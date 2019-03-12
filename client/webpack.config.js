@@ -25,7 +25,7 @@ const envVariables = new webpack.DefinePlugin({
 });
 
 module.exports = {
-  entry: ['babel-polyfill', path.resolve('./src/index') ],
+  entry: ['@babel/polyfill', path.resolve('./src/index') ],
   output: {
     path: path.resolve('./public/dist'),
     filename: 'bundle.js'
@@ -39,7 +39,7 @@ module.exports = {
         exclude: /node_modules/,
         loaders: 'babel-loader',
         options: {
-          presets: [ 'env', 'react', 'stage-0' ]
+          presets: [ 'env', 'react' ]
         }
       },
       {

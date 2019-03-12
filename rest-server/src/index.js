@@ -1,5 +1,5 @@
 import { createServer } from 'http';
-import { success } from './lib'
+import { success } from './lib';
 
 import App from './config';
 
