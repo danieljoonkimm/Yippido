@@ -1,7 +1,7 @@
 require('dotenv').config();
 const webpack = require('webpack');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require('path');
 
@@ -20,18 +20,17 @@ const extractStyles = new MiniCssExtractPlugin({
 
 const envVariables = new webpack.DefinePlugin({
   'process.env': {
-    'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-    'REACT_APP_API_KEY': JSON.stringify(process.env.REACT_APP_API_KEY),
+    'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
   }
 });
 
 module.exports = {
   entry: ['babel-polyfill', path.resolve('./src/index') ],
   output: {
-    path: path.resolve('../build'),
+    path: path.resolve('./public/dist'),
     filename: 'bundle.js'
   },
-  mode: 'production',
+  mode: 'development',
   watch: true,
   module: {
     rules: [
@@ -86,10 +85,6 @@ module.exports = {
   plugins: [
     envVariables,
     optimizeStyles,
-    extractStyles,
-    new HtmlWebpackPlugin({
-      inject: true,
-      template:  path.resolve('./public/dist/index.html'),
-    })
+    extractStyles
   ]
 };
