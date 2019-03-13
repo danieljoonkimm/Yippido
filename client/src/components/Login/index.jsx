@@ -34,14 +34,16 @@ class Login extends Component {
         <form className="login_form" onSubmit={this.handleSubmit.bind(this)}>
           <label className="login_form_label">
             Email:{" "}
-            <input className="login_email"
+            <input
+              className="login_email"
               type="text"
               name="email"
               onChange={this.handleChange.bind(this)}
             />
             <br />
             Password:{" "}
-            <input className="login_password"
+            <input
+              className="login_password"
               type="text"
               name="password"
               onChange={this.handleChange.bind(this)}

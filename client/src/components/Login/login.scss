@@ -17,14 +17,41 @@
     padding: 1em;
 
     .login_form_label {
-
       .login_email {
         margin-bottom: 1em;
       }
 
       .login_password {
-        margin-bottom: .8em;
+        margin-bottom: 0.8em;
       }
     }
   }
+}
+
+//mobile
+@media only screen and (max-width: 425px) {
+  .login_container {
+    
+    .login_form {
+
+      .login_form_label {
+        
+        .login_email {
+          border: 1px solid gray;
+        }
+        
+        .login_password {
+          border: 1px solid gray;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 960px) {
+
+}
+
+@media only screen and (min-width: 961px) {
+
 }

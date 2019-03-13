@@ -1,6 +1,7 @@
 @import "../../../node_modules/include-media/dist/_include-media.scss";
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 
+
 html,
 body,
 div,
@@ -107,6 +108,8 @@ section {
 }
 body {
   line-height: 1;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
 }
 ol,
 ul {
