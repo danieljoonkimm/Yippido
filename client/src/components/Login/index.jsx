@@ -49,7 +49,7 @@ class Login extends Component {
               onChange={this.handleChange.bind(this)}
             />
           </label>
-          <input
+          <input className="login_submit"
             type="submit"
             value="Submit"
             onClick={this.validateForm.bind(this)}

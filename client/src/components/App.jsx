@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <ul>
+        {/* <ul>
           <li>
             <Link to="/login">Login</Link>
           </li>
@@ -20,7 +20,8 @@ class App extends Component {
 
         <Switch>
           <Route exact path="/login" component={Login} />
-        </Switch>
+        </Switch> */}
+        <Login/>
       </div>
     );
   }

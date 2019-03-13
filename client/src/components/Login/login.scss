@@ -3,7 +3,8 @@
 .login_container {
   display: flex;
   justify-content: center;
-  margin-top: 20%;
+  text-transform: uppercase;
+  letter-spacing: .1em;
 
   .login_form {
     display: flex;
@@ -15,15 +16,27 @@
     border: 1px solid black;
     width: fit-content;
     padding: 1em;
+    margin-top: 50%;
 
     .login_form_label {
+      display: flex;
+      flex-direction: column;
+
       .login_email {
-        margin-bottom: 1em;
+        margin-bottom: .5em;
+        margin-top: .5em;
       }
 
       .login_password {
         margin-bottom: 0.8em;
+        margin-top: .5em;
       }
+    }
+
+    .login_submit {
+      border: 1px solid black;
+      background-color: white;
+      padding: .5em;
     }
   }
 }
