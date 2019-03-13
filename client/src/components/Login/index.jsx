@@ -11,12 +11,15 @@ class Login extends Component {
   }
 
   validateForm() {
-    return this.state.email.length > 0 && this.state.password.length > 0;
+    if(this.state.email.length < 1 || this.state.password.length <1) {
+      alert('PLEASE ENTER VALID EMAIL OR PASSWORD')
+    }
   }
 
   handleChange(event) {
+    console.log(event.target.value)
     this.setState({
-      [event.target.id] : event.target.value
+      [event.target.name] : event.target.value
     });
   }
 
@@ -29,8 +32,8 @@ class Login extends Component {
       <div>
         <form onSubmit={this.handleSubmit.bind(this)}>
           <label>
-            Email: <input type="text" name="email" /><br/>
-            Password: <input type="text" name="password" />
+            Email: <input type="text" name="email" onChange={this.handleChange.bind(this)}/><br/>
+            Password: <input type="text" name="password" onChange={this.handleChange.bind(this)}/>
           </label>
           <input type="submit" value="Submit" onClick={this.validateForm.bind(this)}/>
         </form>
