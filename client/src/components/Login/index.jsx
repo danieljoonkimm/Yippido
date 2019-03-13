@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./login.scss";
 
 class Login extends Component {
   constructor() {
@@ -29,18 +30,18 @@ class Login extends Component {
 
   render() {
     return (
-      <div class="login_container">
-        <form onSubmit={this.handleSubmit.bind(this)}>
-          <label>
+      <div className="login_container">
+        <form className="login_form" onSubmit={this.handleSubmit.bind(this)}>
+          <label className="login_form_label">
             Email:{" "}
-            <input
+            <input className="login_email"
               type="text"
               name="email"
               onChange={this.handleChange.bind(this)}
             />
             <br />
             Password:{" "}
-            <input
+            <input className="login_password"
               type="text"
               name="password"
               onChange={this.handleChange.bind(this)}
