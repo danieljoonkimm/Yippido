@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Login from './Login/index';
+import { Link, Route, Switch } from 'react-router-dom';
 
 class App extends Component {
   constructor() {
@@ -13,8 +14,15 @@ class App extends Component {
   render() {
     return(
       <div>
-        <Login/>
+        <ul>
+          <li><Link to="/login">Login</Link></li>
+        </ul>
+
+        <Switch>
+          <Route exact path="/login" component={Login} />
+        </Switch>
       </div>
+
     )
   }
 };
