@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Login from "./Login/index";
+import Register from './Register/index';
 import { Link, Route, Switch } from "react-router-dom";
 
 class App extends Component {
@@ -21,7 +22,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/login" component={Login} />
         </Switch> */}
-        <Login/>
+        <Register/>
       </div>
     );
   }
