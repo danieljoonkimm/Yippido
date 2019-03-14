@@ -13,14 +13,5 @@
   .register_body {
     display: flex;
     flex-direction: column;
-
-    .register_form {
-      li {
-        padding-bottom: .8em;
-        .register_input {
-          border: 1px solid black;
-        }
-      }
-    }
   }
 }

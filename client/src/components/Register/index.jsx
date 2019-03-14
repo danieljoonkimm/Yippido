@@ -14,13 +14,7 @@ class Register extends Component {
         <h1 className="register_header">Sign Up</h1>
         <div className="register_body">
           <h2>It' free and anyone can join</h2>
-            <ul className="register_form">
-              <li>First Name: <input className="register_input"></input></li>
-              <li>Last Name: <input className="register_input"></input></li>
-              <li>Your Email: <input className="register_input"></input></li>
-              <li>New Password: <input className="register_input"></input></li>
-              <li>Confirm Password: <input className="register_input"></input></li>
-            </ul>
+          FOLLOW template
         </div>
       </div>
     );
