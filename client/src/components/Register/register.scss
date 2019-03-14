@@ -4,6 +4,23 @@
   display: flex;
   margin-top: 50%;
   flex-direction: column;
-  border: 1px solid black;
-  width: fit-content;
+
+  .register_header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .register_body {
+    display: flex;
+    flex-direction: column;
+
+    .register_form {
+      li {
+        padding-bottom: .8em;
+        .register_input {
+          border: 1px solid black;
+        }
+      }
+    }
+  }
 }

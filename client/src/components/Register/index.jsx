@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./register.scss";
 
 class Register extends Component {
   constructor() {
@@ -14,11 +15,11 @@ class Register extends Component {
         <div className="register_body">
           <h2>It' free and anyone can join</h2>
             <ul className="register_form">
-              <li>First Name: <input></input></li>
-              <li>Last Name: <input></input></li>
-              <li>Your Email: <input></input></li>
-              <li>New Password: <input></input></li>
-              <li>Confirm Password: <input></input></li>
+              <li>First Name: <input className="register_input"></input></li>
+              <li>Last Name: <input className="register_input"></input></li>
+              <li>Your Email: <input className="register_input"></input></li>
+              <li>New Password: <input className="register_input"></input></li>
+              <li>Confirm Password: <input className="register_input"></input></li>
             </ul>
         </div>
       </div>
