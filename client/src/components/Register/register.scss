@@ -20,8 +20,10 @@
       margin-top: 1em;
       margin-bottom: 1em;
       border-bottom: 1px solid black;
+      padding-bottom: .5em;
       align-self: center;
       width: fit-content;
+      text-transform: uppercase;
     }
 
     .register_info {
@@ -30,15 +32,14 @@
       align-items: center;
 
       label {
-        display: inline-block;
-        float: left;
-        clear: left;
-        text-align: right;
-        margin-bottom: .5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
       input {
         border: 1px solid black;
+        width: fit-content;
       }
 
       #register_submit {
