@@ -10,6 +10,7 @@
     display: flex;
     justify-content: center;
     font-size: 2em;
+    text-transform: uppercase;
   }
 
   .register_body {
@@ -49,6 +50,7 @@
         margin-top: .5em;
         background-color: white;
         min-width: 5em;
+        padding: .2em;
       }
     }
 
@@ -58,6 +60,7 @@
       margin-top: .5em;
       border: 1px solid black;
       text-align: center;
+      padding: .2em;
     }
   }
 }

@@ -46,12 +46,13 @@ class Register extends Component {
       }
   }
 
+
   render() {
     return (
       <div className="register_container">
         <h1 className="register_header">Sign Up</h1>
         <div className="register_body">
-          <h2>It' free and anyone can join</h2>
+          <h2>It's free and anyone can join</h2>
             <div className="register_info">
               <label onChange={this.textHandler.bind(this)}>First Name: <input type="text" name="firstName"/></label>
               <label name="lastName" onChange={this.textHandler.bind(this)}>Last Name: <input type="text" name="lastName"/></label>
