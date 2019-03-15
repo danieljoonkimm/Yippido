@@ -21,6 +21,14 @@ class Register extends Component {
     });
   }
 
+  onSubmit() {
+    if(this.state.firstName.length < 1 || this.state.lastName.length < 1 || 
+      this.state.email.length < 1 || this.state.confirmEmail.length < 1 ||
+      this.state.password.length <1 || this.state.email !== this.state.confirmEmail) {
+        alert('SIGN UP ERROR!')
+      }
+  }
+
   render() {
     return (
       <div className="register_container">
@@ -33,7 +41,7 @@ class Register extends Component {
               <label name="email" onChange={this.textHandler.bind(this)}>Your Email: <input type="text" name="email"/></label>
               <label name="confirmEmail" onChange={this.textHandler.bind(this)}>Re-enter Email: <input type="text" name="confirmEmail"/></label>
               <label name="password" onChange={this.textHandler.bind(this)}>New Password: <input type="password" name="password"/></label>
-              <input type="submit" id="register_submit"/>
+              <input onClick={this.onSubmit.bind(this)} type="submit" id="register_submit"/>
             </div>
         </div>
       </div>
