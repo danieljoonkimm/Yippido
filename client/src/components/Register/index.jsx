@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./register.scss";
+import axios from 'axios';
 
 class Register extends Component {
   constructor() {
@@ -15,10 +16,23 @@ class Register extends Component {
   }
 
   textHandler(e) {
-    console.log('this is state', this.state)
     this.setState({
       [e.target.name] : e.target.value
     });
+  }
+
+  //this is email handler, this checks to see if email is valid
+  emailHandler(email) {
+    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if(re.test(email)) {
+      this.setState({
+        email: email
+      });
+    }
+    else {
+      alert('EMAIL IS INVALID!')
+    }
   }
 
   onSubmit() {
@@ -26,6 +40,9 @@ class Register extends Component {
       this.state.email.length < 1 || this.state.confirmEmail.length < 1 ||
       this.state.password.length <1 || this.state.email !== this.state.confirmEmail) {
         alert('SIGN UP ERROR!')
+      }
+      else {
+        alert('SIGN UP SUCCESSFUL!')
       }
   }
 
