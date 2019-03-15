@@ -6,9 +6,19 @@ class Register extends Component {
     super();
 
     this.state = {
-      username: '',
+      firstName: '',
+      lastName: '',
+      email: '',
+      confirmEmail: '',
       password: ''
     };
+  }
+
+  textHandler(e) {
+    console.log('this is state', this.state)
+    this.setState({
+      [e.target.name] : e.target.value
+    });
   }
 
   render() {
@@ -18,11 +28,11 @@ class Register extends Component {
         <div className="register_body">
           <h2>It' free and anyone can join</h2>
             <div className="register_info">
-              <label>First Name: <input type="text"/></label>
-              <label>Last Name: <input type="text"/></label>
-              <label>Your Email: <input type="text"/></label>
-              <label>Re-enter Email: <input type="text"/></label>
-              <label>New Password: <input type="text"/></label>
+              <label onChange={this.textHandler.bind(this)}>First Name: <input type="text" name="firstName"/></label>
+              <label name="lastName" onChange={this.textHandler.bind(this)}>Last Name: <input type="text" name="lastName"/></label>
+              <label name="email" onChange={this.textHandler.bind(this)}>Your Email: <input type="text" name="email"/></label>
+              <label name="confirmEmail" onChange={this.textHandler.bind(this)}>Re-enter Email: <input type="text" name="confirmEmail"/></label>
+              <label name="password" onChange={this.textHandler.bind(this)}>New Password: <input type="password" name="password"/></label>
               <input type="submit" id="register_submit"/>
             </div>
         </div>
