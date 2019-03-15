@@ -48,7 +48,16 @@
       #register_submit {
         margin-top: .5em;
         background-color: white;
+        min-width: 5em;
       }
+    }
+
+    #login_button {
+      background-color: white;
+      min-width: 5em;
+      margin-top: .5em;
+      border: 1px solid black;
+      text-align: center;
     }
   }
 }

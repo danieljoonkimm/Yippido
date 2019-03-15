@@ -58,7 +58,7 @@ class Register extends Component {
               <label name="email" onChange={this.textHandler.bind(this)}>Your Email: <input type="text" name="email"/></label>
               <label name="confirmEmail" onChange={this.textHandler.bind(this)}>Re-enter Email: <input type="text" name="confirmEmail"/></label>
               <label name="password" onChange={this.textHandler.bind(this)}>New Password: <input type="password" name="password"/></label>
-              <input onClick={this.onSubmit.bind(this)} type="submit" id="register_submit"/><buttton>Login</buttton>
+              <input onClick={this.onSubmit.bind(this)} type="submit" id="register_submit"/><buttton id="login_button">Login</buttton>
             </div>
         </div>
       </div>
