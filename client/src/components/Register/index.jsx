@@ -46,6 +46,20 @@ class Register extends Component {
       alert("SIGN UP ERROR!");
     } else {
       alert("SIGN UP SUCCESSFUL!");
+      const payload = {
+        firstName: this.state.firstName,
+        lastName: this.state.lastName,
+        email: this.state.email,
+        password: this.state.password
+      };
+        axios.post("https://wwww.localhost:3000/api/user/addUser", payload)
+          .then((response) => {
+            console.log('this is the response from adding User', response);
+          })
+          .catch((error) => {
+            console.log('error adding User', error);
+          })
+
     }
   }
 

@@ -7,7 +7,6 @@ CREATE TABLE users (
   firstname varchar(50),
   lastname varchar(255),
   email varchar(255),
-  confirmEmail varchar(255),
   password varchar(255),
   PRIMARY KEY(id)
 );
