@@ -44,6 +44,7 @@
     h1 {
       text-transform: uppercase;
       text-align: center;
+      margin-bottom: .5em;
     }
 
     .signIn_languages {
@@ -72,6 +73,9 @@
 @media only screen and (max-width: 425px) {
   .signInRegister_container {
     .signInRegister_header {
+      img {
+        margin-top: 1em;
+      }
       .signInRegister_searchBar {
         img {
           width: 2em;

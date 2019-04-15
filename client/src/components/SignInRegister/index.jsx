@@ -41,6 +41,8 @@ class SignInRegister extends Component {
             <br />A community of 900+ vendors and nearly half a million buyers
           </div>
         </div>
+        <div className="signIn_becomeBuyer">Become a BUYER</div>
+        <div className="signIn_becomeVendor">Become a VENDOR</div>
       </div>
     );
   }
