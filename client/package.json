@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
-    "bcryptjs": "^2.4.3",
+    "bootstrap": "^4.0.0-alpha.6",
     "dotenv": "^6.2.0",
     "include-media": "^1.4.9",
     "react": "^16.8.4",
