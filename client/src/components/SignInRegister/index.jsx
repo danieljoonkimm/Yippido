@@ -60,7 +60,7 @@ class SignInRegister extends Component {
           </div>
           <div className="row">
             <div className="col-xs-6">New Members 15% OFF</div>
-            <div className="col-xs-6 register_now">REGISTER NOW</div>
+            <div className="col-xs-6 register_now"><button>REGISTER NOW</button></div>
           </div>
         </div>
         <div className="signIn_becomeVendor">
@@ -74,7 +74,7 @@ class SignInRegister extends Component {
           </div>
           <div className="row">
             <div className="col-xs-6">3 MONTH FREE BANNER</div>
-            <div className="col-xs-6 register_now">REGISTER NOW</div>
+            <div className="col-xs-6 register_now"><button>REGISTER NOW</button></div>
           </div>
         </div>
       </div>
