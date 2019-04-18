@@ -59,8 +59,8 @@ class SignInRegister extends Component {
             Make smart purchases with our data and trend analytics
           </div>
           <div className="row">
-          <div className="col-xs-6">New Members 15% OFF</div>
-          <div className="col-xs-6 register_now">REGISTER NOW</div>
+            <div className="col-xs-6">New Members 15% OFF</div>
+            <div className="col-xs-6 register_now">REGISTER NOW</div>
           </div>
         </div>
         <div className="signIn_becomeVendor">
@@ -73,10 +73,8 @@ class SignInRegister extends Component {
             Get personalized support with a dedicated account executive
           </div>
           <div className="row">
-          <div className="col-xs-6">
-          3 MONTH FREE BANNER
-          </div>
-          <div className="col-xs-6 register_now">REGISTER NOW</div>
+            <div className="col-xs-6">3 MONTH FREE BANNER</div>
+            <div className="col-xs-6 register_now">REGISTER NOW</div>
           </div>
         </div>
       </div>
