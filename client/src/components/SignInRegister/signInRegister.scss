@@ -43,10 +43,16 @@
     .signIn_buyerText {
       text-align: center;
     }
-    button {
-      background-color: #9191f7;
-      color: white;
-      text-align: center;
+    .promotions {
+      margin: 0;
+      padding: 0;
+      .register_now {
+        button {
+          background-color: #9191f7;
+          color: white;
+          text-align: center;
+        }
+      }
     }
   }
   .signIn_becomeVendor {
@@ -60,9 +66,15 @@
       text-align: center;
     }
   }
-  button {
-    background-color: #9191f7;
-    color: white;
-    text-align: center;
+  .promotions {
+    margin: 0;
+    padding: 0;
+    .register_now {
+      button {
+        background-color: #9191f7;
+        color: white;
+        text-align: center;
+      }
+    }
   }
 }

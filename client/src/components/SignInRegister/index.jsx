@@ -16,7 +16,7 @@ class SignInRegister extends Component {
         <div className="signInRegister_header">
           <img src={Yippido} alt="No Image" />
           <div className="col-xs-12 signInRegister_searchBar">
-            All |{" "}
+            <button>All</button> |{" "}
             <input
               type="text"
               placeholder="type vendor name, item description, or style number"
@@ -24,12 +24,12 @@ class SignInRegister extends Component {
             | <img src={magnifying_glass} />
           </div>
           <div className="row signInRegister_text">
-            <div className="col-xs-6" id="register">
+            <button className="col-xs-6" id="register">
               Register
-            </div>
-            <div className="col-xs-6" id="signIn">
+            </button>
+            <button className="col-xs-6" id="signIn">
               Sign In
-            </div>
+            </button>
           </div>
         </div>
         <div className="row signInRegister_registration">
@@ -38,8 +38,8 @@ class SignInRegister extends Component {
             <div className="signIn_languages">
               {" "}
               <div className="col-xs-6">
-                <div className="english">English</div>
-                <div className="spanish">Spanish</div>
+                <button className="english">English</button>
+                <button className="spanish">Spanish</button>
               </div>
             </div>
           </div>
@@ -58,7 +58,7 @@ class SignInRegister extends Component {
             <br />
             Make smart purchases with our data and trend analytics
           </div>
-          <div className="row">
+          <div className="row promotions">
             <div className="col-xs-6">New Members 15% OFF</div>
             <div className="col-xs-6 register_now"><button>REGISTER NOW</button></div>
           </div>
@@ -72,7 +72,7 @@ class SignInRegister extends Component {
             <br />
             Get personalized support with a dedicated account executive
           </div>
-          <div className="row">
+          <div className="row promotions">
             <div className="col-xs-6">3 MONTH FREE BANNER</div>
             <div className="col-xs-6 register_now"><button>REGISTER NOW</button></div>
           </div>
