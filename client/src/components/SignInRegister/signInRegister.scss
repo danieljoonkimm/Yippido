@@ -1,107 +1,51 @@
 @import "../../../global/global.scss";
-
 .signInRegister_container {
-  display: flex;
-  flex-direction: column;
-
+  padding-left: 2em;
+  padding-right: 2em;
   .signInRegister_header {
-    display: flex;
-    flex-direction: column;
-
     .signInRegister_searchBar {
-      border: 1px solid black;
-      display: flex;
-      align-content: center;
-      align-items: center;
-      padding: 0.2em;
-      justify-content: space-around;
+      text-align: center;
+      img {
+        width: 2em;
+        height: 100%;
+      }
     }
     .signInRegister_text {
-      display: grid;
-      grid-template-columns: 50% 50%;
-      padding-top: 1em;
-      justify-items: center;
+      text-align: center;
 
       #register {
-        text-align: center;
+        text-align: right;
       }
       #signIn {
-        text-align: center;
-        border: 1px solid #9595ff;
-        width: fit-content;
-        text-transform: uppercase;
-        font-weight: bold;
+        text-align: left;
       }
     }
   }
-
-  .signInRegister_registration {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1em;
+  .signInRegister_languages {
     text-align: center;
-
-    h1 {
-      text-transform: uppercase;
-      text-align: center;
-      margin-bottom: .5em;
-    }
-
-    .signIn_languages {
-      display: flex;
-      justify-content: center;
-
-      .english {
-        border: 1px solid black;
-        width: fit-content;
-        padding: 0.5em;
-      }
-      .spanish {
-        border: 1px solid black;
-        width: fit-content;
-        padding: 0.5em;
-      }
-    }
-    .signIn_text {
-      margin-top: 1em;
-      color: gray;
-      line-height: 1.5em;
-    }
   }
   .signIn_becomeBuyer {
-    background-color: #f1f1f1;
-  }
-}
-
-@media only screen and (max-width: 425px) {
-  .signInRegister_container {
-    .signInRegister_header {
-      img {
-        
-      }
-      .signInRegister_searchBar {
-        img {
-          width: 2em;
-          height: 100%;
-        }
-
-        input {
-          min-width: 14em;
-          max-width: 21em;
-        }
-      }
+    background-color: #dadada;
+    padding: 0.2em;
+    h2 {
+      text-align: center;
+      font-size: 2em;
+      border-bottom: 0.1em solid white;
+      padding-bottom: 0.2em;
     }
-
-    .signInRegister_registration {
-      h1 {
-        font-size: 1.5em;
-      }
+    .signIn_buyerText {
+      text-align: center;
     }
   }
-}
-
-@media only screen and (min-width: 426px) and (max-width: 960px) {
-}
-
-@media only screen and (min-width: 961px) {
+  .signIn_becomeVendor {
+    h2 {
+      text-align: center;
+      font-size: 2em;
+      border-bottom: 0.1em solid white;
+      padding-bottom: 0.2em;
+    }
+    .signIn_vendorText {
+      text-align: center;
+    }
+  }
 }

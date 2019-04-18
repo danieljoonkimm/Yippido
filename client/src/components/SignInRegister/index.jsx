@@ -15,7 +15,7 @@ class SignInRegister extends Component {
       <div className="signInRegister_container">
         <div className="signInRegister_header">
           <img src={Yippido} alt="No Image" />
-          <div className="signInRegister_searchBar">
+          <div className="col-xs-12 signInRegister_searchBar">
             All |{" "}
             <input
               type="text"
@@ -23,17 +23,25 @@ class SignInRegister extends Component {
             />{" "}
             | <img src={magnifying_glass} />
           </div>
-          <div className="signInRegister_text">
-            <div id="register">Register</div>
-            <div id="signIn">Sign In</div>
+          <div className="row signInRegister_text">
+            <div className="col-xs-6" id="register">
+              Register
+            </div>
+            <div className="col-xs-6" id="signIn">
+              Sign In
+            </div>
           </div>
         </div>
-        <div className="signInRegister_registration">
-          <h1>registration</h1>
-          <div className="signIn_languages">
-            {" "}
-            <div className="english">English</div>
-            <div className="spanish">Spanish</div>
+        <div className="row signInRegister_registration">
+          <div className="row signInRegister_languages">
+            <h1 className="col-xs-6">registration</h1>
+            <div className="signIn_languages">
+              {" "}
+              <div className="col-xs-6">
+                <div className="english">English</div>
+                <div className="spanish">Spanish</div>
+              </div>
+            </div>
           </div>
           <div className="signIn_text">
             Join the premier online shopping mall for wholesale fashion and
@@ -41,8 +49,36 @@ class SignInRegister extends Component {
             <br />A community of 900+ vendors and nearly half a million buyers
           </div>
         </div>
-        <div className="signIn_becomeBuyer">Become a BUYER</div>
-        <div className="signIn_becomeVendor">Become a VENDOR</div>
+        <div className="signIn_becomeBuyer">
+          <h2>Become a BUYER</h2>
+          <div className="signIn_buyerText">
+            Free Membership
+            <br />
+            Shop thousands of new styles uploaded daily
+            <br />
+            Make smart purchases with our data and trend analytics
+          </div>
+          <div className="row">
+          <div className="col-xs-6">New Members 15% OFF</div>
+          <div className="col-xs-6">REGISTER NOW</div>
+          </div>
+        </div>
+        <div className="signIn_becomeVendor">
+          <h2>Become a VENDOR</h2>
+          <div className="signIn_vendorText">
+            Discover new sales opportunities
+            <br />
+            Market your brand to thousands of qualified buyers
+            <br />
+            Get personalized support with a dedicated account executive
+          </div>
+          <div className="row">
+          <div className="col-xs-6">
+          3 MONTH FREE BANNER
+          </div>
+          <div className="col-xs-6">REGISTER NOW</div>
+          </div>
+        </div>
       </div>
     );
   }
