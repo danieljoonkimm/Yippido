@@ -14,7 +14,7 @@ class SignInRegister extends Component {
   render() {
     return (
       <div className="registration">
-        <div className="container">
+        <div className="row container">
           <div className="header">
             <h1>Registration</h1>
             <div className="languageBtn_container">
@@ -32,7 +32,7 @@ class SignInRegister extends Component {
           </div>
         </div>
 
-        <div className="row become_container">
+        <div className="row col-md-6 become_container">
           <div className="row become">
             <h2>Become a BUYER</h2>
             <div className="become_text">
@@ -52,7 +52,7 @@ class SignInRegister extends Component {
           </div>
         </div>
 
-        <div className="row become_container" id="buyer">
+        <div className="row col-md-6 become_container" id="buyer">
           <div className="row become">
             <h2>Become a BUYER</h2>
             <div className="become_text">
