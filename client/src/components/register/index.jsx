@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import "./signInRegister.scss";
+import "./register.scss";
 import Yippido from "../../../public/images/Yippido.png";
 import magnifying_glass from "../../../public/images/magnifying_glass.jpg";
 import topdeals from "../../../public/images/topdeals.jpeg";
@@ -14,7 +14,7 @@ class SignInRegister extends Component {
   render() {
     return (
       <div className="registration">
-        <div className="row container">
+        <div className="row register_Container">
           <div className="header">
             <h1>Registration</h1>
             <div className="languageBtn_container">

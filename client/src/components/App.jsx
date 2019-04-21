@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Login from "./Login/index";
-import SignInRegister from './SignInRegister/index';
+import Register from './register/index.jsx';
+import SignIn from './signIn/index.jsx';
 import { Link, Route, Switch } from "react-router-dom";
 
 class App extends Component {
@@ -22,7 +22,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/login" component={Login} />
         </Switch> */}
-        <SignInRegister/>
+        <SignIn/>
       </div>
     );
   }
