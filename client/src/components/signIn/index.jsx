@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./signIn.scss";
+import topdeals from "../../../public/images/topdeals.jpeg";
 
 class signIn extends Component {
   constructor() {
@@ -10,7 +11,7 @@ class signIn extends Component {
   render() {
     return (
       <div className="row signIn">
-        <div className="col-xs-6 signIn_container">
+        <div className="col-xs-12 col-sm-6 signIn_container" id="signIn_signIn">
           <div className="header">
             <h1>Sign In</h1>
             <div className="signIn_text">
@@ -37,7 +38,10 @@ class signIn extends Component {
           </form>
         </div>
 
-        <div className="row col-xs-6 signIn_container">
+        <div
+          className="row col-xs-12 col-sm-6 signIn_container"
+          id="signIn_create"
+        >
           <div className="row header">
             <h1>Create Account</h1>
             <div className="signIn_text">
@@ -48,6 +52,24 @@ class signIn extends Component {
                 favorite vendors and order in the convenience of your home or
                 office.
               </p>
+            </div>
+            <div className="signIn_img">
+              <div>
+                <img src={topdeals} alt="" />
+                <img />
+              </div>
+              <div>
+                <img src={topdeals} alt="" />
+                <img />
+              </div>
+              <div>
+                <img src={topdeals} alt="" />
+                <img />
+              </div>
+              <div>
+                <img src={topdeals} alt="" />
+                <img />
+              </div>
             </div>
             <form>
               <input type="submit" value="CREATE ACCOUNT" id="signIn" />
