@@ -14,7 +14,7 @@ class signIn extends Component {
         <div className="col-xs-12 col-sm-6 signIn_container" id="signIn_signIn">
           <div className="header">
             <h1>Sign In</h1>
-            <div className="signIn_text">
+            <div className="signIn_text" id="paragraph">
               <p>If you have an account with us, please log in.</p>
             </div>
           </div>
@@ -22,12 +22,12 @@ class signIn extends Component {
             <label>
               Email Address:
               <br />
-              <input type="text" name="name" />
+              <input type="text" name="name" className="inputBox" />
             </label>
             <label>
               Password:
               <br />
-              <input type="text" name="password" />
+              <input type="text" name="password" className="inputBox" />
             </label>
             <label>
               <input type="checkbox" /> Remember Me{" "}
@@ -42,7 +42,7 @@ class signIn extends Component {
           className="row col-xs-12 col-sm-6 signIn_container"
           id="signIn_create"
         >
-          <div className="row header">
+          <div className="header">
             <h1>Create Account</h1>
             <div className="signIn_text">
               <p>
@@ -53,6 +53,7 @@ class signIn extends Component {
                 office.
               </p>
             </div>
+          </div>
             <div className="signIn_img">
               <div>
                 <img src={topdeals} alt="" />
@@ -74,7 +75,6 @@ class signIn extends Component {
             <form>
               <input type="submit" value="CREATE ACCOUNT" id="signIn" />
             </form>
-          </div>
         </div>
       </div>
     );

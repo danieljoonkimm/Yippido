@@ -24,16 +24,19 @@
         color: gray;
         margin-bottom: 1em;
       }
-      .signIn_img {
-        display: flex;
-        width: fit-content;
-      }
+    }
+    .signIn_img {
+      display: flex;
+      width: fit-content;
     }
     form {
       label {
         input {
           background-color: #f0f0f0;
           border: 1px solid #cacaca;
+        }
+        .inputBox {
+          width: 100%;
         }
         button {
           text-decoration: underline;
@@ -54,9 +57,7 @@
   .signIn {
     margin: 0 auto;
     width: 90%;
-    #signIn_create {
-      padding-top: 1em;
-    }
+
     #signIn_signIn {
       border-bottom: 1px solid #cacaca;
       padding-bottom: 1em;
@@ -71,6 +72,16 @@
     #signIn_signIn {
       border-right: 1px solid #cacaca;
     }
+    .signIn_container {
+      display: flex;
+      flex-direction: column;
+      min-height: 20em;
+      .header {
+        #paragraph {
+          margin-top: 3em;
+        }
+      }
+    }
     #signIn_create {
       padding-left: 4em;
     }
@@ -83,6 +94,16 @@
     width: 70%;
     #signIn_signIn {
       border-right: 1px solid #cacaca;
+    }
+    .signIn_container {
+      display: flex;
+      flex-direction: column;
+      min-height: 20em;
+      .header {
+        #paragraph {
+          margin-top: 3em;
+        }
+      }
     }
     #signIn_create {
       padding-left: 4em;
