@@ -1,0 +1,81 @@
+.row {
+  margin: 0;
+  padding: 0;
+}
+
+.landingVendors_container {
+  display: grid;
+  justify-content: center;
+  grid-template-areas:
+    "main subImg1 subImg3"
+    "main subImg2 subImg4";
+
+  .main {
+    grid-area: main;
+    display: flex;
+    img {
+      height: 10em;
+      width: auto;
+      border: 1px solid #f0f0f0;
+      border-radius: 5%;
+      outline: none;
+    }
+  }
+
+  .subImg1 {
+    grid-area: subImg1;
+    display: flex;
+    img {
+      height: 5em;
+      width: auto;
+      border: 1px solid #f0f0f0;
+      border-radius: 5%;
+      outline: none;
+    }
+  }
+
+  .subImg2 {
+    grid-area: subImg2;
+    display: flex;
+    img {
+      height: 5em;
+      width: auto;
+      border: 1px solid #f0f0f0;
+      border-radius: 5%;
+      outline: none;
+    }
+  }
+
+  .subImg3 {
+    grid-area: subImg3;
+    display: flex;
+    img {
+      height: 5em;
+      width: auto;
+      border: 1px solid #f0f0f0;
+      border-radius: 5%;
+      outline: none;
+    }
+  }
+
+  .subImg4 {
+    grid-area: subImg4;
+    display: flex;
+    img {
+      height: 5em;
+      width: auto;
+      border: 1px solid #f0f0f0;
+      border-radius: 5%;
+      outline: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+}
+
+@media only screen and (min-width: 426px) and (max-width: 960px) {
+}
+
+@media only screen and (min-width: 961px) {
+}

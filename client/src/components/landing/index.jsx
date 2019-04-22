@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import dummyImg from "../../../public/images/dummyImg.jpg";
+import Vendors from './vendors/index.jsx';
 import "./landing.scss";
 
 class Landing extends Component {
@@ -10,28 +10,8 @@ class Landing extends Component {
   }
   render() {
     return (
-      <div className="landing">
-        <div className="row landing_container">
-          <div className="col-xs-12 col-sm-4 col-md-4 landing_images">
-            <img src={dummyImg} />
-          </div>
-          <div className="col-xs-12 col-sm-4 col-md-4 landing_images">
-            <img src={dummyImg} />
-            <img src={dummyImg} />
-          </div>
-          <div className="col-xs-12 col-sm-4 col-md-4 landing_images">
-            <img src={dummyImg} />
-            <img src={dummyImg} />
-          </div>
-          <div className="col-xs-12 col-sm-4 col-md-4 landing_images">
-            <img src={dummyImg} />
-            <img src={dummyImg} />
-          </div>
-          <div className="col-xs-12 col-sm-4 col-md-4 landing_images">
-            <img src={dummyImg} />
-            <img src={dummyImg} />
-          </div>
-        </div>
+      <div>
+        <Vendors/>
       </div>
     );
   }
