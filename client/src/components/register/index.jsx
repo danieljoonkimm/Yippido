@@ -54,7 +54,7 @@ class SignInRegister extends Component {
 
         <div className="row col-md-6 become_container" id="buyer">
           <div className="row become">
-            <h2>Become a BUYER</h2>
+            <h2>Become a VENDOR</h2>
             <div className="become_text">
               <p>Discover new sales opportunities</p>
               <p>Market your brand to thousands of qualified buyers</p>

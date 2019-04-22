@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Landing from './landing/index.jsx';
 import Register from './register/index.jsx';
 import SignIn from './signIn/index.jsx';
 import { Link, Route, Switch } from "react-router-dom";
@@ -22,7 +23,8 @@ class App extends Component {
         <Switch>
           <Route exact path="/login" component={Login} />
         </Switch> */}
-        <SignIn/>
+        {/* <SignIn/> */}
+        <Landing/>
       </div>
     );
   }
