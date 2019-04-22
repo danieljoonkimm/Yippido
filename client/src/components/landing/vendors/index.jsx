@@ -10,6 +10,8 @@ class Vendors extends Component {
   }
   render() {
     return (
+      <div>
+
       <div className="row landingVendors_container">
         <div className="landing_mainImage main">
           <img src={dummyImg} />
@@ -34,6 +36,7 @@ class Vendors extends Component {
           <img src={dummyImg} />
           <img src={dummyImg} />
         </div>
+      </div>
       </div>
     );
   }
