@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Vendors from './vendors/index.jsx';
+import FeaturedItems from './featuredItems/index.jsx';
 import "./landing.scss";
 
 class Landing extends Component {
@@ -11,7 +12,7 @@ class Landing extends Component {
   render() {
     return (
       <div>
-        <Vendors/>
+        <FeaturedItems/>
       </div>
     );
   }
