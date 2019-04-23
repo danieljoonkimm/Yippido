@@ -10,8 +10,89 @@ class FeaturedItems extends Component {
   }
   render() {
     return (
-      <div>
-        featured
+      <div class="container">
+        <div className="row">
+          <div class="col-xs-3 col-sm-3 col-md-3 image">
+            <img
+              alt=""
+              src={dummyImg}
+            />
+            <p>STYLE #</p>
+
+            <p>COMPANY NAME</p>
+          </div>
+
+          <div class="col-xs-3 col-sm-3 col-md-3 image">
+            <img
+              alt=""
+              src={dummyImg}
+            />
+            <p>STYLE #</p>
+
+            <p>COMPANY NAME</p>
+          </div>
+
+          <div class="col-xs-3 col-sm-3 col-md-3 image">
+            <img
+              alt=""
+              src={dummyImg}
+            />
+            <p>STYLE #</p>
+
+            <p>COMPANY NAME</p>
+          </div>
+
+          <div class="col-xs-3 col-sm-3 col-md-3 image">
+            <img
+              alt=""
+              src={dummyImg}
+            />
+            <p>STYLE #</p>
+
+            <p>COMPANY NAME</p>
+          </div>
+        </div>
+        <div className="row">
+          <div class="col-xs-3 col-sm-3 col-md-3 image">
+            <img
+              alt=""
+              src={dummyImg}
+            />
+            <p>STYLE #</p>
+
+            <p>COMPANY NAME</p>
+          </div>
+
+          <div class="col-xs-3 col-sm-3 col-md-3 image">
+            <img
+              alt=""
+              src={dummyImg}
+            />
+            <p>STYLE #</p>
+
+            <p>COMPANY NAME</p>
+          </div>
+
+          <div class="col-xs-3 col-sm-3 col-md-3 image">
+            <img
+              alt=""
+              src={dummyImg}
+            />
+            <p>STYLE #</p>
+
+            <p>COMPANY NAME</p>
+          </div>
+
+          <div class="col-xs-3 col-sm-3 col-md-3 image">
+            <img
+              alt=""
+              src={dummyImg}
+            />
+            <p>STYLE #</p>
+
+            <p>COMPANY NAME</p>
+          </div>
+        </div>
       </div>
     );
   }

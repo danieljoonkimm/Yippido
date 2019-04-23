@@ -1,0 +1,14 @@
+.container {
+  background-color: gray;
+  padding: 1em;
+  .row {
+    .image {
+      padding: .2em;
+      margin: 0;
+      img {
+        border: 1px solid gray;
+        border-radius: 3%;
+      }
+    }
+  }
+}
