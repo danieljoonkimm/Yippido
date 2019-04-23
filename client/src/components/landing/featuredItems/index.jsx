@@ -11,6 +11,7 @@ class FeaturedItems extends Component {
   render() {
     return (
       <div class="container">
+      <h1>FEATURED ITEMS</h1>
         <div className="row">
           <div class="col-xs-3 col-sm-3 col-md-3 image">
             <img
