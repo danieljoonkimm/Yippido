@@ -1,14 +1,37 @@
 .container {
-  background-color: gray;
+  background-color: #efefef;
   padding: 1em;
   .row {
     .image {
       padding: .2em;
       margin: 0;
       img {
-        border: 1px solid gray;
+        border: 1px solid #efefef;
         border-radius: 3%;
       }
     }
   }
+}
+
+@media only screen and (max-width: 425px) {
+  .container {
+    .row {
+      p {
+        font-size: .2em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 960px) {
+  .container {
+    .row {
+      p {
+        font-size: .5em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 961px) {
 }
