@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import dummyImg from "../../../../public/images/dummyImg.jpg";
-import "./highlightVendors.scss";
+import lookbook from "../../../../public/images/lookbook.png";
+import lookbook1 from "../../../../public/images/lookbook1.png";
+import "./lookbook.scss";
 
 class LookBook extends Component {
   constructor() {
@@ -11,7 +12,46 @@ class LookBook extends Component {
   render() {
     return (
       <div className="container" id="lookBookVendors_container">
+        <h1>LOOKBOOK</h1>
+        <div className="row">
+          <div className="col-xs-4 col-sm-4 col-md-4">
+            <div className="row">
+              <img className="img-responsive" alt="" src={lookbook} />
+              <p>SAMPLE</p>
+              <p>SAMPLE</p>
+            </div>
+          </div>
 
+          <div className="col-xs-4 col-sm-4 col-md-4">
+            <div className="row">
+              <div className="col-xs-6 col-sm-6 col-md-6">
+                <img className="img-responsive" alt="" src={lookbook1} />
+                <p>SAMPLE</p>
+                <p>SAMPLE</p>
+              </div>
+              <div className="col-xs-6 col-sm-6 col-md-6">
+                <img className="img-responsive" alt="" src={lookbook1} />
+                <p>SAMPLE</p>
+                <p>SAMPLE</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-xs-4 col-sm-4 col-md-4">
+            <div className="row">
+              <div className="col-xs-6 col-sm-6 col-md-6">
+                <img className="img-responsive" alt="" src={lookbook1} />
+                <p>SAMPLE</p>
+                <p>SAMPLE</p>
+              </div>
+              <div className="col-xs-6 col-sm-6 col-md-6">
+                <img className="img-responsive" alt="" src={lookbook1} />
+                <p>SAMPLE</p>
+                <p>SAMPLE</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
