@@ -12,7 +12,10 @@ class LookBook extends Component {
   render() {
     return (
       <div className="container" id="lookBookVendors_container">
+        <div className="row">
         <h1>LOOKBOOK</h1>
+        <button>More</button>
+        </div>
         <div className="row">
           <div className="col-xs-4 col-sm-4 col-md-4">
             <div className="row">
@@ -49,9 +52,9 @@ class LookBook extends Component {
                 <img className="img-responsive" alt="" src={lookbook1} />
               </div>
               <div>
-                  <p>SAMPLE</p>
-                  <p>SAMPLE</p>
-                </div>
+                <p>SAMPLE</p>
+                <p>SAMPLE</p>
+              </div>
             </div>
           </div>
         </div>
