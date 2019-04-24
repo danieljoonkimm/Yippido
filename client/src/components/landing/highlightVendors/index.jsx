@@ -11,6 +11,7 @@ class HighlightVendors extends Component {
   render() {
     return (
       <div className="container" id="highlightVendors_container">
+        <h1>HIGHLIGHT VENDORS</h1>
         <div className="row">
           <div className="col-xs-3 col-sm-3 col-md-3">
             <div className="col-xs-12 col-sm-12 col-md-12">
@@ -56,7 +57,7 @@ class HighlightVendors extends Component {
                 <img className="img-responsive" alt="" src={dummyImg} />
               </div>
             </div>
-            
+
             <div className="row">
               <div className="col-xs-6 col-sm-6 col-md-6">
                 <img className="img-responsive" alt="" src={dummyImg} />

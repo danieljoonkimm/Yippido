@@ -7,7 +7,14 @@ class Vendors extends Component {
     super();
 
     this.state = {
-      vendors: ['vendor1', 'vendor1', 'vendor1', 'vendor1', 'vendor1', 'vendor1']
+      vendors: [
+        "vendor1",
+        "vendor1",
+        "vendor1",
+        "vendor1",
+        "vendor1",
+        "vendor1"
+      ]
     };
   }
   render() {
@@ -15,8 +22,10 @@ class Vendors extends Component {
       <div className="container" id="vendorMain_container">
         <div className="row">
           <div className="col-xs-4 col-sm-4 col-md-4" id="vendor_mainImage">
-            <div className="col-xs-12 col-sm-12 col-md-12">
-              <img className="img-responsive" alt="" src={dummyImg} />
+            <div className="row">
+              <div className="col-xs-12 col-sm-12 col-md-12">
+                <img className="img-responsive" alt="" src={dummyImg} />
+              </div>
             </div>
           </div>
 
@@ -66,8 +75,8 @@ class Vendors extends Component {
         </div>
 
         <div className="mainPage_vendors">
-          {this.state.vendors.map( (vendors) => {
-            return <li key="vendors">{vendors}</li>
+          {this.state.vendors.map(vendors => {
+            return <li key="vendors">{vendors}</li>;
           })}
         </div>
       </div>

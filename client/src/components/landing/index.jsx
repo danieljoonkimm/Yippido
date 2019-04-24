@@ -16,6 +16,7 @@ class Landing extends Component {
         <Vendors/>
         <FeaturedItems/>
         <HighlightVendors/>
+        <LookBook/>
       </div>
     );
   }
