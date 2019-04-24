@@ -1,4 +1,4 @@
-.lookBookVendors_container {
+#lookBookVendors_container {
   .row {
     .col-xs-4 {
       padding: 5px;
@@ -11,6 +11,30 @@
     .col-md-4 {
       padding: 5px;
       margin: 0;
+    }
+  }
+}
+#lookBook_row {
+  display: flex;
+  .lookBookMain_mainImage {
+    display: flex;
+    flex-direction: column;
+    img {
+      height: fit-content;
+    }
+  }
+
+  .lookBookMain_subParent {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    .row {
+      .lookBookMain_subImage {
+        img {
+          height: fit-content;
+        }
+      }
     }
   }
 }
