@@ -1,81 +1,52 @@
-.row {
-  margin: 0;
+#vendorMain_container {
+  background-color: #efefef;
+  display: flex;
+  flex-direction: column;
+  border: none;
+
+  .col-xs-4 {
+     padding: 5px;
+  }
+}
+
+#vendor_mainImage {
   padding: 0;
 }
 
-.landingVendors_container {
-  display: grid;
-  justify-content: center;
-  grid-template-areas:
-    "main subImg1 subImg3"
-    "main subImg2 subImg4";
+.mainPage_vendors {
+  text-align: center;
+  border-radius: 12px;
+  border: 1px solid #d2d2d2;
+  padding: 0.3em;
+  align-content: center;
+  align-self: center;
+  width: fit-content;
+  margin-top: 0.5em;
+  display: flex;
 
-  .main {
-    grid-area: main;
-    display: flex;
-    img {
-      height: 10em;
-      width: auto;
-      border: 1px solid #f0f0f0;
-      border-radius: 5%;
-      outline: none;
-    }
+  li {
+    list-style: none;
   }
-
-  .subImg1 {
-    grid-area: subImg1;
-    display: flex;
-    img {
-      height: 5em;
-      width: auto;
-      border: 1px solid #f0f0f0;
-      border-radius: 5%;
-      outline: none;
-    }
+  li:after {
+    content: "|";
   }
-
-  .subImg2 {
-    grid-area: subImg2;
-    display: flex;
-    img {
-      height: 5em;
-      width: auto;
-      border: 1px solid #f0f0f0;
-      border-radius: 5%;
-      outline: none;
-    }
-  }
-
-  .subImg3 {
-    grid-area: subImg3;
-    display: flex;
-    img {
-      height: 5em;
-      width: auto;
-      border: 1px solid #f0f0f0;
-      border-radius: 5%;
-      outline: none;
-    }
-  }
-
-  .subImg4 {
-    grid-area: subImg4;
-    display: flex;
-    img {
-      height: 5em;
-      width: auto;
-      border: 1px solid #f0f0f0;
-      border-radius: 5%;
-      outline: none;
-    }
+  li:last-child:after {
+    content: "";
   }
 }
 
 @media only screen and (max-width: 425px) {
+  .mainPage_vendors {
+    font-size: 0.3em;
+    margin-top: 1em;
+  }
 }
 
 @media only screen and (min-width: 426px) and (max-width: 960px) {
 }
 
 @media only screen and (min-width: 961px) {
+  .mainPage_vendors {
+    font-size: 1.5em;
+  }
 }

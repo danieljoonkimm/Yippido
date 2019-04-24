@@ -10,11 +10,11 @@ class FeaturedItems extends Component {
   }
   render() {
     return (
-      <div class="container">
+      <div className="container">
       <h1>FEATURED ITEMS</h1>
         <div className="row">
-          <div class="col-xs-3 col-sm-3 col-md-3 image">
-            <img
+          <div className="col-xs-3 col-sm-3 col-md-3 image">
+            <img className="img-responsive"
               alt=""
               src={dummyImg}
             />
@@ -23,8 +23,8 @@ class FeaturedItems extends Component {
             <p>COMPANY NAME</p>
           </div>
 
-          <div class="col-xs-3 col-sm-3 col-md-3 image">
-            <img
+          <div className="col-xs-3 col-sm-3 col-md-3 image">
+            <img className="img-responsive"
               alt=""
               src={dummyImg}
             />
@@ -33,8 +33,8 @@ class FeaturedItems extends Component {
             <p>COMPANY NAME</p>
           </div>
 
-          <div class="col-xs-3 col-sm-3 col-md-3 image">
-            <img
+          <div className="col-xs-3 col-sm-3 col-md-3 image">
+            <img className="img-responsive"
               alt=""
               src={dummyImg}
             />
@@ -43,8 +43,8 @@ class FeaturedItems extends Component {
             <p>COMPANY NAME</p>
           </div>
 
-          <div class="col-xs-3 col-sm-3 col-md-3 image">
-            <img
+          <div className="col-xs-3 col-sm-3 col-md-3 image">
+            <img className="img-responsive"
               alt=""
               src={dummyImg}
             />
@@ -54,8 +54,8 @@ class FeaturedItems extends Component {
           </div>
         </div>
         <div className="row">
-          <div class="col-xs-3 col-sm-3 col-md-3 image">
-            <img
+          <div className="col-xs-3 col-sm-3 col-md-3 image">
+            <img className="img-responsive"
               alt=""
               src={dummyImg}
             />
@@ -64,8 +64,8 @@ class FeaturedItems extends Component {
             <p>COMPANY NAME</p>
           </div>
 
-          <div class="col-xs-3 col-sm-3 col-md-3 image">
-            <img
+          <div className="col-xs-3 col-sm-3 col-md-3 image">
+            <img className="img-responsive"
               alt=""
               src={dummyImg}
             />
@@ -74,8 +74,8 @@ class FeaturedItems extends Component {
             <p>COMPANY NAME</p>
           </div>
 
-          <div class="col-xs-3 col-sm-3 col-md-3 image">
-            <img
+          <div className="col-xs-3 col-sm-3 col-md-3 image">
+            <img className="img-responsive"
               alt=""
               src={dummyImg}
             />
@@ -84,8 +84,8 @@ class FeaturedItems extends Component {
             <p>COMPANY NAME</p>
           </div>
 
-          <div class="col-xs-3 col-sm-3 col-md-3 image">
-            <img
+          <div className="col-xs-3 col-sm-3 col-md-3 image">
+            <img className="img-responsive"
               alt=""
               src={dummyImg}
             />

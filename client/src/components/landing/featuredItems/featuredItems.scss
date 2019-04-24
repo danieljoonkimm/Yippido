@@ -1,9 +1,15 @@
 .container {
-  background-color: #efefef;
+  background-color: white;
   padding: 1em;
+  border: 1px solid #c3c3c3;
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5em;
+  }
   .row {
     .image {
-      padding: .2em;
+      padding: 0.2em;
       margin: 0;
       img {
         border: 1px solid #efefef;
@@ -17,7 +23,7 @@
   .container {
     .row {
       p {
-        font-size: .2em;
+        font-size: 0.2em;
       }
     }
   }
@@ -25,13 +31,21 @@
 
 @media only screen and (min-width: 426px) and (max-width: 960px) {
   .container {
+    h1 {
+      font-size: 1.5em;
+    }
     .row {
       p {
-        font-size: .5em;
+        font-size: 0.5em;
       }
     }
   }
 }
 
 @media only screen and (min-width: 961px) {
+  .container {
+    h1 {
+      font-size: 2.1em;
+    }
+  }
 }

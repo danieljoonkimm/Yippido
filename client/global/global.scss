@@ -1,6 +1,6 @@
 @import "../../../node_modules/include-media/dist/_include-media.scss";
 @import url(https://fonts.googleapis.com/css?family=Raleway);
-@import url('https://fonts.googleapis.com/css?family=Encode+Sans:400,700');
+@import url("https://fonts.googleapis.com/css?family=Encode+Sans:400,700");
 
 html,
 body,
@@ -112,7 +112,8 @@ section {
 //   margin: 0;
 //   width: 100%;
 // }
-body, html {
+body,
+html {
   line-height: 1;
   width: 100%;
   margin: 0;
@@ -138,4 +139,57 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+.col-xs-12 {
+  padding: 0;
+  margin: 0;
+}
+.col-sm-12 {
+  padding: 0;
+  margin: 0;
+}
+.col-md-12 {
+  padding: 0;
+  margin: 0;
+}
+
+.col-xs-6 {
+  padding: 0;
+  margin: 0;
+}
+.col-sm-6 {
+  padding: 0;
+  margin: 0;
+}
+.col-md-6 {
+  padding: 0;
+  margin: 0;
+}
+.col-xs-4 {
+  padding: 0;
+  margin: 0;
+}
+.col-sm-4 {
+  padding: 0;
+  margin: 0;
+}
+.col-md-4 {
+  padding: 0;
+  margin: 0;
+}
+.col-xs-3 {
+  padding: 0;
+  margin: 0;
+}
+.col-sm-3 {
+  padding: 0;
+  margin: 0;
+}
+.col-md-3 {
+  padding: 0;
+  margin: 0;
+}
+.row {
+  margin: 0;
+  padding: 0;
 }
