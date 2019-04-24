@@ -1,6 +1,9 @@
 #highlightVendors_container {
   background-color: #efefef;
   border: none;
+  .row {
+    background-color: white;
+  }
   .col-xs-3 {
     padding: 5px;
     margin: 0;

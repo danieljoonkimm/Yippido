@@ -17,20 +17,7 @@ class LookBook extends Component {
           <div className="col-xs-4 col-sm-4 col-md-4">
             <div className="row">
               <img className="img-responsive" alt="" src={lookbook} />
-              <p>SAMPLE</p>
-              <p>SAMPLE</p>
-            </div>
-          </div>
-
-          <div className="col-xs-4 col-sm-4 col-md-4">
-            <div className="row">
-              <div className="col-xs-6 col-sm-6 col-md-6">
-                <img className="img-responsive" alt="" src={lookbook1} />
-                <p>SAMPLE</p>
-                <p>SAMPLE</p>
-              </div>
-              <div className="col-xs-6 col-sm-6 col-md-6">
-                <img className="img-responsive" alt="" src={lookbook1} />
+              <div>
                 <p>SAMPLE</p>
                 <p>SAMPLE</p>
               </div>
@@ -41,14 +28,30 @@ class LookBook extends Component {
             <div className="row">
               <div className="col-xs-6 col-sm-6 col-md-6">
                 <img className="img-responsive" alt="" src={lookbook1} />
-                <p>SAMPLE</p>
-                <p>SAMPLE</p>
               </div>
               <div className="col-xs-6 col-sm-6 col-md-6">
                 <img className="img-responsive" alt="" src={lookbook1} />
+                <div />
+              </div>
+              <div>
                 <p>SAMPLE</p>
                 <p>SAMPLE</p>
               </div>
+            </div>
+          </div>
+
+          <div className="col-xs-4 col-sm-4 col-md-4">
+            <div className="row">
+              <div className="col-xs-6 col-sm-6 col-md-6">
+                <img className="img-responsive" alt="" src={lookbook1} />
+              </div>
+              <div className="col-xs-6 col-sm-6 col-md-6">
+                <img className="img-responsive" alt="" src={lookbook1} />
+              </div>
+              <div>
+                  <p>SAMPLE</p>
+                  <p>SAMPLE</p>
+                </div>
             </div>
           </div>
         </div>
