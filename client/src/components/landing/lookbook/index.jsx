@@ -13,7 +13,7 @@ class LookBook extends Component {
     return (
       <div className="container" id="lookBookVendors_container">
         <div className="row">
-        <h1>LOOKBOOK</h1>
+        <h1>FROM THE LOOKBOOK</h1>
         <button>More</button>
         </div>
         <div className="row">

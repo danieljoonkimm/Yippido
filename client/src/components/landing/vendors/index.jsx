@@ -21,13 +21,13 @@ class Vendors extends Component {
     return (
       <div className="container" id="vendorMain_container">
         <div className="row">
-          <div className="col-xs-4 col-sm-4 col-md-4" id="vendor_mainImage">
+          <div className="col-xs-4 col-sm-4 col-md-4" id="vendorMain_mainImage">
             <img className="img-responsive" alt="" src={dummyImg} />
           </div>
 
           <div className="col-xs-4 col-sm-4 col-md-4">
             <div className="row">
-              <div className="col-xs-6 col-sm-6 col-md-6 vendor_topRow">
+              <div className="col-xs-6 col-sm-6 col-md-6 vendorMain_topRow">
                 <img className="img-responsive img-responsive-left" alt="" src={dummyImg} />
               </div>
 
@@ -49,7 +49,7 @@ class Vendors extends Component {
 
           <div className="col-xs-4 col-sm-4 col-md-4">
             <div className="row">
-              <div className="col-xs-6 col-sm-6 col-md-6 vendor_topRow">
+              <div className="col-xs-6 col-sm-6 col-md-6 vendorMain_topRow">
                 <img className="img-responsive img-responsive-left" alt="" src={dummyImg} />
               </div>
 
