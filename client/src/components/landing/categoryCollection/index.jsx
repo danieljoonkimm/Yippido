@@ -30,7 +30,7 @@ class CategoryCollection extends Component {
     };
   }
 
-  componentDidMount() {
+  componentWillMount() {
     {
       this.state.categories.map(categories => {
         let cat = categories;
@@ -42,7 +42,6 @@ class CategoryCollection extends Component {
   }
 
   render() {
-    console.log(this.state.eachCategory)
     return (
       <div className="container" id="categoryCollection_container">
         <h1>CATEGORY COLLECTION</h1>
@@ -50,7 +49,7 @@ class CategoryCollection extends Component {
           <div className="col-xs-2 col-sm-2 col-sm-2">
             <div className="col-xs-12 col-sm-12 col-md-12">
             {this.state.eachCategory.map((list) => {
-              return <li>{list}</li>
+              return <ul><li>{list}</li></ul>
             })}
             </div>
           </div>
