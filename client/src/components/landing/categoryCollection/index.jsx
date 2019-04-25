@@ -7,15 +7,15 @@ class CategoryCollection extends Component {
     super();
 
     this.state = {
-      dummyData: {
-        WOMEN: [TOPS, DRESSES, PANTS, JACKETS/OUTERWEAR, SKIRTS, DENIM, OTHERS],
-        MEN: [TOPS, DRESSES, PANTS, JACKETS/OUTERWEAR, SKIRTS, DENIM, OTHERS],
-        KID: [TOPS, DRESSES, PANTS, JACKETS/OUTERWEAR, SKIRTS, DENIM, OTHERS],
-        SHOES: [TOPS, DRESSES, PANTS, JACKETS/OUTERWEAR, SKIRTS, DENIM, OTHERS],
-        ACCESSORIES: [TOPS, DRESSES, PANTS, JACKETS/OUTERWEAR, SKIRTS, DENIM, OTHERS],
-        HANDBAGS: [TOPS, DRESSES, PANTS, JACKETS/OUTERWEAR, SKIRTS, DENIM, OTHERS],
-        OTHERS: [TOPS, DRESSES, PANTS, JACKETS/OUTERWEAR, SKIRTS, DENIM, OTHERS]
-      }
+      data: [
+        {"name": "women"},
+        {"name": "men"},
+        {"name": "kid"},
+        {"name": "shoes"},
+        {"name": "accessories"},
+        {"name": "handbags"},
+        {"name": "others"},
+      ]
     };
   }
   render() {
@@ -25,7 +25,9 @@ class CategoryCollection extends Component {
         <div className="row">
           <div className="col-xs-2 col-sm-2 col-sm-2">
             <div className="col-xs-12 col-sm-12 col-md-12">
-              <img className="img-responsive" alt="" src={dummyImg} />
+              {this.state.data.map(categories => {
+                console.log(categories);
+              })}
             </div>
           </div>
 
