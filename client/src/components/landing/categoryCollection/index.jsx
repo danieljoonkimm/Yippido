@@ -11,9 +11,73 @@ class CategoryCollection extends Component {
   render() {
     return (
       <div className="container" id="categoryCollection_container">
-      <h1>CATEGORY COLLECTION</h1>
+        <h1>CATEGORY COLLECTION</h1>
         <div className="row">
-hello
+          <div className="col-xs-2 col-sm-2 col-sm-2">
+            <div className="col-xs-12 col-sm-12 col-md-12">
+              <img className="img-responsive" alt="" src={dummyImg} />
+            </div>
+          </div>
+
+          <div className="col-xs-10 col-sm-10 col-md-10">
+            <div className="row">
+              <div className="col-xs-3 col-sm-3 col-sm-3">
+                <div className="col-xs-12 col-sm-12 col-md-12">
+                  <img className="img-responsive" alt="" src={dummyImg} />
+                </div>
+              </div>
+
+              <div className="col-xs-3 col-sm-3 col-sm-3">
+                <div className="col-xs-12 col-sm-12 col-md-12">
+                  <img className="img-responsive" alt="" src={dummyImg} />
+                </div>
+              </div>
+
+              <div className="col-xs-3 col-sm-3 col-sm-3">
+                <div className="col-xs-12 col-sm-12 col-md-12">
+                  <img className="img-responsive" alt="" src={dummyImg} />
+                </div>
+              </div>
+
+              <div className="col-xs-3 col-sm-3 col-sm-3">
+                <div className="col-xs-12 col-sm-12 col-md-12">
+                  <img className="img-responsive" alt="" src={dummyImg} />
+                </div>
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="col-xs-4 col-sm-4 col-md-4">
+                <div className="col-xs-6 col-sm-6 col-md-6">
+                  <img className="img-responsive" alt="" src={dummyImg} />
+                </div>
+
+                <div className="col-xs-6 col-sm-6 col-md-6">
+                  <img className="img-responsive" alt="" src={dummyImg} />
+                </div>
+              </div>
+
+              <div className="col-xs-4 col-sm-4 col-md-4">
+                <div className="col-xs-6 col-sm-6 col-md-6">
+                  <img className="img-responsive" alt="" src={dummyImg} />
+                </div>
+
+                <div className="col-xs-6 col-sm-6 col-md-6">
+                  <img className="img-responsive" alt="" src={dummyImg} />
+                </div>
+              </div>
+
+              <div className="col-xs-4 col-sm-4 col-md-4">
+                <div className="col-xs-6 col-sm-6 col-md-6">
+                  <img className="img-responsive" alt="" src={dummyImg} />
+                </div>
+
+                <div className="col-xs-6 col-sm-6 col-md-6">
+                  <img className="img-responsive" alt="" src={dummyImg} />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );
