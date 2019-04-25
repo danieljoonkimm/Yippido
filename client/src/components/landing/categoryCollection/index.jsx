@@ -6,7 +6,17 @@ class CategoryCollection extends Component {
   constructor() {
     super();
 
-    this.state = {};
+    this.state = {
+      dummyData: {
+        WOMEN: [TOPS, DRESSES, PANTS, JACKETS/OUTERWEAR, SKIRTS, DENIM, OTHERS],
+        MEN,
+        KID,
+        SHOES,
+        ACCESSORIES,
+        HANDBAGS,
+        OTHERS
+      }
+    };
   }
   render() {
     return (
