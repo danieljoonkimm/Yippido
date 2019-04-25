@@ -3,6 +3,7 @@ import Vendors from './vendors/index.jsx';
 import FeaturedItems from './featuredItems/index.jsx';
 import HighlightVendors from './highlightVendors/index.jsx';
 import LookBook from './lookbook/index.jsx';
+import CategoryCollection from './categoryCollection/index.jsx';
 import "./landing.scss";
 
 class Landing extends Component {
@@ -17,7 +18,8 @@ class Landing extends Component {
         <Vendors/>
         <FeaturedItems/>
         <HighlightVendors/>
-        <LookBook/>
+        {/* <LookBook/> */}
+        <CategoryCollection/>
       </div>
     );
   }
