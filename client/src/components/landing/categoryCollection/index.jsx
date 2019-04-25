@@ -9,34 +9,27 @@ class CategoryCollection extends Component {
     this.state = {
       categories: [
         {
-          women: {
-            women1:
-              "https://images.unsplash.com/photo-1553531384-ab9ba1a8b1e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=60&q=80",
-            women2:
-              "https://images.unsplash.com/photo-1553531384-ab9ba1a8b1e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=60&q=80",
-            women3:
-              "https://images.unsplash.com/photo-1553531384-ab9ba1a8b1e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=60&q=80"
-          }
+            category_id: 74,
+            parent_id: 0,
+            name: "women",
+            categories: []
         },
         {
-          shoes: {
-            booties: "shoes",
-            boots: "test",
-            dress_shoes: "test1"
-          }
+            category_id: 74,
+            parent_id: 0,
+            name: "shoes",
+            categories: []
         }
       ],
-      eachCategory: [],
+      eachCategory: []
     };
   }
 
   componentWillMount() {
     {
       this.state.categories.map(categories => {
-        let cat = categories;
-        for (var key in cat) {
-          this.state.eachCategory.push(key);
-        }
+        let categoryName = categories;
+        this.state.eachCategory.push(categoryName.name);
       });
     }
   }
@@ -48,9 +41,9 @@ class CategoryCollection extends Component {
         <div className="row">
           <div className="col-xs-2 col-sm-2 col-sm-2">
             <div className="col-xs-12 col-sm-12 col-md-12">
-            {this.state.eachCategory.map((list) => {
-              return <ul><li>{list}</li></ul>
-            })}
+              {this.state.eachCategory.map( (category) => {
+                return <ul><li>{category}</li></ul>
+              })}
             </div>
           </div>
 
