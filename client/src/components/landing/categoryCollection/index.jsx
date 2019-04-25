@@ -26,6 +26,11 @@ class CategoryCollection extends Component {
   }
 
   componentWillMount() {
+    //api call
+      //this.setState to categories = response.data
+        //use logic below to map
+          //will render
+            //need to see how the componentWillUpdate for categories within the category
     {
       this.state.categories.map(categories => {
         let categoryName = categories;
