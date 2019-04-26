@@ -6,8 +6,16 @@ class signIn extends Component {
   constructor() {
     super();
 
-    this.state = {};
+    this.state = {
+      email: '',
+      password: ''
+    };
   }
+
+  signInClick() {
+    if()
+  }
+
   render() {
     return (
       <div className="container signInBuyer_container">
