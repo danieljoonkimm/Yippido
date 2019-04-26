@@ -22,7 +22,7 @@ class signIn extends Component {
     return (
       <div className="container" id="signInBuyer_container">
         <div className="row col-xs-12 col-sm-6 col-md-6 justify-content-center align-items-center" id="signInBuyer_login">
-          <h1>SIGN IN</h1>
+          <h1 className="signInBuyer_header">SIGN IN</h1>
           <p>If you have an account with us, please log in.</p>
           <div className="col-xs-12 col-sm-12 col-md-12">
             <div className="card">

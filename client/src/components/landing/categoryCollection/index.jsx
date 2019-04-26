@@ -42,7 +42,7 @@ class CategoryCollection extends Component {
   render() {
     return (
       <div className="container" id="categoryCollection_container">
-        <h1>CATEGORY COLLECTION</h1>
+        <h1 className="categoryCollection_header">CATEGORY COLLECTION</h1>
         <div className="row" id="categoryCollection_row">
           <div className="col-xs-2 col-sm-2 col-sm-2">
             <div className="col-xs-12 col-sm-12 col-md-12">
