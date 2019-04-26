@@ -9,104 +9,87 @@
   padding: 0;
 }
 
-.signIn {
-  .signIn_container {
-    margin: 1em auto 0;
-    .header {
-      h1 {
-        font-size: 24px;
-        text-align: left;
-        margin-bottom: 0.5em;
-        font-weight: bold;
-        text-transform: uppercase;
-      }
-      .signIn_text {
-        color: gray;
-        margin-bottom: 1em;
-      }
+#signInBuyer_login {
+  p {
+    padding-top: 1em;
+    line-height: 2em;
+    padding-bottom: 1em;
+  }
+  .signInBuyer_input {
+    width: 90%;
+  }
+}
+
+.signInBuyer_container {
+  display: flex;
+  #signInBuyer_register {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      margin-bottom: auto;
+      padding-top: 1em;
+      line-height: 2em;
+      padding-bottom: 1em;
     }
-    .signIn_img {
-      display: flex;
-      width: fit-content;
+
+  }
+  #signInBuyer_forgotPassword {
+    display: flex;
+
+    label {
     }
-    form {
-      label {
-        input {
-          background-color: #f0f0f0;
-          border: 1px solid #cacaca;
-        }
-        .inputBox {
-          width: 100%;
+        p {
+          width: fit-content;
+          padding-left: .3em;
         }
         button {
-          text-decoration: underline;
-          text-decoration-color: #cacaca;
+          padding-left: 3em;
         }
-      }
-      #signIn {
-        border: 1px solid white;
-        background-color: #168dc8;
-        padding: 0.7em;
-        border-radius: 5%;
-      }
-    }
+  }
+
+  h1 {
+    text-align: left;
+    padding: 0;
+  }
+
+  #sendlogin {
+    min-width: 12em;
   }
 }
 
 @media only screen and (max-width: 425px) {
-  .signIn {
-    margin: 0 auto;
-    width: 90%;
+  .signInBuyer_container {
+    flex-direction: column;
 
-    #signIn_signIn {
-      border-bottom: 1px solid #cacaca;
+    #signInBuyer_login {
       padding-bottom: 1em;
+      padding-top: 3em;
+    }
+
+    #signInBuyer_register {
+      border-top: 1px solid #c3c3c3;
+      padding-top: 3em;
+
+      p {
+        padding-top: 1em;
+        line-height: 2em;
+        padding-bottom: 2em;
+      }
     }
   }
 }
 
-@media only screen and (min-width: 426px) and (max-width: 960px) {
-  .signIn {
-    margin: 0 auto;
-    width: 90%;
-    #signIn_signIn {
-      border-right: 1px solid #cacaca;
-    }
-    .signIn_container {
-      display: flex;
-      flex-direction: column;
-      min-height: 20em;
-      .header {
-        #paragraph {
-          margin-top: 3em;
-        }
-      }
-    }
-    #signIn_create {
-      padding-left: 4em;
-    }
-  }
-}
+@media only screen and (min-width: 426px) {
+  .signInBuyer_container {
 
-@media only screen and (min-width: 961px) {
-  .signIn {
-    margin: 0 auto;
-    width: 70%;
-    #signIn_signIn {
-      border-right: 1px solid #cacaca;
-    }
-    .signIn_container {
-      display: flex;
-      flex-direction: column;
-      min-height: 20em;
-      .header {
-        #paragraph {
-          margin-top: 3em;
-        }
+    #signInBuyer_register {
+      border-left: 1px solid #c3c3c3;
+      padding-left: 2em;
+
+      p {
+        padding-top: 1em;
       }
-    }
-    #signIn_create {
-      padding-left: 4em;
     }
   }
 }
