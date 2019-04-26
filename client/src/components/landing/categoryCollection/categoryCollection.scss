@@ -1,4 +1,22 @@
 #categoryCollection_container {
   background-color: #efefef;
   border: none;
+  padding: 1em;
+
+  #categoryCollection_row {
+    background-color: white;
+    padding: .2em;
+    .categoryCollection_image {
+      img {
+        border: 1px solid #efefef;
+        border-radius: 3%;
+      }
+    }
+  }
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5em;
+    letter-spacing: 4px;
+  }
 }

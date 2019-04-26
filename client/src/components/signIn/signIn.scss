@@ -4,11 +4,6 @@
   margin: 0;
   padding: 0;
 }
-.row {
-  margin: 0;
-  padding: 0;
-}
-
 #signInBuyer_login {
   p {
     padding-top: 1em;
@@ -17,12 +12,12 @@
   }
   .signInBuyer_input {
     width: 90%;
-    background-color: #c3c3c3;
   }
 }
 
-.signInBuyer_container {
+#signInBuyer_container {
   display: flex;
+  padding: 1em;
   #signInBuyer_register {
     display: flex;
     flex-direction: column;
@@ -60,12 +55,11 @@
 }
 
 @media only screen and (max-width: 425px) {
-  .signInBuyer_container {
+  #signInBuyer_container {
     flex-direction: column;
 
     #signInBuyer_login {
       padding-bottom: 1em;
-      padding-top: 3em;
     }
 
     #signInBuyer_register {
@@ -82,15 +76,11 @@
 }
 
 @media only screen and (min-width: 426px) {
-  .signInBuyer_container {
+  #signInBuyer_container {
 
     #signInBuyer_register {
       border-left: 1px solid #c3c3c3;
       padding-left: 2em;
-
-      p {
-        padding-top: 1em;
-      }
     }
   }
 }

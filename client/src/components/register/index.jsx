@@ -32,7 +32,8 @@ class SignInRegister extends Component {
           </div>
         </div>
 
-        <div className="row col-md-6 become_container">
+        <div className="row" id="register_buyerVendor_container">
+        <div className="col-md-6 become_container">
           <div className="row become">
             <h2>Become a BUYER</h2>
             <div className="become_text">
@@ -52,7 +53,7 @@ class SignInRegister extends Component {
           </div>
         </div>
 
-        <div className="row col-md-6 become_container" id="buyer">
+        <div className="col-md-6 become_container" id="buyer">
           <div className="row become">
             <h2>Become a VENDOR</h2>
             <div className="become_text">
@@ -70,6 +71,7 @@ class SignInRegister extends Component {
               <button>REGISTER NOW</button>
             </div>
           </div>
+        </div>
         </div>
       </div>
     );

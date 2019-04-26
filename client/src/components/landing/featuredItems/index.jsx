@@ -10,7 +10,7 @@ class FeaturedItems extends Component {
   }
   render() {
     return (
-      <div className="container">
+      <div className="container" id="featuredItems_container">
       <h1>FEATURED ITEMS</h1>
         <div className="row">
           <div className="col-xs-3 col-sm-3 col-md-3 featured_image">

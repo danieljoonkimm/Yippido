@@ -13,12 +13,14 @@ class signIn extends Component {
   }
 
   signInClick() {
-    if()
+    if(this.state.email.length < 1 || this.state.password.length < 4) {
+      
+    }
   }
 
   render() {
     return (
-      <div className="container signInBuyer_container">
+      <div className="container" id="signInBuyer_container">
         <div className="row col-xs-12 col-sm-6 col-md-6 justify-content-center align-items-center" id="signInBuyer_login">
           <h1>SIGN IN</h1>
           <p>If you have an account with us, please log in.</p>

@@ -43,7 +43,7 @@ class CategoryCollection extends Component {
     return (
       <div className="container" id="categoryCollection_container">
         <h1>CATEGORY COLLECTION</h1>
-        <div className="row">
+        <div className="row" id="categoryCollection_row">
           <div className="col-xs-2 col-sm-2 col-sm-2">
             <div className="col-xs-12 col-sm-12 col-md-12">
               {this.state.eachCategory.map( (category) => {
@@ -55,25 +55,25 @@ class CategoryCollection extends Component {
           <div className="col-xs-10 col-sm-10 col-md-10">
             <div className="row">
               <div className="col-xs-3 col-sm-3 col-sm-3">
-                <div className="col-xs-12 col-sm-12 col-md-12">
+                <div className="col-xs-12 col-sm-12 col-md-12 categoryCollection_image">
                   <img className="img-responsive" alt="" src={dummyImg} />
                 </div>
               </div>
 
               <div className="col-xs-3 col-sm-3 col-sm-3">
-                <div className="col-xs-12 col-sm-12 col-md-12">
+                <div className="col-xs-12 col-sm-12 col-md-12 categoryCollection_image">
                   <img className="img-responsive" alt="" src={dummyImg} />
                 </div>
               </div>
 
               <div className="col-xs-3 col-sm-3 col-sm-3">
-                <div className="col-xs-12 col-sm-12 col-md-12">
+                <div className="col-xs-12 col-sm-12 col-md-12 categoryCollection_image">
                   <img className="img-responsive" alt="" src={dummyImg} />
                 </div>
               </div>
 
               <div className="col-xs-3 col-sm-3 col-sm-3">
-                <div className="col-xs-12 col-sm-12 col-md-12">
+                <div className="col-xs-12 col-sm-12 col-md-12 categoryCollection_image">
                   <img className="img-responsive" alt="" src={dummyImg} />
                 </div>
               </div>
@@ -81,31 +81,31 @@ class CategoryCollection extends Component {
 
             <div className="row">
               <div className="col-xs-4 col-sm-4 col-md-4">
-                <div className="col-xs-6 col-sm-6 col-md-6">
+                <div className="col-xs-6 col-sm-6 col-md-6 categoryCollection_image">
                   <img className="img-responsive" alt="" src={dummyImg} />
                 </div>
 
-                <div className="col-xs-6 col-sm-6 col-md-6">
-                  <img className="img-responsive" alt="" src={dummyImg} />
-                </div>
-              </div>
-
-              <div className="col-xs-4 col-sm-4 col-md-4">
-                <div className="col-xs-6 col-sm-6 col-md-6">
-                  <img className="img-responsive" alt="" src={dummyImg} />
-                </div>
-
-                <div className="col-xs-6 col-sm-6 col-md-6">
+                <div className="col-xs-6 col-sm-6 col-md-6 categoryCollection_image">
                   <img className="img-responsive" alt="" src={dummyImg} />
                 </div>
               </div>
 
               <div className="col-xs-4 col-sm-4 col-md-4">
-                <div className="col-xs-6 col-sm-6 col-md-6">
+                <div className="col-xs-6 col-sm-6 col-md-6 categoryCollection_image">
                   <img className="img-responsive" alt="" src={dummyImg} />
                 </div>
 
-                <div className="col-xs-6 col-sm-6 col-md-6">
+                <div className="col-xs-6 col-sm-6 col-md-6 categoryCollection_image">
+                  <img className="img-responsive" alt="" src={dummyImg} />
+                </div>
+              </div>
+
+              <div className="col-xs-4 col-sm-4 col-md-4">
+                <div className="col-xs-6 col-sm-6 col-md-6 categoryCollection_image">
+                  <img className="img-responsive" alt="" src={dummyImg} />
+                </div>
+
+                <div className="col-xs-6 col-sm-6 col-md-6 categoryCollection_image">
                   <img className="img-responsive" alt="" src={dummyImg} />
                 </div>
               </div>

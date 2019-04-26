@@ -4,9 +4,9 @@
   margin: 0;
   padding: 0;
 }
-.row {
-  margin: 0;
-  padding: 0;
+
+#register_buyerVendor_container {
+  display: flex;
 }
 
 .register_Container {
@@ -54,6 +54,7 @@
   padding-top: 1em;
   background-color: #f0f0f0;
   padding: 2em;
+  display: flex;
   .become {
     text-align: center;
     h2 {
@@ -98,12 +99,17 @@
 }
 
 @media only screen and (max-width: 425px) {
+  #register_buyerVendor_container {
+    flex-direction: column;
+  }
   .registration {
     margin: 0 auto;
     width: 90%;
   }
   .become_container {
     border: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -116,6 +122,11 @@
     }
     .become_container {
       border: 1px solid #f0f0f0;
+      flex-direction: column;
+
+      .become_register {
+        margin-top: auto;
+      }
     }
   }
 }
@@ -124,13 +135,17 @@
   .registration {
     margin: 0 auto;
     width: 70%;
-    
+
     .register_container {
       width: 100%;
     }
     .become_container {
       border: 1px solid #f0f0f0;
+      flex-direction: column;
+
+      .become_register {
+        margin-top: auto;
+      }
     }
   }
 }
-
