@@ -4,35 +4,41 @@
   margin: 0;
   padding: 0;
 }
+
 #signInBuyer_login {
+  padding: 1em;
+  background-color: white;
   p {
+    padding-top: 1em;
+    line-height: 2em;
+  }
+  .signInBuyer_input {
+    width: 90%;
+    background-color: #efefef;
+  }
+}
+
+#signInBuyer_register {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  background-color: white;
+
+  p {
+    margin-bottom: auto;
     padding-top: 1em;
     line-height: 2em;
     padding-bottom: 1em;
   }
-  .signInBuyer_input {
-    width: 90%;
-  }
-}
 
+}
 #signInBuyer_container {
   display: flex;
   padding: 1em;
-  #signInBuyer_register {
-    display: flex;
-    flex-direction: column;
-
-    p {
-      margin-bottom: auto;
-      padding-top: 1em;
-      line-height: 2em;
-      padding-bottom: 1em;
-    }
-
-  }
+  background-color: #efefef;
+  width: 100%;
   #signInBuyer_forgotPassword {
     display: flex;
-
     label {
     }
         p {
@@ -64,8 +70,6 @@
 
     #signInBuyer_register {
       border-top: 1px solid #c3c3c3;
-      padding-top: 3em;
-
       p {
         padding-top: 1em;
         line-height: 2em;
@@ -77,10 +81,10 @@
 
 @media only screen and (min-width: 426px) {
   #signInBuyer_container {
-
     #signInBuyer_register {
       border-left: 1px solid #c3c3c3;
       padding-left: 2em;
+      
     }
   }
 }
