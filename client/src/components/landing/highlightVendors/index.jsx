@@ -12,7 +12,7 @@ class HighlightVendors extends Component {
     return (
       <div className="container" id="highlightVendors_container">
         <h1>HIGHLIGHT VENDORS</h1>
-        <div className="row">
+        <div className="row" id="highlightVendors_row">
           <div className="col-xs-3 col-sm-3 col-md-3">
             <div className="col-xs-12 col-sm-12 col-md-12">
               <img className="img-responsive highlightVendors_bigImage" alt="" src={dummyImg} />

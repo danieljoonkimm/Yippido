@@ -12,11 +12,11 @@ class signIn extends Component {
     };
   }
 
-  signInClick() {
-    if(this.state.email.length < 1 || this.state.password.length < 4) {
+  // signInClick() {
+  //   if(this.state.email.length < 1 || this.state.password.length < 4) {
       
-    }
-  }
+  //   }
+  // }
 
   render() {
     return (
