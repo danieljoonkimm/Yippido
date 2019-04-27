@@ -5,8 +5,7 @@
   width: 100%;
   #categoryCollection_row {
     background-color: white;
-    padding: 0.6em;
-    display: flex;
+    display: -webkit-box;
     .categoryCollection_image {
       img {
         border: 1px solid #efefef;
@@ -34,7 +33,6 @@
 }
 
 #categoryCollection_topRow {
-  padding-bottom: .6em;
 
   .categoryCollection_imageContainer {
     padding: .4em;

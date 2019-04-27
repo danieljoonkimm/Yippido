@@ -4,6 +4,7 @@ import FeaturedItems from "./featuredItems/index.jsx";
 import HighlightVendors from "./highlightVendors/index.jsx";
 import LookBook from "./lookbook/index.jsx";
 import CategoryCollection from "./categoryCollection/index.jsx";
+import Events from "./events/index.jsx";
 import NewVendors from "./newVendors/index.jsx";
 import "./landing.scss";
 
@@ -21,6 +22,7 @@ class Landing extends Component {
         <HighlightVendors />
         <LookBook />
         <CategoryCollection />
+        <Events/>
         <NewVendors/>
       </div>
     );
