@@ -4,6 +4,8 @@ import Register from './register/index.jsx';
 import SignIn from './signIn/index.jsx';
 import { Link, Route, Switch } from "react-router-dom";
 import BuyerRegisteration from './BuyerRegisteration/index.jsx';
+import CategoryMain from './CategoryMain';
+import CategorySub from './CategorySub';;
 class App extends Component {
   constructor() {
     super();
@@ -25,7 +27,7 @@ class App extends Component {
         </Switch> */}
         {/* <SignIn/> */}
         {/* <Register/> */}
-        <Landing/>
+        <CategorySub/>
         {/* <BuyerRegisteration/> */}
       </div>
     );
