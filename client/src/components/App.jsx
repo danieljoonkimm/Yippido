@@ -24,8 +24,8 @@ class App extends Component {
           <Route exact path="/login" component={Login} />
         </Switch> */}
         {/* <SignIn/> */}
-        <Register/>
-        {/* <Landing/> */}
+        {/* <Register/> */}
+        <Landing/>
         {/* <BuyerRegisteration/> */}
       </div>
     );
