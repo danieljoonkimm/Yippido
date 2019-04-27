@@ -1,9 +1,15 @@
 import React, { Component } from "react";
+import { Link, Route, Switch } from "react-router-dom";
+
+
+// Components
+import Navigation from './Navigation';
 import Landing from './landing/index.jsx';
 import Register from './register/index.jsx';
 import SignIn from './signIn/index.jsx';
-import { Link, Route, Switch } from "react-router-dom";
 import BuyerRegisteration from './BuyerRegisteration/index.jsx';
+
+
 class App extends Component {
   constructor() {
     super();
@@ -23,9 +29,10 @@ class App extends Component {
         <Switch>
           <Route exact path="/login" component={Login} />
         </Switch> */}
-        <SignIn/>
+        <Navigation />
+        {/* <SignIn/>
         <Register/>
-        <Landing/>
+        <Landing/> */}
         <BuyerRegisteration/>
       </div>
     );

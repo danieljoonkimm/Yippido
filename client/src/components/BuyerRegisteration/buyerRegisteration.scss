@@ -22,6 +22,10 @@
   background: white;
   padding-top: 5%;
   margin: 0 auto;
+  
+  * {
+    font-weight: 600;
+  }
 
   .buyerRegistration_header {
     
@@ -76,7 +80,7 @@
   padding: 0 1em;;
   margin: 1em auto;
   font-size: 14px;
-  color: $fontGrey;
+  color: black;
   line-height: 1.7;
 
   input {
