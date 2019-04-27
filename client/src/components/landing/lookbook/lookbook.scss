@@ -1,4 +1,10 @@
 #lookBookVendors_container {
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5em;
+    letter-spacing: 4px;
+  }
   .row {
     .col-xs-4 {
       padding: 5px;
@@ -16,11 +22,14 @@
 }
 #lookBook_row {
   display: flex;
-  .lookBookMain_mainImage {
-    display: flex;
-    flex-direction: column;
+  #lookBookMain_mainImage {
+    height: auto;
+    width: auto;
+  }
+  #lookBookMain_mainImage {
     img {
-      height: fit-content;
+      border: 1px solid #efefef;
+      border-radius: 3%;
     }
   }
 
@@ -29,12 +38,21 @@
     align-items: center;
     align-content: center;
     align-self: center;
-    .row {
+    height: auto;
+    width: auto;
+    .lookBook_subImages {
       .lookBookMain_subImage {
         img {
-          height: fit-content;
+          border: 1px solid #efefef;
+          border-radius: 3%;
         }
       }
     }
   }
+}
+
+#lookBook_mainImage {
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
 }
