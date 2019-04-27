@@ -1,0 +1,64 @@
+#highlightVendors_container {
+  background-color: #efefef;
+  border: none;
+  padding: 1em;
+  width: 100%;
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5em;
+    letter-spacing: 4px;
+  }
+  .row {
+    background-color: white;
+  }
+  .col-xs-3 {
+    padding: 5px;
+    margin: 0;
+  }
+  .col-sm-3 {
+    padding: 5px;
+    margin: 0;
+  }
+  .col-md-3 {
+    padding: 5px;
+    margin: 0;
+  }
+
+  #highlightVendors_row {
+    padding: .3em;
+  }
+
+  .highlightVendors_bigImage {
+    border: 1px solid #c3c3c3;
+    border-radius: 3%;
+  }
+
+  #highlightVendors_topLeft {
+    border: 1px solid #c3c3c3;
+    border-bottom: none;
+    border-right: none;
+    border-radius: 5% 0 0 0;
+  }
+
+  #highlightVendors_topRight {
+    border: 1px solid #c3c3c3;
+    border-bottom: none;
+    border-left: none;
+    border-radius: 0 5% 0 0;
+  }
+
+  #highlightVendors_bottomLeft {
+    border: 1px solid #c3c3c3;
+    border-top: none;
+    border-right: none;
+    border-radius: 0 0 0 5%;
+  }
+
+  #highlightVendors_bottomRight {
+    border: 1px solid #c3c3c3;
+    border-top: none;
+    border-left: none;
+    border-radius: 0 0 5% 0;
+  }
+}
