@@ -5,147 +5,115 @@
   padding: 0;
 }
 
-#register_buyerVendor_container {
+#registration_container {
+  background-color: #f0f0f0;
+  padding: 1em;
   display: flex;
+  width: 100%;
 }
 
-.register_Container {
-  margin: 1em auto 0;
-  .header {
-    h1 {
-      font-size: 24px;
-      text-align: center;
-      margin-bottom: 0.5em;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-    .languageBtn_container {
-      display: flex;
-      justify-content: center;
-
-      button {
-        font-size: 16px;
-        padding: 0.5em;
-        border: 1px solid black;
-        background: white;
-        width: fit-content;
-        margin-bottom: 1em;
-      }
-    }
-    p {
-      color: gray;
-      font-size: 16px;
-      text-align: center;
-      line-height: 1.7em;
-    }
-  }
-}
-#buyer {
+#registration_main {
+  padding: 1em;
   background-color: white;
+  border: 1px solid #f0f0f0;
+  .registration_header {
+    padding: 1em;
+}
+
+}
+
+#registration_body {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+#become_vendor {
+  background-color: white;
+}
+
+#becomeBuyer_container {
+  border: 1px solid #f0f0f0;
+  padding: 1em;
+
   .become {
     h2 {
-      border-bottom: 1px solid #f0f0f0;
+      border-bottom: 1px solid white;
+      padding-bottom: .8em;
     }
   }
+}
+
+#becomeVendor_container {
+  background-color: white;
+  border: 1px solid #f0f0f0;
+  padding: 1em;
+
+  .become {
+    h2 {
+      border-bottom: 1px solid#f0f0f0;
+      padding-bottom: .8em;
+    }
+  }
+}
+
+#buyerVendor_register {
+  display: flex;
+  flex-direction: column;
 }
 
 .become_container {
-  margin-top: 1em;
-  padding-top: 1em;
   background-color: #f0f0f0;
-  padding: 2em;
   display: flex;
+  flex-direction: column;
+  padding: 1em;
+
   .become {
     text-align: center;
-    h2 {
-      font-size: 2em;
-      border-bottom: 1px solid white;
-      padding-bottom: 0.5em;
-      padding-top: 0.5em;
-    }
-    .become_text {
-      padding-top: 0.5em;
-      line-height: 1.7em;
-      padding-bottom: 1em;
-      color: #778da9;
-    }
+    line-height: 1.5em;
   }
-  .become_register {
-    display: flex;
-    justify-content: center;
-    .become_img {
-      width: 5em;
-      height: auto;
+    .become_register {
+      display: flex;
       justify-content: center;
       align-items: center;
-      align-content: center;
-      align-self: center;
-      margin-right: 1em;
-    }
-    .become_button {
-      border: 1px solid white;
-      background-color: #168dc8;
-      width: fit-content;
-      height: fit-content;
-      align-items: center;
-      align-content: center;
-      align-self: center;
-      padding: 0.7em;
-      border-radius: 5%;
-      outline: none;
-      margin-left: 1em;
-    }
-  }
-}
-
-@media only screen and (max-width: 425px) {
-  #register_buyerVendor_container {
-    flex-direction: column;
-  }
-  .registration {
-    margin: 0 auto;
-    width: 90%;
-  }
-  .become_container {
-    border: 1px solid #f0f0f0;
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media only screen and (min-width: 426px) and (max-width: 960px) {
-  .registration {
-    margin: 0 auto;
-    width: 90%;
-    .register_Container {
-      width: 100%;
-    }
-    .become_container {
-      border: 1px solid #f0f0f0;
-      flex-direction: column;
-
-      .become_register {
-        margin-top: auto;
+      margin-top: auto;
+      padding: 1em;
+      .become_img {
+        width: 5em;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        align-self: center;
+        margin-right: 1em;
+      }
+      .become_button {
+        border: 1px solid white;
+        background-color: #168dc8;
+        width: fit-content;
+        height: fit-content;
+        align-items: center;
+        align-content: center;
+        align-self: center;
+        padding: 0.7em;
+        border-radius: 5%;
+        outline: none;
+        margin-left: 1em;
       }
     }
-  }
 }
 
-@media only screen and (min-width: 961px) {
-  .registration {
-    margin: 0 auto;
-    width: 70%;
-
-    .register_container {
-      width: 100%;
-    }
-    .become_container {
-      border: 1px solid #f0f0f0;
-      flex-direction: column;
-
-      .become_register {
-        margin-top: auto;
-      }
-    }
+@media only screen and (min-width: 768px) {
+  #registration_container {
+    padding: 4em;
+  }
+  #buyerVendor_register {
+    flex-direction: row;
+  }
+  #registration_main {
+    .registration_header {
+      padding-top: 0;
+    };
   }
 }
