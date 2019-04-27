@@ -47,7 +47,8 @@ class CategoryCollection extends Component {
           <div className="col-xs-2 col-sm-2 col-sm-2" id="categoryCollection_categories">
             <div className="col-xs-12 col-sm-12 col-md-12">
               {this.state.eachCategory.map( (category) => {
-                return <ul><li><button>{category}</button></li></ul>
+                let mappedCatergory = <li key={category.toString()}>{<button>{category}</button>}</li>;
+                return (<ul>{mappedCatergory}</ul>);
               })}
             </div>
           </div>

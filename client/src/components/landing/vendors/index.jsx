@@ -72,7 +72,8 @@ class Vendors extends Component {
 
         <div className="mainPage_vendors">
           {this.state.vendors.map(vendors => {
-            return <li key="vendors">{vendors}</li>;
+            let mappedVendors =<li key={vendors.toString()}><button>{vendors}</button></li>;
+            return (<ul>{mappedVendors}</ul>);
           })}
         </div>
       </div>
