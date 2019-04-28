@@ -20,7 +20,7 @@ class Vendors extends Component {
   render() {
     return (
       <div className="container" id="vendorMain_container">
-        <div className="row">
+        <div className="row" id="vendorMain_row">
           <div className="col-xs-4 col-sm-4 col-md-4" id="vendorMain_mainImage">
             <img className="img-responsive" alt="" src={dummyImg} />
           </div>
