@@ -47,21 +47,21 @@ class CategorySub extends Component {
         
           <div>{subCategory.name} ({subCategory.size} items)</div>
           <div style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between"}}>
-            <div class="dropdown" style={{ width: "300px",}}>
-              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <div className="dropdown" style={{ width: "300px",}}>
+              <button className="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 Dropdown
-                <span class="caret"></span>
+                <span className="caret"></span>
               </button>
-              <ul class="dropdown-menu" style={{ width: "300px"}} aria-labelledby="dropdownMenu1">
+              <ul className="dropdown-menu" style={{ width: "300px"}} aria-labelledby="dropdownMenu1">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
                 <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
+                <li role="separator" className="divider"></li>
                 <li><a href="#">Separated link</a></li>
               </ul>
             </div>
             <nav aria-label="Page navigation" style={{ width: "250px"}} >
-              <ul class="pagination" style={{ display: "flex", flexDirection:"row"}} >
+              <ul className="pagination" style={{ display: "flex", flexDirection:"row"}} >
                 <li>
                   <a href="#" aria-label="Previous">
                     <span aria-hidden="true">&laquo;</span>
@@ -79,31 +79,31 @@ class CategorySub extends Component {
                 </li>
               </ul>
             </nav>
-            <div class="dropdown" style={{ width: "300px",}}>
+            <div className="dropdown" style={{ width: "300px",}}>
               SORT BY:  
-              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <button className="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 Dropdown
-                <span class="caret"></span>
+                <span className="caret"></span>
               </button>
-              <ul class="dropdown-menu" style={{ width: "300px"}} aria-labelledby="dropdownMenu1">
+              <ul className="dropdown-menu" style={{ width: "300px"}} aria-labelledby="dropdownMenu1">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
                 <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
+                <li role="separator" className="divider"></li>
                 <li><a href="#">Separated link</a></li>
               </ul>
             </div>
-            <div class="dropdown" style={{ width: "300px",}}>
+            <div className="dropdown" style={{ width: "300px",}}>
             ITEMS PER PAGE  
-              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <button className="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 Dropdown
-                <span class="caret"></span>
+                <span className="caret"></span>
               </button>
-              <ul class="dropdown-menu" style={{ width: "300px"}} aria-labelledby="dropdownMenu1">
+              <ul className="dropdown-menu" style={{ width: "300px"}} aria-labelledby="dropdownMenu1">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
                 <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
+                <li role="separator" className="divider"></li>
                 <li><a href="#">Separated link</a></li>
               </ul>
             </div>
