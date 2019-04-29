@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import VendorShoppingCart from "./VendorShoppingCart/index.jsx";
 
 class ShoppingCart extends Component {
   constructor() {
@@ -119,6 +120,8 @@ class ShoppingCart extends Component {
             <button>GO SHOPPING CART</button>
           </div>
         </div>
+
+        <VendorShoppingCart/>
       </div>
     );
   }
