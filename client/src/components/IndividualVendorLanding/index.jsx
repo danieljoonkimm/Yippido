@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import VendorLandingFeaturedItems from "./IndividualVendorFeatured/index.jsx";
 import VendorLandingBestSellers from "./IndividualVendorBestSellers/index.jsx";
+import VendorLandingNewArrivals from "./IndividualVendorNewArrivals/index.jsx";
 
 class VendorLanding extends Component {
   constructor() {
@@ -16,6 +17,7 @@ class VendorLanding extends Component {
         <div className="row" id="vendorLanding_row">
           <VendorLandingFeaturedItems />
           <VendorLandingBestSellers />
+          <VendorLandingNewArrivals />
         </div>
       </div>
     );
