@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./individualVendorLanding.scss";
 
 import VendorLandingFeaturedItems from "./IndividualVendorFeatured/index.jsx";
 import VendorLandingBestSellers from "./IndividualVendorBestSellers/index.jsx";
