@@ -8,6 +8,8 @@ import CategoryMain from "./CategoryMain";
 import CategorySub from "./CategorySub";
 import Sale from "./sale/index.jsx";
 import IndividualVendorLanding from "./IndividualVendorLanding/index.jsx";
+
+import ShoppingCart from "./ShoppingCart/index.jsx";
 class App extends Component {
   constructor() {
     super();
@@ -31,7 +33,7 @@ class App extends Component {
         {/* <Register/> */}
         {/* <CategorySub /> */}
 
-        <IndividualVendorLanding />
+        <ShoppingCart />
         {/* <BuyerRegisteration/> */}
       </div>
     );

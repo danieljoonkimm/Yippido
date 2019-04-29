@@ -18,9 +18,9 @@ class VendorLanding extends Component {
     return (
       <div className="container" id="vendorLanding_container">
         <div className="row" id="vendorLanding_row">
-          {/* <VendorLandingFeaturedItems />
-          <VendorLandingBestSellers /> */}
-          <IndividualVendorAllItems />
+          <VendorLandingFeaturedItems />
+          <VendorLandingBestSellers />
+          <VendorLandingNewArrivals />
         </div>
       </div>
     );
