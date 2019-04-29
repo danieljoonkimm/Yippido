@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class VendorShoppingCart extends Component {
+class VendorShoppingCartSavedItems extends Component {
   constructor() {
     super();
 
@@ -9,7 +9,7 @@ class VendorShoppingCart extends Component {
 
   render() {
     return (
-      <div className="container" id="vendorShoppingCart_container">
+      <div className="container" id="vendorShoppingCartSavedItems_container">
         <div className="row">
           <div className="col-sm-12 col-md-10 col-md-offset-1">
             <table className="table table-hover">
@@ -136,4 +136,4 @@ class VendorShoppingCart extends Component {
   }
 }
 
-export default VendorShoppingCart;
+export default VendorShoppingCartSavedItems;
