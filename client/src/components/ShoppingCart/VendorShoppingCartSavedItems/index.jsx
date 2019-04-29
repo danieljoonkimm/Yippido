@@ -4,7 +4,9 @@ class VendorShoppingCartSavedItems extends Component {
   constructor() {
     super();
 
-    this.state = {};
+    this.state = {
+
+    };
   }
 
   render() {
@@ -15,11 +17,15 @@ class VendorShoppingCartSavedItems extends Component {
             <table className="table table-hover">
               <thead>
                 <tr>
-                  <th>Product</th>
-                  <th>Quantity</th>
-                  <th className="text-center">Price</th>
-                  <th className="text-center">Total</th>
-                  <th> </th>
+                  <th>Pic</th>
+                  <th>Style No.</th>
+                  <th className="text-center">Color</th>
+                  <th className="text-center">Size</th>
+                  <th>Pack</th>
+                  <th>Total Qty</th>
+                  <th>Unit Price</th>
+                  <th>Amount</th>
+                  <th>Sel</th>
                 </tr>
               </thead>
               <tbody>

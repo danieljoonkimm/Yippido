@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import VendorShoppingCartSavedItems from "./VendorShoppingCart/index.jsx";
+import VendorShoppingCartSavedItems from "./VendorShoppingCartSavedItems/index.jsx";
 
 class ShoppingCart extends Component {
   constructor() {
