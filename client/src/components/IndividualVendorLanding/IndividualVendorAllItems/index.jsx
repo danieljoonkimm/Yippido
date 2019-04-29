@@ -16,7 +16,7 @@ class IndividualVendorAllItems extends Component {
       <div className="container" id="individualVendorAllItems_container">
         <div className="row" id="individualVendorAllItems_row">
           <div className="row" id="individualVendorAllItems_pagination">
-            <h2>Pagination</h2>
+            <h2>All Items</h2>
             <ul class="pagination">
               <li>
                 <a href="#">1</a>
