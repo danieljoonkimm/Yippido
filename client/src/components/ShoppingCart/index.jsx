@@ -65,7 +65,7 @@ class ShoppingCart extends Component {
       return entireTotal += data.total_raw;
     });
     this.setState({
-      subTotal: subTotalProducts,
+      subTotal: entireTotal,
       totalProducts: dataProducts
     });
   }
