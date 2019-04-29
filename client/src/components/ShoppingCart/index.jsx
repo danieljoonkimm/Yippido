@@ -45,7 +45,8 @@ class ShoppingCart extends Component {
           }
         ]
       },
-      totalProducts: 0
+      totalProducts: 0,
+      subTotal: 0
     };
   }
 
@@ -59,9 +60,14 @@ class ShoppingCart extends Component {
 
   componentWillMount() {
     let dataProducts = this.state.data.products.length;
+    let entireTotal = 0;
+    let subTotalProducts = this.state.data.products.map(data => {
+      return entireTotal += data.total_raw;
+    });
     this.setState({
+      subTotal: subTotalProducts,
       totalProducts: dataProducts
-    })
+    });
   }
 
   render() {
@@ -98,15 +104,13 @@ class ShoppingCart extends Component {
           <div className="col-xs-12 col-sm-12 col-md-12">
             <div className="row">
               <div className="col-xs-4 col-sm-4 col-md-4">
-            {this.state.totalProducts}
+                {this.state.totalProducts}
               </div>
 
-              <div className="col-xs-4 col-sm-4 col-md-4">
-                SUBTOTAL
-              </div>
+              <div className="col-xs-4 col-sm-4 col-md-4">SUBTOTAL</div>
 
               <div className="col-xs-4 col-sm-4 col-md-4">
-              DOLLAR AMOUNT
+                {this.state.subTotal}
               </div>
             </div>
           </div>
@@ -114,7 +118,6 @@ class ShoppingCart extends Component {
           <div className="col-xs-12 col-sm-12 col-md-4">
             <button>GO SHOPPING CART</button>
           </div>
-
         </div>
       </div>
     );
