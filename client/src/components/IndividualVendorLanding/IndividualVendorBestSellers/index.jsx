@@ -11,6 +11,7 @@ class VendorLandingBestSellers extends Component {
   render() {
     return(
       <div className="container" id="vendorLandingBestSellers_container">
+        <h1>BEST SELLING ITEMS</h1>
         <div className="row" id="vendorLandingBestSellers_row">
 
         <div className="col-xs-4 col-sm-4 col-md-4">

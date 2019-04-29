@@ -1,6 +1,12 @@
 #vendorLandingNewArrivals_container {
   width: 100%;
   padding: 1em;
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5em;
+    letter-spacing: 4px;
+  }
 }
 
 #vendorLandingNewArrivals_row {

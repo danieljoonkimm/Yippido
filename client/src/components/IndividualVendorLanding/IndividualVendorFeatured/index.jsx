@@ -40,6 +40,7 @@ class VendorLandingFeaturedItems extends Component {
     return (
       <div id="productList">
         <div className="container" id="vendorLandingFeaturedItems_container" style={{ width: '100%'}}>
+          <h1>FEATURED ITEMS</h1>
           <div className="row">
             { this.convertGrid() }
           </div>
