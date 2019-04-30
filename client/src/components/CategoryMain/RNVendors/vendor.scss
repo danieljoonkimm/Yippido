@@ -1,0 +1,29 @@
+
+#Vendors {
+  background-color: #efefef;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  h1 {
+    padding: 40px 0 20px 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+.gallery-new-vendors {
+  display: flex;
+  align-items: center;
+
+  .new-vendor-item {
+    padding: 10px;
+
+  }
+  
+  .new-vendor-box-item {
+    .new-vendor-left {
+      border-radius: 8px 0 0 8px;
+    }
+    .new-vendor-right {
+      border-radius: 0 8px 8px 0;
+    }
+  }
+}
+

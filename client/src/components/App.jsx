@@ -3,12 +3,13 @@ import { Link, Route, Switch } from "react-router-dom";
 
 
 // Components
-import Navigation from './Navigation';
+import Navigation from './Navigation/navigation.jsx';
 import Landing from './landing/index.jsx';
 import Register from './register/index.jsx';
 import SignIn from './signIn/index.jsx';
-import BuyerRegisteration from './BuyerRegisteration/index.jsx';
-
+import BuyerRegisteration from './BuyerRegisteration';
+import CategoryMain from './CategoryMain';
+import CategorySub from './CategorySub';
 
 class App extends Component {
   constructor() {
@@ -33,6 +34,7 @@ class App extends Component {
         {/* <SignIn/>
         <Register/>
         <Landing/> */}
+        <CategorySub />
         <BuyerRegisteration/>
       </div>
     );

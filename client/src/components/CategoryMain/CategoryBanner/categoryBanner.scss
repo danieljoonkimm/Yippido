@@ -1,0 +1,159 @@
+#categoryBanner {
+  display: flex;
+  background-color: #efefef;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+
+  .gallery {
+    background-color: white;
+    display: flex;
+    border-radius: 8px 0 0 8px;
+    align-items: center;
+  }
+
+  .brand-item {
+    img {
+      display: flex;
+      border-radius: 8px;
+      padding-right: 3px;
+    }
+  }
+
+  .item {
+    padding: 0 5px;
+  }
+  
+
+  .gallery-item {
+    padding: 5px 8px;
+
+
+    img {
+      border-radius: 8px;
+      display: flex;
+    }
+
+    .top-left {
+      border-radius: 8px 0 0 0;
+    }
+    .top-right {
+      border-radius: 0 8px 0 0;
+    }
+    .bottom-right {
+      border-radius: 0 0 8px 0;
+    }
+    .bottom-left {
+      border-radius: 0 0 0 8px;
+    } 
+  }
+}
+.category-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  
+
+  h1 {
+    font-size: 36px;
+    padding: 20px 0;
+    margin: 0;
+    width: 200px;
+    text-transform: uppercase;
+  }
+  
+  .category-dropdown-menus {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    .category-dropdown-btns {
+      width: 250px;
+
+      .category-dropdown-btn {
+        width: 250px;
+
+        span {
+          margin-left: 5px;
+        }
+
+      }
+      .category-dropdown {
+        width: 200px;
+      }
+    }
+  }
+  
+}
+
+.banner-buttons {
+  margin: 20px auto 30px auto;
+  width: 33%;
+  font-size: 12px;
+  color: rgba(58, 133, 191, 0.75);
+  letter-spacing: 1px;
+  padding: 10px;
+  background-color: white;
+  border: 2px white rgba(58, 133, 191, 0.75);
+  box-shadow: 0 0 20px  rgba(0,0,0,.125);
+  border-radius: 45px;
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+
+
+  .separator {
+    height: 10px;
+    margin: auto 5px;
+    position: relative;
+    width: 3px;
+  }
+  .separator::before {
+    content: " ";
+    height: 10px;
+    left: 30%;
+    position: absolute;
+    right: 30%;
+    top: 0;
+    background-color: grey;
+  }
+
+  .separator::after {
+    content: " ";
+    height: 10px;
+    left: 30%;
+    position: absolute;
+    right: 30%;
+    top: 0;
+    background-color: grey;
+  }
+
+  
+  .btn-category {
+    padding: 0 10px;
+    color: grey;
+    outline: 0;
+    background-color: inherit;
+    
+    &:hover {
+      color: blue
+    }
+
+    &:active {
+      box-shadow:none;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+ 
+}
+
+@media only screen and (min-width: 426px) and (max-width: 960px) {
+
+}
+
+@media only screen and (min-width: 961px) {
+  .mainPage_vendors {
+    font-size: 1.5em;
+  }
+}
