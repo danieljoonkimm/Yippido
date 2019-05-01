@@ -1,11 +1,50 @@
 import React, { Component } from "react";
 
 class VendorShoppingCartSavedItems extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
-
+      data: {
+        products: [
+          {
+            key: "726",
+            thumb:
+              "http://www.davidhechler.com/wp-content/uploads/2016/07/500x500-dummy-image.jpg",
+            name: "iPod Shuffle",
+            points: 0,
+            product_id: "34",
+            model: "Product 7",
+            option: [],
+            quantity: "2",
+            stock: true,
+            reward: "",
+            price: "$122.00",
+            recurring: "",
+            total: "$244.00",
+            price_raw: 122,
+            total_raw: 244
+          },
+          {
+            key: "726",
+            thumb:
+              "http://www.davidhechler.com/wp-content/uploads/2016/07/500x500-dummy-image.jpg",
+            name: "iPod Shuffle",
+            points: 0,
+            product_id: "34",
+            model: "Product 7",
+            option: [],
+            quantity: "2",
+            stock: true,
+            reward: "",
+            price: "$122.00",
+            recurring: "",
+            total: "$244.00",
+            price_raw: 122,
+            total_raw: 244
+          }
+        ]
+      }
     };
   }
 
@@ -30,7 +69,7 @@ class VendorShoppingCartSavedItems extends Component {
               </thead>
               <tbody>
                 <tr>
-                  <td className="col-sm-8 col-md-6">
+                  <td className="col-xs-3 col-sm-3 col-md-3">
                     <div className="media">
                       <a className="thumbnail pull-left" href="#">
                         {" "}
@@ -65,7 +104,7 @@ class VendorShoppingCartSavedItems extends Component {
                     />
                   </td>
                   <td className="col-sm-1 col-md-1 text-center">
-                    <strong>$4.87</strong>
+                    {<strong>$4.87</strong>}
                   </td>
                   <td className="col-sm-1 col-md-1 text-center">
                     <strong>$14.61</strong>

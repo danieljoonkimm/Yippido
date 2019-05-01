@@ -17,8 +17,8 @@ class CustomerViewed extends Component {
       let price = `${(Math.random() * 20 + 10).toFixed(2)}`
 
       mockData.push(
-        <div className="customerViewed__vendor scol-xs-4 col-sm-4 col-md-4">
-          <Image className="col-xs-6 col-sm-6 col-md-6" images={images}/>
+        <div key={i  + 'customer view'} className="customerViewed__vendor scol-xs-4 col-sm-4 col-md-4">
+          <Image className="col-xs-6 col-sm-6 col-md-6" images={images} otherImages={[images]}/>
           <h6 >BLUELEMON</h6>
           <span>{model} / <strong>${price}</strong></span>
         </div>

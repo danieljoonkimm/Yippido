@@ -59,11 +59,11 @@ class ShoppingCart extends Component {
     // })}
   }
 
-  componentWillMount() {
-    let dataProducts = this.state.data.products.length;
+  async componentWillMount() {
+    let dataProducts = await this.state.data.products.length;
     let entireTotal = 0;
-    let subTotalProducts = this.state.data.products.map(data => {
-      return entireTotal += data.total_raw;
+    let subTotalProducts = await this.state.data.products.map(data => {
+      return data;
     });
     this.setState({
       subTotal: entireTotal,
@@ -74,7 +74,7 @@ class ShoppingCart extends Component {
   render() {
     return (
       <div className="container" id="shoppingCart_container">
-        <div className="row" id="shoppingCart_row">
+        {/* <div className="row" id="shoppingCart_row">
           <div className="col-xs-12 col-sm-12 col-md-12">
             {this.state.data.products.map(products => {
               return (
@@ -119,7 +119,7 @@ class ShoppingCart extends Component {
           <div className="col-xs-12 col-sm-12 col-md-4">
             <button>GO SHOPPING CART</button>
           </div>
-        </div>
+        </div> */}
 
         <VendorShoppingCartSavedItems/>
       </div>
