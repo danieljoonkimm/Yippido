@@ -14,8 +14,9 @@ class CategorySub extends Component {
     const subCategory = { name: 'Tops', size: 2542}
     return (
       <div id="CategorySub">
-        <div className="container" className="subCategory">
-          <div className="category-title" style={{ backgroundColor: "#efefef"}}>
+        <div style={{ backgroundColor: "#efefef" }}>
+          <div className="category-title subCategory">
+
               <h1>Women</h1>
               <div className="category-dropdown-menus">
                 <div className="btn-group category-dropdown-btns">
@@ -44,24 +45,26 @@ class CategorySub extends Component {
                 </div>
               </div>
           </div>
+        </div>
+        <div className="container" className="subCategory" style={{ backgroundColor: "#fff" }}>
         
           <div>{subCategory.name} ({subCategory.size} items)</div>
           <div style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between"}}>
-            <div className="dropdown" style={{ width: "300px",}}>
-              <button className="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <div class="dropdown" style={{ width: "300px",}}>
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 Dropdown
-                <span className="caret"></span>
+                <span class="caret"></span>
               </button>
-              <ul className="dropdown-menu" style={{ width: "300px"}} aria-labelledby="dropdownMenu1">
+              <ul class="dropdown-menu" style={{ width: "300px"}} aria-labelledby="dropdownMenu1">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
                 <li><a href="#">Something else here</a></li>
-                <li role="separator" className="divider"></li>
+                <li role="separator" class="divider"></li>
                 <li><a href="#">Separated link</a></li>
               </ul>
             </div>
             <nav aria-label="Page navigation" style={{ width: "250px"}} >
-              <ul className="pagination" style={{ display: "flex", flexDirection:"row"}} >
+              <ul class="pagination" style={{ display: "flex", flexDirection:"row"}} >
                 <li>
                   <a href="#" aria-label="Previous">
                     <span aria-hidden="true">&laquo;</span>
@@ -79,31 +82,31 @@ class CategorySub extends Component {
                 </li>
               </ul>
             </nav>
-            <div className="dropdown" style={{ width: "300px",}}>
+            <div class="dropdown" style={{ width: "300px",}}>
               SORT BY:  
-              <button className="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 Dropdown
-                <span className="caret"></span>
+                <span class="caret"></span>
               </button>
-              <ul className="dropdown-menu" style={{ width: "300px"}} aria-labelledby="dropdownMenu1">
+              <ul class="dropdown-menu" style={{ width: "300px"}} aria-labelledby="dropdownMenu1">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
                 <li><a href="#">Something else here</a></li>
-                <li role="separator" className="divider"></li>
+                <li role="separator" class="divider"></li>
                 <li><a href="#">Separated link</a></li>
               </ul>
             </div>
-            <div className="dropdown" style={{ width: "300px",}}>
+            <div class="dropdown" style={{ width: "300px",}}>
             ITEMS PER PAGE  
-              <button className="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 Dropdown
-                <span className="caret"></span>
+                <span class="caret"></span>
               </button>
-              <ul className="dropdown-menu" style={{ width: "300px"}} aria-labelledby="dropdownMenu1">
+              <ul class="dropdown-menu" style={{ width: "300px"}} aria-labelledby="dropdownMenu1">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
                 <li><a href="#">Something else here</a></li>
-                <li role="separator" className="divider"></li>
+                <li role="separator" class="divider"></li>
                 <li><a href="#">Separated link</a></li>
               </ul>
             </div>

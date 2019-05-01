@@ -4,8 +4,9 @@ import Register from "./register/index.jsx";
 import SignIn from "./signIn/index.jsx";
 import { Link, Route, Switch } from "react-router-dom";
 import BuyerRegisteration from "./BuyerRegisteration/index.jsx";
-import CategoryMain from "./CategoryMain";
-import CategorySub from "./CategorySub";
+import CategoryMain from './CategoryMain'
+import CategorySub from './CategorySub';
+import Vendor from './Vendor';
 import Sale from "./sale/index.jsx";
 import IndividualVendorLanding from "./IndividualVendorLanding/index.jsx";
 import ShoppingCart from "./ShoppingCart/index.jsx";
@@ -33,7 +34,7 @@ class App extends Component {
         {/* <Register/> */}
         {/* <CategorySub /> */}
 
-        <ShoppingCart />
+        <Vendor />
         {/* <BuyerRegisteration/> */}
       </div>
     );

@@ -1,0 +1,23 @@
+#customerViewed {
+
+  .customerViewed__title {
+    color: #2f3136;
+    font-weight: 700;
+    padding: 40px 0 20px 0;
+    text-transform: uppercase
+  }
+  .customerViewed__gallery {
+    background-color: #fff;
+    padding: 10px;
+    
+    .customerViewed__vendor {
+      h6 {
+        padding: 5px;
+        display: flex;
+      }
+      span {
+        padding: 5px;
+      }
+    }
+  }
+}
