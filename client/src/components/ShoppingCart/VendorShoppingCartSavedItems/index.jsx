@@ -109,10 +109,8 @@ class VendorShoppingCartSavedItems extends Component {
                   <td className="col-sm-1 col-md-1 text-center">
                     <strong>S-M-L</strong>
                   </td>
-                  <td className="col-sm-1 col-md-1">
-                    <button type="button" className="btn btn-danger">
-                      <span className="glyphicon glyphicon-remove" /> Remove
-                    </button>
+                  <td className="col-sm-1 col-md-1 text-center">
+                    <strong>3</strong>
                   </td>
                   <td className="col-sm-1 col-md-1 text-center">
                     <strong>10</strong>

@@ -14,17 +14,26 @@ const middleWare = [
   }),
   parser.json(),
   parser.urlencoded( { extended: true } ),
-  express.static( resolve( __dirname, '../../../client/public/dist') ) 
+  express.static( resolve( __dirname, '../../../client/public/dist') ),
+
 ]
 
 class App {
   constructor () {
     this.express = express();
     this.mountMiddleWare();
+    this.serverStaticWhenRouting();
   }
 
   mountMiddleWare() {
     this.express.use(...middleWare);
+  }
+
+  serverStaticWhenRouting () {
+    this.express.get('/*', (req, res) => {
+      res.sendFile(resolve(__dirname, '../../../client/public/dist/index.html'));
+    });
+
   }
 }
 
