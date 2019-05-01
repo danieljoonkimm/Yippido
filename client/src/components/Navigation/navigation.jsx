@@ -115,35 +115,31 @@ export default class Navigation extends Component {
   //   )
   // }
   toggleCategories() {
-
     this.state.subItemToggle.toggle ? this.setState({subItemToggle: {toggle: false, display: 'none'}}) : this.setState({subItemToggle: {display: "flex", toggle: true}})
-    console.log('hello', this.state.subItemToggle.toggle);
   }
   renderSubCategories(options, depthLevel = 0) {
     const menuOptions = options.map(option => {
-      const display = (option.link
-        ? <a href={ option.link }>{option.name}</a>
-        : <span>{option.name}</span>
-      );
-      console.log(option.name, display)
+      const display = <ul className="tooltip_subCat" onClick={this.toggleCategories}>{option.name}</ul>
+
       let subMenu;
-      if (options.categories && options.categories.length > 0) {
-        subMenu = this.renderSubCategories(options.categories)
+      if (option.categories && option.categories.length > 0) {
+        subMenu = this.renderSubCategories(option.categories)
       }
     return (
-      <li className="tooltip_item" onClick={this.toggleCategories}> 
+      <li className="tooltip_item" > 
         {display}
-        {subMenu}
-        {/* hello */}
+        <ul className="tooltip_subCat_items">
+          {subMenu}
+
+        </ul>
       </li>
     );
   });
   return (
     <div className="dropdown_options">
-      <ul className="tooltip_subCat" >
-        {/* hello */}
+      {/* <ul className="tooltip_subCat" > */}
         {menuOptions}
-      </ul>
+      {/* </ul> */}
     </div>
   );
 }

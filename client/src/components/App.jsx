@@ -3,7 +3,7 @@ import { Link, Route, Switch } from "react-router-dom";
 
 
 // Components
-import Navigation from './Navigation/navigation.jsx';
+import Navigation from './Navigation/navigation';
 import Landing from './landing/index.jsx';
 import Register from './register/index.jsx';
 import SignIn from './signIn/index.jsx';

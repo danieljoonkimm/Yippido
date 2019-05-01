@@ -107,71 +107,9 @@ export default class Navigation extends Component {
       selectedIds: [],
     };
     
-    // this.renderSubCategories = this.renderSubCategories.bind(this);
-    // this.toggleCategories = this.toggleCategories.bind(this);
-    // this.handleSelectedId = this.handleSelectedId.bind(this);
-    // this.handledDropdownToggle = this.handledDropdownToggle.bind(this);
+    this.toggleCategories = this.toggleCategories.bind(this);
   }
-  shouldComponentUpdate(nextProps, nextState) {
-    return this.props.categories !== nextProps.categories
-    || this.state.showDrowpdown !== nextState.showDrowpdown
-    || this.state.selectedIds !== nextState.selectedIds;
-  }
-  handledDropdownToggle() {
-    let nextState = !this.state.showDrowpdown;
-    this.setState({
-      showDrowpdown: nextState,
-      selectedIds: []
-    });
-  }
-  handleSelectedId(selected, depthLevel) {
-    return () => {
-      const updatedArray = this.state.selectedIds.slice(0);
 
-      updatedArray[depthLevel] = selected;
-
-      this.setState({
-        selectedIds: updatedArray
-      })
-    }
-  }
-  renderSubCategories(options, depthLevel = 0) {
-    // if (!this.state.showDrowpdown) {
-    //   return null;
-    // }
-    // const classes = ['dropdown_options'];
-
-    // classes.push(`dropdown_options--`)
-    const menuOptions = options.map(option => {
-      const display = (option.link
-        ? <a href={ option.link }>{option.name}</a>
-        : <span>{option.name}</span>
-      );
-      // hasOptions = (option.categories && option.categories.length > 0
-      //   );
-      //   let subMenu;
-
-      //   if ((this.state.selectedIds[depthLevel] === option.parent_id)
-      //   && hasOptions
-      //   ) {
-      //     const newDepthLevel = depthLevel + 1;
-      //     subMenu = this.renderSubCategories(option.categories, newDepthLevel);
-      //   }
-        return (
-          <li className="tooltip_item">
-            {display}
-            {subMenu}
-          </li>
-        );
-      });
-      return (
-        <div className="dropdown_options">
-          <ul className="tooltip_subCat" onClick={this.handleCateg}>
-            {menuOptions}
-          </ul>
-        </div>
-      );
-  }
 
 
   
@@ -202,14 +140,8 @@ export default class Navigation extends Component {
             <ReactTooltip id='test' place="bottom" globalEventOff='click' type="light" aria-haspopup='true' 
             role='example' effect="solid" border="true" className="navbar_tooltip"
             clickable={true} scrollHide={false}>
-            <div onClick={this.handledDropdownToggle}>
-              {this.renderSubCategories(data)}
-            </div>
-            {/* <ul id="list">
-              <li>{this.renderSubCategories(data)}</li>
-            </ul> */}
-              {/* <ul className="tooltip_subCat">
-                {this.state.categories.map((category, index) => {
+              <ul className="tooltip_subCat">
+                {data.map((category, index) => {
                   return <li className="tooltip_item" key={index} onClick={this.toggleCategories}>{category.name}</li>
                 })}
               </ul>
@@ -223,11 +155,11 @@ export default class Navigation extends Component {
                 </ul>
                 <ul className="col sub_item">Jackets/Outerwear 
                   <li>Cape & Poncho</li>
-                </ul> */}
+                </ul>
               {/* {this.state.eachCategory.map((item) => {
                 return <li className="tooltip_item">{item}</li>
               })} */}
-              {/* </ul> */}
+              </ul>
             </ReactTooltip>
             <li className="bm-item-list">Vendors</li>
             <li className="bm-item-list">Daily New</li>
