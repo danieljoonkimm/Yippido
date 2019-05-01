@@ -12,6 +12,7 @@ import IndividualVendorLanding from "./IndividualVendorLanding/index.jsx";
 import ShoppingCart from "./ShoppingCart/index.jsx";
 
 import routes from "../routes";
+
 class App extends Component {
   constructor() {
     super();
@@ -21,11 +22,14 @@ class App extends Component {
 
   render() {
     return (
-      <Switch>
-        {routes.map(route => (
-          <Route key={`route-${route.name}`} {...route} />
-        ))}
-      </Switch>
+      // <Switch>
+      //   {routes.map(route => (
+      //     <Route key={`route-${route.name}`} {...route} />
+      //   ))}
+      // </Switch>
+      <div>
+        <ShoppingCart/>
+        </div>
     );
   }
 }

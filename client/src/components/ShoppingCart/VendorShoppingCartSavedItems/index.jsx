@@ -104,15 +104,27 @@ class VendorShoppingCartSavedItems extends Component {
                     />
                   </td>
                   <td className="col-sm-1 col-md-1 text-center">
-                    {<strong>$4.87</strong>}
+                    {<strong>RED</strong>}
                   </td>
                   <td className="col-sm-1 col-md-1 text-center">
-                    <strong>$14.61</strong>
+                    <strong>S-M-L</strong>
                   </td>
                   <td className="col-sm-1 col-md-1">
                     <button type="button" className="btn btn-danger">
                       <span className="glyphicon glyphicon-remove" /> Remove
                     </button>
+                  </td>
+                  <td className="col-sm-1 col-md-1 text-center">
+                    <strong>10</strong>
+                  </td>
+                  <td className="col-sm-1 col-md-1 text-center">
+                    <strong>$15.00</strong>
+                  </td>
+                  <td className="col-sm-1 col-md-1 text-center">
+                    <strong>$150.00</strong>
+                  </td>
+                  <td className="col-sm-1 col-md-1 text-center">
+                    <label><input type="checkbox"></input></label>
                   </td>
                 </tr>
 
