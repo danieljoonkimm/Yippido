@@ -3,7 +3,7 @@ import { Link, Route, Switch } from "react-router-dom";
 
 
 // Components
-import Navigation from './Navigation/navigation';
+import Navigation from './Navigation/';
 import Landing from './landing/index.jsx';
 import Register from './register/index.jsx';
 import SignIn from './signIn/index.jsx';
@@ -31,9 +31,9 @@ class App extends Component {
           <Route exact path="/login" component={Login} />
         </Switch> */}
         <Navigation />
-        {/* <SignIn/>
+        <SignIn/>
         <Register/>
-        <Landing/> */}
+        <Landing/>
         <CategorySub />
         <BuyerRegisteration/>
       </div>

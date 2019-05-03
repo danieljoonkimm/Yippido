@@ -3,6 +3,10 @@ import './navigation.scss';
 import { slide as Menu} from "react-burger-menu";
 import ReactTooltip from 'react-tooltip';
 
+// Icons
+import { Icon } from 'react-icons-kit';
+import {ic_arrow_drop_down} from 'react-icons-kit/md/ic_arrow_drop_down'
+
 
 
 
@@ -100,46 +104,72 @@ export default class Navigation extends Component {
     super();
 
     this.state = {
+      selectedIds: [],
       subItemToggle: {
         display: 'none',
         toggle: false
       },
+      hasCaret: true
     }
     this.toggleCategories = this.toggleCategories.bind(this);
     // this.renderSubCategories = this.renderSubCategories.bind(this);
   }
-  // componentDidMount() {
-  //   console.log(
-
-  //     this.renderSubCategories(data)
-  //   )
-  // }
   toggleCategories() {
     this.state.subItemToggle.toggle ? this.setState({subItemToggle: {toggle: false, display: 'none'}}) : this.setState({subItemToggle: {display: "flex", toggle: true}})
   }
+
+  handleSelectedId(selected, depthLevel) {
+    return () => {
+      const updatedArray = this.state.selectedIds.slice(0);
+
+      updatedArray[depthLevel] = selected;
+
+      this.setState({
+        selectedIds: updatedArray
+      })
+      console.log(this.state.selectedIds)
+    }
+  }
+  renderDisplay() {
+    const classes = classNames({
+      'dropdown_display': true,
+
+    })
+  }
+
   renderSubCategories(options, depthLevel = 0) {
     const menuOptions = options.map(option => {
-      const display = <ul className="tooltip_subCat" onClick={this.toggleCategories}>{option.name}</ul>
+      const display = <ul className="tooltip_item">{option.name}</ul>,
+
+      hasSub = (option.categories && option.categories.length > 0);
 
       let subMenu;
-      if (option.categories && option.categories.length > 0) {
-        subMenu = this.renderSubCategories(option.categories)
-      }
-    return (
-      <li className="tooltip_item" > 
-        {display}
-        <ul className="tooltip_subCat_items">
-          {subMenu}
 
+      if ((this.state.selectedIds[depthLevel] === option.category_id) 
+      && hasSub) {
+        const newDepthLevel = depthLevel + 1;
+        subMenu = this.renderSubCategories(option.categories, newDepthLevel)
+      }
+
+    return (
+      <div>
+        <ul className="tooltop_subCat" key={option.parent_id} onMouseEnter={
+          this.handleSelectedId(option.category_id, depthLevel)
+        }> 
+          {display}
         </ul>
-      </li>
+        <ul className="tooltip_subCat_items">
+          <ul className="col sub_group">
+            {subMenu}
+          </ul>
+        </ul>
+
+      </div>
     );
   });
   return (
-    <div className="dropdown_options">
-      {/* <ul className="tooltip_subCat" > */}
+    <div>
         {menuOptions}
-      {/* </ul> */}
     </div>
   );
 }
@@ -149,15 +179,13 @@ export default class Navigation extends Component {
       <div>
         <div id="navbar-desktop">
           <ul className="navbar-item">
-            <li className="bm-item-list" data-tip data-for='test' data-event='click focus'>Categories</li>
+            <li className="bm-item-list" data-tip data-for='test' data-event='click focus'>Categories<Icon icon={ic_arrow_drop_down}/></li>
             <ReactTooltip id='test' place="bottom" globalEventOff='click' type="light" aria-haspopup='true' 
-            role='example' effect="solid" border="true" className="navbar_tooltip"
+            effect="solid" border="true" className="navbar_tooltip"
             clickable={true} scrollHide={false}>
-            <div>
               {this.renderSubCategories(data)}
-            </div>
             </ReactTooltip>
-            <li className="bm-item-list">Vendors</li>
+            <li className="bm-item-list">Vendors<Icon icon={ic_arrow_drop_down}/></li>
             <li className="bm-item-list">Daily New</li>
             <li className="bm-item-list">Best Seller</li>
             <li className="bm-item-list">Sale</li>

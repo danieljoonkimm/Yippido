@@ -1,0 +1,18 @@
+
+#navVendor_container {
+  // display: flex;
+  width: 100%;
+}
+.navVendor_container {
+  display: flex;
+}
+.navVendor_left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.navVendor_right {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}

@@ -86,9 +86,6 @@
     display: flex;
     border: 1px solid $fontGrey;
 
-    * {
-      // outline: 1px solid red;
-    }
   }
   .navbar-item {
     width: 70%;
@@ -101,13 +98,14 @@
     justify-content: space-evenly;
 
     .bm-item-list {
+      display: flex;
       text-align: center;
       width: fit-content;
       font-size: 16px;
       color: $black;
       text-transform: uppercase;
       text-decoration: none;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .bm-item-list:hover {
@@ -119,50 +117,96 @@
     display: flex !important;
     flex-direction: row;
     opacity: 1 !important;
+    box-shadow: 5px 5px 5px darkgrey;
+    overflow-y: scroll;
     min-width: 30%;
     width: fit-content;
-    height: 70%;
-    box-shadow: 5px 5px 5px darkgrey;
-    margin: 0;
-    padding: 1em;
-    // position: absolute;
-    
-    // &::before, &::after {
-    //   position: absolute;
-    //   top: 0;
-    //   transition: .2s ease-in;
-    //   content: '';
-    //   height: 70%;
-    //   // bottom: 0;
-    // }
   }
-  .tooltip_subCat {
+  .tooltip_container {
+    height: 70%;
+    margin: 0;
+    // padding: 1em;
+    display: flex;
+    width: 100%;
+  }
+  .category_container {
     display: flex;
     flex-direction: column;
     width: fit-content;
-    min-width: 30%;
+    min-width: 60%;
+  }
+  .category_item {
+    margin: 1em;
+    font-weight: 500;
     text-transform: uppercase;
-  }
-  .tooltip_subCat_items {
-    border-left: 2px solid darkgrey;
     display: flex;
+  }
+  .category_item:hover {
+    color: $blue;
+    // &::after {
+    //   content: '>';
+    // }
+  }
+  .subCategory_container {
     width: fit-content;
-    // min-width: 60%;
-    padding: 1em;
-    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
   }
-  .tooltip_item {
-    // margin: 0 1em;
-    padding: 1em 0;
-    cursor: pointer;
+  .subCategory_name {
     font-weight: 600;
+    text-transform: uppercase;
+    margin: 1em;
   }
-  .tooltip_item:hover {
+  .subCategory_name:hover {
     color: $blue;
   }
-  .sub_item {
-    margin: 0 1em;
-    text-transform: uppercase;
-    font-weight: 800;
+  .subCategory_item {
+    text-transform: capitalize;
+    color: $fontGrey;
+    margin: 1em;
   }
+
+  // .tooltip_subCat {
+  //   display: flex;
+  //   flex-direction: column;
+  //   width: fit-content;
+  //   min-width: 30%;
+  //   text-transform: uppercase;
+  //   font-weight: 600;
+  //   padding: 1em;
+  // }
+  // // .tooltip_subCat:hover {
+  // //   color: $blue;
+
+  // // }
+  // .tooltip_subCat_items {
+  //   border-left: 2px solid darkgrey;
+  //   display: flex;
+  //   width: fit-content;
+  //   // min-width: 60%;
+  //   padding: 1em;
+  //   overflow-y: scroll;
+  // }
+  // .tooltip_item {
+  //   // margin: 0 1em;
+  //   // padding: 1em 0;
+  //   cursor: pointer;
+  //   font-weight: 600;
+  // }
+  // .tooltip_item:hover {
+  //   color: $blue;
+  // }
+  // .sub_group {
+  //   margin: 0 1em 0 0;
+  // }
+  // .sub_title {
+  //   margin: 0 2em .5em 0;
+  //   text-transform: uppercase;
+  //   font-weight: 800;
+  //   margin-bottom: 1em;
+  // }
+  // .sub_item {
+  //   // margin-top: 1em;
+  //   font-weight: 400;
+  // }
 }
