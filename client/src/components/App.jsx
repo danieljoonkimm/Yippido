@@ -22,14 +22,11 @@ class App extends Component {
 
   render() {
     return (
-      // <Switch>
-      //   {routes.map(route => (
-      //     <Route key={`route-${route.name}`} {...route} />
-      //   ))}
-      // </Switch>
-      <div>
-        <ShoppingCart/>
-        </div>
+      <Switch>
+        {routes.map(route => (
+          <Route key={`route-${route.name}`} {...route} />
+        ))}
+      </Switch>
     );
   }
 }

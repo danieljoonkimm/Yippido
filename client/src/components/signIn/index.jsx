@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from 'react-router-dom';
 import "./signIn.scss";
 import topdeals from "../../../public/images/topdeals.jpeg";
 
@@ -18,7 +19,12 @@ class signIn extends Component {
   //   }
   // }
 
+  signIn() {
+    this.props.history.push('/');
+  }
+
   render() {
+    console.log(this.props);
     return (
       <div className="container" id="signInBuyer_container">
         <div className="row col-xs-12 col-sm-6 col-md-6 justify-content-center align-items-center" id="signInBuyer_login">
@@ -60,6 +66,7 @@ class signIn extends Component {
                     type="button"
                     id="sendlogin"
                     className="btn btn-primary"
+                    onClick={this.signIn.bind(this)}
                   >
                     SIGN IN
                   </button>
@@ -98,4 +105,4 @@ class signIn extends Component {
   }
 }
 
-export default signIn;
+export default withRouter(signIn);
