@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./vendorShoppingCart.scss";
 
 class VendorShoppingCartSavedItems extends Component {
   constructor(props) {
@@ -51,76 +52,101 @@ class VendorShoppingCartSavedItems extends Component {
   render() {
     return (
       <div className="container" id="vendorShoppingCartSavedItems_container">
-        <table id="cart" className="table table-hover table-condensed">
-          <thead>
-            <tr>
-              <th style={{width:"50%"}}>Product</th>
-              <th style={{width:"10%"}}>Price</th>
-              <th style={{width:"8%"}}>Quantity</th>
-              <th style={{width:"22%"}} className="text-center">
-                Subtotal
-              </th>
-              <th style={{width:"10%"}} />
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-th="Product">
-                <div className="row">
-                  <div className="col-sm-2 hidden-xs">
-                    <img
-                      src="http://placehold.it/100x100"
-                      alt="..."
-                      className="img-responsive"
-                    />
-                  </div>
-                  <div className="col-sm-10">
-                    <h4 className="nomargin">Product 1</h4>
-                    <p>awfag</p>
-                  </div>
-                </div>
-              </td>
-              <td data-th="Price">$1.99</td>
-              <td data-th="Quantity">
-                <input type="number" className="form-control text-center" />
-              </td>
-              <td data-th="Subtotal" className="text-center">
-                1.99
-              </td>
-              <td className="actions" data-th="">
-                <button className="btn btn-info btn-sm">
-                  <i className="fa fa-refresh" />
-                </button>
-                <button className="btn btn-danger btn-sm">
-                  <i className="fa fa-trash-o" />
-                </button>
-              </td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr className="visible-xs">
-              <td className="text-center">
-                <strong>Total 1.99</strong>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <a href="#" style={{width: "fit-content"}} className="btn btn-warning">
-                  <i style={{width: "fit-content"}}/> Clear All
-                </a>
-              </td>
-              <td colSpan="2" className="hidden-xs" />
-              <td className="hidden-xs text-center">
-                <strong>Total $1.99</strong>
-              </td>
-              <td>
-                <a href="#" className="btn btn-success btn-block">
-                  Continue Shopping <i className="fa fa-angle-right" />
-                </a>
-              </td>
-            </tr>
-          </tfoot>
-        </table>
+        <div className="row vendorShoppingCartSavedItems_shopping-cart">
+          <div className="row vendorShoppingCartSavedItems_column-labels">
+            <label className="col-xs-1 col-sm-1 col-md-1 vendorShoppingCartSavedItems_product-image">
+              Pic
+            </label>
+            <label className="col-xs-1 col-sm-1 col-md-1 vendorShoppingCartSavedItems_product-styleNo">
+              Style No.
+            </label>
+            <label className="col-xs-1 col-sm-1 col-md-1 vendorShoppingCartSavedItems_product-color">
+              Color
+            </label>
+            <label className="col-xs-1 col-sm-1 col-md-1 vendorShoppingCartSavedItems_product-size">
+              Size
+            </label>
+            <label className="col-xs-1 col-sm-1 col-md-1 vendorShoppingCartSavedItems_product-pack">
+              Pack
+            </label>
+            <label className="col-xs-1 col-sm-1 col-md-1 vendorShoppingCartSavedItems_product-totalQty">
+              Total Qty.
+            </label>
+            <label className="col-xs-1 col-sm-1 col-md-1 vendorShoppingCartSavedItems_product-unitPrice">
+              Unit Price
+            </label>
+            <label className="col-xs-1 col-sm-1 col-md-1 vendorShoppingCartSavedItems_product-amount">
+              Amount
+            </label>
+            <label className="col-xs-1 col-sm-1 col-md-1 vendorShoppingCartSavedItems_product-sel">
+              Sel
+            </label>
+          </div>
+
+          <div className="row vendorShoppingCartSavedItems_column-labelInfo">
+            <div className="col-xs-1 col-sm-1 col-md-1 vendorShoppingCartSavedItems_product">
+              <img
+                src="https://s.cdpn.io/3/dingo-dog-bones.jpg"
+                style={{ width: "1em" }}
+              />
+            </div>
+
+            <div className="col-xs-1 col-sm-1 col-md-1 vendorShoppingCartSavedItems_product">
+              123
+            </div>
+
+            <div className="col-xs-1 col-sm-1 col-md-1 vendorShoppingCartSavedItems_product">
+              Red
+            </div>
+
+            <div className="col-xs-1 col-sm-1 col-md-1 vendorShoppingCartSavedItems_product">
+              1-2-3
+            </div>
+
+            <div className="col-xs-1 col-sm-1 col-md-1 vendorShoppingCartSavedItems_product">
+              <input
+                type="number"
+                value=""
+                min="1"
+                style={{ width: "fit-content" }}
+              />
+            </div>
+
+            <div className="col-xs-1 col-sm-1 col-md-1 vendorShoppingCartSavedItems_product">
+              6
+            </div>
+
+            <div className="col-xs-1 col-sm-1 col-md-1 vendorShoppingCartSavedItems_product">
+              $12.00
+            </div>
+
+            <div className="col-xs-1 col-sm-1 col-md-1 vendorShoppingCartSavedItems_product">
+              $1000
+            </div>
+
+            <div className="ccol-xs-1 col-sm-1 col-md-1 vendorShoppingCartSavedItems_product">
+              <input type="checkbox" />
+            </div>
+          </div>
+
+          <div className="row vendorShoppingCartSavedItems_totals">
+            <div className="col-xs-2 col-sm-2 col-md-2">
+              <input type="checkbox"/> Select All
+            </div>
+
+            <div className="col-xs-6 col-sm-6 col-md-6">
+              <button className="vendorShoppingCartSavedItems_clearAll">
+                CLEAR ALL
+              </button>
+            </div>
+
+            <div className="col-xs-4 col-sm-4 col-md-4">
+              <button className="vendorShoppingCartSavedItems_checkout">
+                Continue Shopping
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
