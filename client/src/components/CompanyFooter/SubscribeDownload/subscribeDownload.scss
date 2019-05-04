@@ -1,3 +1,34 @@
 #footerSubscribeDownload_container {
   padding: 1em;
+
+  .footerSubscribeDownload_p {
+    font-size: 9px;
+  }
+
+  .footerSubscribeDownload_button {
+    border: 1px solid white;
+    background-color: #333333;
+    width: 100%;
+  }
+}
+#footerSubscribeDownload_button {
+  border: 1px solid white;
+  background-color: #333333;
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#footerSubscribeDownload_buttonApp {
+
+  padding-right: .5em;
+}
+#footerSubscribeDownload_buttonGoogle {
+  padding-left: .5em;
+}
+
+@media only screen and (min-width: 769px) {
+  #footerSubscribeDownload_p {
+    font-size: 12px;
+  }
 }
