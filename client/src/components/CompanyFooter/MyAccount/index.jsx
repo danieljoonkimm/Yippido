@@ -10,7 +10,7 @@ class FooterMyAccount extends Component {
     return (
       <div id="footerMyAccount_container">
         <div className="row" id="footerMyAccount_row">
-          <h2>MY ACCOUNT</h2>
+          <h2 id="footerMyAccount_headerTag">MY ACCOUNT</h2>
           <div className="col-xs-12 col-sm-12 col-md-12 footerMyAccount_rowChild">
             <a href="">Register</a>
           </div>

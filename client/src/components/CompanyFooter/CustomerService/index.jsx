@@ -10,7 +10,7 @@ class FooterCustomerService extends Component {
     return (
       <div id="footerCustomerService_container">
         <div className="row" id="footerCustomerService_row">
-          <h2>CUSTOMER SERVICE</h2>
+          <h2 id="footerCustomerService_headerTag">CUSTOMER SERVICE</h2>
           <div className="col-xs-12 col-sm-12 col-md-12 footerCustomerService_rowChild">
             <a href="">Be a Buyer</a>
           </div>

@@ -10,7 +10,7 @@ class FooterOurCompany extends Component {
     return (
       <div id="footerOurCompany_container">
         <div className="row" id="footerOurCompany_row">
-          <h2>OUR COMPANY</h2>
+          <h2 id="footerOurCompany_headerTag">OUR COMPANY</h2>
           <div className="col-xs-12 col-sm-12 col-md-12 footerOurCompany_rowChild">
             <a href="">About Us</a>
           </div>
