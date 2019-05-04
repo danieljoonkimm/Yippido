@@ -11,6 +11,8 @@ import Sale from "./sale/index.jsx";
 import IndividualVendorLanding from "./IndividualVendorLanding/index.jsx";
 import ShoppingCart from "./ShoppingCart/index.jsx";
 
+import CompanyFooter from "./CompanyFooter/index.jsx";
+
 import routes from "../routes";
 
 class App extends Component {
@@ -28,7 +30,7 @@ class App extends Component {
       //   ))}
       // </Switch>
       <div>
-        <ShoppingCart/>
+        <CompanyFooter/>
       </div>
     );
   }
