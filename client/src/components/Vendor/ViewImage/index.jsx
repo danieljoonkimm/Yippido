@@ -34,7 +34,7 @@ class ViewImage extends Component {
       <Modal>
         <div className="view-image-wrapper" onClick={this.toggleModal}>
           <div className="view-image-container" ref={ node => { this.node = node; }}>
-          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <div id="carousel-example-generic" className="carousel slide" data-ride="carousel">
 
             <ol className="carousel-indicators view">
               <li data-target="#carousel-example-generic" data-slide-to="0" className="active">
