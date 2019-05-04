@@ -3469,7 +3469,7 @@ eval("exports = module.exports = __webpack_require__(/*! ../../../../node_module
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"#companyFooter_container {\\n  background-color: #333333;\\n  color: white;\\n  width: 100%;\\n  padding: 1em;\\n  line-height: 1.5em; }\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/components/CompanyFooter/companyFooter.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/lib/loader.js!./node_modules/postcss-loader/src");
+eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"#companyFooter_container {\\n  background-color: #333333;\\n  color: white;\\n  width: 100%;\\n  padding: 1em;\\n  line-height: 1.5em;\\n  font-size: 12px; }\\n\\n@media only screen and (max-width: 769px) {\\n  #companyFooter_container {\\n    font-size: 9px; } }\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/components/CompanyFooter/companyFooter.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/lib/loader.js!./node_modules/postcss-loader/src");
 
 /***/ }),
 
