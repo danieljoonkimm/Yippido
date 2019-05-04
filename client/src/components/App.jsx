@@ -30,7 +30,7 @@ class App extends Component {
       //   ))}
       // </Switch>
       <div>
-        <CompanyFooter/>
+        <Landing/>
       </div>
     );
   }

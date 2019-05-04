@@ -8,6 +8,8 @@ import Events from "./events/index.jsx";
 import NewVendors from "./newVendors/index.jsx";
 import "./landing.scss";
 
+import CompanyFooter from "../CompanyFooter/index.jsx";
+
 class Landing extends Component {
   constructor() {
     super();
@@ -24,6 +26,8 @@ class Landing extends Component {
         <CategoryCollection />
         <Events/>
         <NewVendors/>
+        
+        <CompanyFooter/>
       </div>
     );
   }
