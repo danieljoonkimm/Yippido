@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./subscribeDownload.scss";
 
 class FooterSubscribeDownload extends Component {
   constructor() {
