@@ -16,23 +16,23 @@ class CompanyFooter extends Component {
     return (
       <div className="container" id="companyFooter_container">
         <div className="row" id="companyFooter_row">
-          <div className="col-xs-2 col-sm-2 col-md-2">
+          <div className="col-xs-12 col-sm-2 col-md-2">
             <FooterVastETech />
           </div>
 
-          <div className="col-xs-2 col-sm-2 col-md-2">
+          <div className="col-xs-12 col-sm-2 col-md-2">
             <FooterOurCompany />
           </div>
 
-          <div className="col-xs-2 col-sm-2 col-md-2">
+          <div className="col-xs-12 col-sm-2 col-md-2">
             <FooterCustomerService />
           </div>
 
-          <div className="col-xs-2 col-sm-2 col-md-2">
+          <div className="col-xs-12 col-sm-2 col-md-2">
             <FooterMyAccount />
           </div>
 
-          <div className="col-xs-4 col-sm-4 col-md-4">
+          <div className="col-xs-12 col-sm-4 col-md-4">
             <FooterSubscribeDownload />
           </div>
         </div>
