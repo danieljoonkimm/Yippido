@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./vastETech.scss";
 
 class FooterVastETech extends Component {
   constructor() {
@@ -25,11 +26,11 @@ class FooterVastETech extends Component {
             </div>
 
             <div className="col-xs-12 col-sm-12 col-md-12">
-              <button>BE A BUYER</button>
+              <button className="footerVastETech_button" id="footerVastETech_buttonTop">BE A BUYER</button>
             </div>
 
             <div className="col-xs-12 col-sm-12 col-md-12">
-              <button>BE A VENDOR</button>
+              <button className="footerVastETech_button">BE A VENDOR</button>
             </div>
 
         </div>

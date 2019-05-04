@@ -4,6 +4,7 @@ import FooterOurCompany from "./OurCompany/index.jsx";
 import FooterCustomerService from "./CustomerService/index.jsx";
 import FooterMyAccount from "./MyAccount/index.jsx";
 import FooterSubscribeDownload from "./SubscribeDownload/index.jsx";
+import "./companyFooter.scss";
 
 class CompanyFooter extends Component {
   constructor() {
@@ -16,7 +17,7 @@ class CompanyFooter extends Component {
     return (
       <div className="container" id="companyFooter_container">
         <div className="row" id="companyFooter_row">
-          <div className="col-xs-12 col-sm-2 col-md-2">
+          <div className="col-xs-12 col-sm-3 col-md-3">
             <FooterVastETech />
           </div>
 
@@ -32,7 +33,7 @@ class CompanyFooter extends Component {
             <FooterMyAccount />
           </div>
 
-          <div className="col-xs-12 col-sm-4 col-md-4">
+          <div className="col-xs-12 col-sm-3 col-md-3">
             <FooterSubscribeDownload />
           </div>
         </div>
