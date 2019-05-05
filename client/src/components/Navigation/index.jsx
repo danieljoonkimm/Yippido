@@ -5,7 +5,7 @@ import ReactTooltip from 'react-tooltip';
 
 // Components
 import NavVendor from './NavVendor';
-import CategoryNav from './CategoryNav';
+import NavCategory from './NavCategory';
 
 // Icons
 import { Icon } from 'react-icons-kit';
@@ -35,7 +35,7 @@ export default class Navigation extends Component {
               role='example' effect="solid" border="true" className="navbar_tooltip"
               clickable={true} scrollHide={false}>
               <div className="category_container">
-                <CategoryNav />
+                <NavCategory />
               </div>
               </ReactTooltip>
             <li className="bm-item-list" data-tip data-for="navVendor" data-event="click focus">

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './navCategory.scss';
 
 // Icons
 import { Icon } from 'react-icons-kit';
@@ -92,7 +93,7 @@ const data = [
   }
 ]
 
-export default class CategoryNav extends Component {
+export default class NavCategory extends Component {
   constructor() {
     super();
     this.state = {
@@ -129,14 +130,14 @@ export default class CategoryNav extends Component {
       this.toggleCategories();
     }
   }
-  renderSubCategories(categories, depthLevel = 0) {
+  renderCategories(categories, depthLevel = 0) {
     return categories.map(category => {
       return (
         <div className="tooltip_container">
           <div className="col category_container" key={category.category_id}>
             <ul className="category_item" onClick={this.handleSelectedId(category.category_id, depthLevel)}>{category.name}<Icon icon={ic_keyboard_arrow_right} style={this.state.isActive}/></ul>
           </div>
-          <ul className="col subCategory_container" style={this.state.subItemToggle}>
+          {/* <ul className="col subCategory_container" style={this.state.subItemToggle}>
             {
               category.categories.map(name => {
                 if((this.state.selectedIds[depthLevel] === name.parent_id)) {
@@ -159,7 +160,7 @@ export default class CategoryNav extends Component {
                 }
               })
             }
-          </ul>
+          </ul> */}
         </div>
       )
     })
@@ -167,7 +168,7 @@ export default class CategoryNav extends Component {
   render() {
     return(
       <div>
-        {this.renderSubCategories(data)}
+        {this.renderCategories(data)}
       </div>
     )
   }
