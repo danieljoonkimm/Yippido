@@ -7,7 +7,7 @@ class CompanyHeader extends Component {
   constructor() {
     super();
 
-    this.state = { country: "", inputVendor: "" };
+    this.state = { country: "", inputVendor: "", dummyData: ["Daniels Company", "SeansCompany", "HyungMinsCompany", "HansCompany", "JaysCompany"] };
   }
 
   inputSelect() {
@@ -90,19 +90,21 @@ class CompanyHeader extends Component {
 
         <div className="col-xs-3 col-sm-3 col-md-3">
           <div className="row">
-            <div className="col-xs-6 col-sm-6 col-md-6"><CountryDropdown
-              className="col-xs-6 country"
-              value={country}
-              onChange={(val) => this.selectCountry(val)} />
-              </div>
-            
-            
+            <div className="col-xs-6 col-sm-6 col-md-6">
+              <CountryDropdown
+                className="col-xs-6 country"
+                value={country}
+                onChange={val => this.selectCountry(val)}
+              />
+            </div>
 
             <div className="col-xs-6 col-sm-6 col-md-6">Help</div>
           </div>
 
           <div className="row">
-            <div className="col-xs-6 col-sm-6 col-md-6"><button>Register</button></div>
+            <div className="col-xs-6 col-sm-6 col-md-6">
+              <button>Register</button>
+            </div>
 
             <div className="col-xs-6 col-sm-6 col-md-6">
               <button id="companyHeader_signInButton">SIGN IN</button>
