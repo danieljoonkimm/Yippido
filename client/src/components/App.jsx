@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Switch, Route } from 'react-router-dom';
 import Landing from "./landing/index.jsx";
-import Register from "./register/index.jsx";
 import SignIn from "./signIn/index.jsx";
 import BuyerRegisteration from "./BuyerRegisteration/index.jsx";
 import CategoryMain from "./CategoryMain";
@@ -12,7 +11,7 @@ import IndividualVendorLanding from "./IndividualVendorLanding/index.jsx";
 import ShoppingCart from "./ShoppingCart/index.jsx";
 
 import CompanyFooter from "./CompanyFooter/index.jsx";
-
+import CompanyHeader from "./CompanyHeader/index.jsx";
 import routes from "../routes";
 
 class App extends Component {
@@ -24,14 +23,14 @@ class App extends Component {
 
   render() {
     return (
-      <Switch>
-        {routes.map(route => (
-          <Route key={`route-${route.name}`} {...route} />
-        ))}
-      </Switch>
-      // <div>
-      //   <Landing/>
-      // </div>
+      // <Switch>
+      //   {routes.map(route => (
+      //     <Route key={`route-${route.name}`} {...route} />
+      //   ))}
+      // </Switch>
+      <div>
+        <CompanyHeader/>
+      </div>
     );
   }
 }

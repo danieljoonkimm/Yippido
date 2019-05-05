@@ -1,0 +1,43 @@
+.companyHeader_searchbar {
+  margin-bottom: auto;
+  margin-top: auto;
+  height: 60px;
+  border: 1px solid gray;
+  border-radius: 30px;
+  padding: 10px;
+  display: flex;
+}
+.companyHeader_search_input {
+  color: white;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  caret-color:transparent;
+  line-height: 40px;
+  transition: width 0.4s linear;
+  width: 100%;
+}
+.companyHeader_search_icon {
+  height: 40px;
+  width: 40px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color:white;
+}
+#companyHeader_container {
+  color: black;
+  .companyHeader_searchAll {
+    align-self: center;
+    #companyHeader_searchButton {
+      width: fit-content;
+    }
+  }
+  .companyHeader_fa-search {
+    color: black;
+    text-align: right;
+  }
+}
