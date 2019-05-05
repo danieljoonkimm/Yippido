@@ -5,7 +5,7 @@ import Landing from '../components/landing';
 
 const routes = [
   {
-    path: '/signin',
+    path: '/',
     name: 'signin',
     exact: true,
     component: signIn,
@@ -23,7 +23,7 @@ const routes = [
     component: Vendor,
   },
   {
-    path: '/',
+    path: '/landing',
     name: 'landing',
     exact: true,
     component: Landing,

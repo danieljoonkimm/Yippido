@@ -7,7 +7,7 @@ class CompanyHeader extends Component {
   constructor() {
     super();
 
-    this.state = { country: "" };
+    this.state = { country: "", inputVendor: "" };
   }
 
   inputSelect() {
@@ -19,6 +19,12 @@ class CompanyHeader extends Component {
 
   selectCountry(val) {
     this.setState({ country: val });
+  }
+
+  onTextHandler(e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
   }
 
   render() {
@@ -35,11 +41,11 @@ class CompanyHeader extends Component {
               <div className="input-group-btn search-panel">
                 <button
                   type="button"
-                  class="btn btn-default dropdown-toggle"
+                  className="btn btn-default dropdown-toggle"
                   data-toggle="dropdown"
                 >
-                  <span id="search_concept">Filter by</span>{" "}
-                  <span class="caret" />
+                  <span id="search_concept">All</span>{" "}
+                  <span className="caret" />
                 </button>
                 <ul>
                   <li>
@@ -54,7 +60,7 @@ class CompanyHeader extends Component {
                   <li>
                     <a href="#less_than">Less than</a>
                   </li>
-                  <li class="divider" />
+                  <li className="divider" />
                   <li>
                     <a href="#all">Anything</a>
                   </li>
@@ -67,14 +73,15 @@ class CompanyHeader extends Component {
                 id="search_param"
               />
               <input
+                onChange={this.onTextHandler.bind(this)}
                 type="text"
-                class="form-control"
-                name="x"
+                className="form-control"
+                name="inputVendor"
                 placeholder="type vendor name, item description, or style number"
               />
-              <span class="input-group-btn">
-                <button class="btn btn-default" type="button">
-                  <span class="glyphicon glyphicon-search" />
+              <span className="input-group-btn">
+                <button className="btn btn-default" type="button">
+                  <span className="glyphicon glyphicon-search" />
                 </button>
               </span>
             </div>
@@ -89,9 +96,11 @@ class CompanyHeader extends Component {
           </div>
 
           <div className="row">
-            <div className="col-xs-6 col-sm-6 col-md-6">Register</div>
+            <div className="col-xs-6 col-sm-6 col-md-6"><button>Register</button></div>
 
-            <div className="col-xs-6 col-sm-6 col-md-6">Sign In</div>
+            <div className="col-xs-6 col-sm-6 col-md-6">
+              <button id="companyHeader_signInButton">SIGN IN</button>
+            </div>
           </div>
         </div>
       </div>

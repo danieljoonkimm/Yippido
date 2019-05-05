@@ -24,7 +24,7 @@ class signIn extends Component {
     if (!!this.state.email.length > 6 && !!this.state.password.length > 4) {
       alert("Username and/or Password Invalid");
     }
-    this.props.history.push("/");
+    this.props.history.push("/landing");
   }
 
   render() {
