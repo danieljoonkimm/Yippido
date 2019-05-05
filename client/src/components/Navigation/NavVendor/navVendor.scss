@@ -1,3 +1,4 @@
+@import '../../../../global/global.scss';
 
 #navVendor_container {
   // display: flex;
@@ -15,4 +16,19 @@
   display: flex;
   flex-direction: column;
   width: 50%;
+}
+.alphabet_container {
+  padding: 1em !important;
+  border: 1px solid $fontGrey;
+  margin: .5em 0 !important;
+}
+.letters {
+  width: fit-content;
+}
+.letters:hover {
+  color: $blue;
+}
+.navVendor_image {
+  width: 100px;
+  height: auto;
 }

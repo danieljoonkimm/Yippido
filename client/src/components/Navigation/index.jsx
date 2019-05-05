@@ -21,8 +21,9 @@ export default class Navigation extends Component {
   constructor(props) {
     super(props);
 
-    
+    this.state = {lettersFinal: []}
   }  
+
 
   render () {
     return (
