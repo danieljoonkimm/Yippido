@@ -32,7 +32,7 @@ export default class NavVendor extends Component {
       vendor_id: [],
       letters: []
     }
-    // this.matchVendor = this.matchVendor.bind(this);
+    this.matchVendor = this.matchVendor.bind(this);
     this.renderVendor = this.renderVendor.bind(this);
   }
 
@@ -48,10 +48,8 @@ export default class NavVendor extends Component {
         letters.push(alphabet);
       }
       letters.push('0-9', <Icon icon={ic_favorite_border}/>, "All Vendor List")
-      console.log(letters)
     for (let k = 0, j = letters.length; k < j; k += chunk) {
       temp.push(letters.slice(k, k+chunk));
-      // console.log(temp)
       this.setState({
         letters: temp
       })
@@ -100,7 +98,7 @@ export default class NavVendor extends Component {
                   return <ul className="alphabet_container" key={j}>
                     {
                       letter.map((alphabet, i) => {
-                        return <li className="letters" key={letter[i]} onClick={this.matchVendor.bind(this)}>{alphabet}</li>
+                        return <li className="letters" key={letter[i]} onClick={this.matchVendor}>{alphabet}</li>
                       })
                     }</ul>
                 })

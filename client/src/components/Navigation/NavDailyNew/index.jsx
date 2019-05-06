@@ -104,7 +104,7 @@ export default class NavDailyNew extends Component {
   render() {
     return(
       <div className="container" id="navDailyNew_container">
-        <h1 className="nav_title">NEW Items <span className="item_count">(1500)</span></h1>
+        <h1 className="nav_title">NEW Items <span className="item_count">(1,500)</span></h1>
         <div className="row navVendor_container">
           <div className="col-xs-6 col-sm-6 col-md-6 navDailynew_left">
             <ul >
