@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import './navVendor.scss';
 
+// Icons
+import { Icon } from 'react-icons-kit';
+import {ic_favorite_border} from 'react-icons-kit/md/ic_favorite_border';
+
+
 const data = [
   {
     "manufacturer_id": 8,
@@ -42,8 +47,11 @@ export default class NavVendor extends Component {
       alphabet = String.fromCharCode(i + 65)
         letters.push(alphabet);
       }
+      letters.push('0-9', <Icon icon={ic_favorite_border}/>, "All Vendor List")
+      console.log(letters)
     for (let k = 0, j = letters.length; k < j; k += chunk) {
       temp.push(letters.slice(k, k+chunk));
+      // console.log(temp)
       this.setState({
         letters: temp
       })
@@ -100,21 +108,20 @@ export default class NavVendor extends Component {
             </div>
           </div>
           <div className="col-xs-5 col-sm-5 col-md-5 navVendor_right">
-              <div className="navVendor_Image_container">
-                {
-                  images.map( (image, i ) => (
-                    <div key={i + image} className="col-xs-6 navVendor_image">
-                      <img className={`${i === 0 ? `image__left` : `image__right`}`} src={image} alt=""/>
-                    </div>
-                  ))
-                }              
-              </div>
-              <div className="row navVendor_description">
-                <div className="col-xs-6 nav_description">T12048</div>
-                <button className="col-xs-6 navShop">Shop Now</button>
-                <div className="col-xs-6 nav_description">Bluelemon</div>
-              </div>
-
+            <div className="navVendor_Image_container">
+              {
+                images.map( (image, i ) => (
+                  <div key={i + image} className="col-xs-6 navVendor_image">
+                    <img className={`${i === 0 ? `image__left` : `image__right`}`} src={image} alt=""/>
+                  </div>
+                ))
+              }              
+            </div>
+            <div className="row navVendor_description">
+              <div className="col-xs-6 nav_description">T12048</div>
+              <button className="col-xs-6 navShop">Shop Now</button>
+              <div className="col-xs-6 nav_description">Bluelemon</div>
+            </div>
           </div>
         </div>
       </div>

@@ -101,11 +101,12 @@
       display: flex;
       text-align: center;
       width: fit-content;
-      font-size: 16px;
+      font-size: 14px;
       color: $black;
       text-transform: uppercase;
       text-decoration: none;
       font-weight: 800;
+      white-space: nowrap;
     }
 
     .bm-item-list:hover {

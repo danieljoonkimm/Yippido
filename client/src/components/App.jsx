@@ -31,10 +31,10 @@ class App extends Component {
           <Route exact path="/login" component={Login} />
         </Switch> */}
         <Navigation />
-        <SignIn/>
+        {/* <SignIn/>
         <Register/>
         <Landing/>
-        <CategorySub />
+        <CategorySub /> */}
         <BuyerRegisteration/>
       </div>
     );

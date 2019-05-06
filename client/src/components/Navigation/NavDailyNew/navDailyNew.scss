@@ -1,0 +1,38 @@
+@import '../../../../global/global.scss';
+
+.navDailynew_container {
+  display: flex;
+  width: 100%;
+}
+#navDailyNew_container {
+  width: 100%;
+}
+.nav_title {
+  font-size: 16px !important;
+  font-weight: 800;
+  text-align: start;
+  padding: 1em;
+  text-transform: none;
+}
+.dailyNew_categories {
+  padding: .5em 0;
+  border-bottom: 1px solid $fontGrey;
+  color: $fontGrey;
+}
+.navDailynew_left {
+  padding: 0 2em 0 0 !important;
+  text-align: start;
+  width: 50%;
+  margin: 1em !important;
+}
+.navDailyNew_right {
+  width: fit-content;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.item_count {
+  color: $blue;
+}
