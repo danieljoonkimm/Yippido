@@ -18,12 +18,23 @@
 .category_lower {
   // border-left: 2px solid $grey;
 }
-.subCategory_name {
+.subCategory_name.group {
   font-weight: 600;
   text-transform: uppercase;
   margin: 1em;
+  // display: none;
 }
-.subCategory_name:hover {
+.subCategory_name.group:hover {
+  color: $blue;
+}
+.subCategory_name.single {
+  text-transform: capitalize;
+  color: $fontGrey;
+  margin: 1em;
+  font-weight: 600;
+
+}
+.subCategory_name.single:hover {
   color: $blue;
 }
 .subCategory_item {
