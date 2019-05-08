@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Yippido from "../../../public/images/Yippido.png";
 import "./companyHeader.scss";
 import { CountryDropdown } from "react-country-region-selector";
+import ReactTooltip from "react-tooltip";
 
 const dummyData = [
   "Daniels Company",
@@ -9,7 +10,7 @@ const dummyData = [
   "HyungMinsCompany",
   "HansCompany",
   "JaysCompany"
-]
+];
 
 class CompanyHeader extends Component {
   constructor() {
@@ -56,17 +57,20 @@ class CompanyHeader extends Component {
           <div className="row" id="companyHeader_row">
             <div className="input-group">
               <div className="dropdown input-group-btn search-panel">
-                <button
-                  type="button"
-                  className="btn btn-default dropdown-toggle"
-                  data-toggle="dropdown"
-                >
-                  <span id="search_concept">All</span>{" "}
-                  <span className="caret" />
-                </button>
-                <ul className="dropdown-menu">
-                  {dummyData.map( vendor => {
-                    return <li>{vendor}</li>
+                {
+                  <button
+                    type="button"
+                    className="btn btn-default dropdown-toggle"
+                    data-toggle="dropdown"
+                  >
+                    <span id="search_concept">All</span>{" "}
+                    <span className="caret" />
+                  </button>
+                }
+
+                <ul className="dropdown-menu" id="dropdown-menuAllVendors">
+                  {dummyData.map(vendor => {
+                    return <li>{vendor}</li>;
                   })}
                 </ul>
               </div>

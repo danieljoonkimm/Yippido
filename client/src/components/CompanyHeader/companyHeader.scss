@@ -30,6 +30,7 @@
 }
 #companyHeader_container {
   color: black;
+  overflow: -webkit-paged-x;
   .companyHeader_searchAll {
     align-self: center;
     #companyHeader_searchButton {
@@ -54,4 +55,8 @@
 
 #companyheader_selectHelp {
   width: fit-content;
+}
+
+#dropdown-menuAllVendors {
+  line-height: 1.5em;
 }
