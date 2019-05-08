@@ -97,7 +97,6 @@ export default class NavDailyNew extends Component {
   renderCategories(category) {
     return category.map(categories => {
       return <li className="dailyNew_categories" key={categories.category_id}>{categories.name} <span className="item_count">(500)</span></li>
-      console.log(categories, 'daily new')
     })
   }
 

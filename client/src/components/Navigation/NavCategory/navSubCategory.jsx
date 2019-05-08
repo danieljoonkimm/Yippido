@@ -1,45 +1,43 @@
 import React, { Component } from 'react';
+import './navCategory.scss';
 
 export default class NavSubCategory extends Component {
   constructor(props) {
     super(props);
 
   }
-  componentDidMount() {
-    console.log(this.props.subItems)
-
-  }
   renderSubCategories() {
+    let category = this.props.subItems;
+    return category.map(subCategory => {
+      return subCategory.categories.map(child => {
+        return (
+          <ul className="subCategory_name">{subCategory.name}
+            <li className="subCategory_item">
+              {child.name}
+            </li>
+          </ul>
+        )
+      })
+    })
   }
+  // renderSubCategories() {
+  //   let category = this.props.subItems;
+  //   return category.map(subCategory => {
+  //     console.log(subCategory)
+  //     return (<ul><li className="subCategory_name" key={subCategory.category_id}>{subCategory.name}
+  //       {subCategory.categories.map(child => {
+  //         console.log(child.name)
+  //         return <li key={child.category_id} className="subCategory_item">{child.name}</li>
+  //       })}
+  //       </li></ul>)
+  //   })
+  // }
 
   render() {
     let category = this.props.subItems;
     return(
       <div>
-       <ul className="col subCategory_container" style={this.props.subItemToggle}>
-          {
-            category.categories.map(name => {
-              {/* if((this.props.selectedIds[this.props.depthLevel] === name.parent_id)) { */}
-                return (
-                  <div className>
-                    <ul className="col subCategory_name" key={category.parent_id}>
-                    {name.name}
-                    </ul>
-                    {/* {
-                      name.categories.map(subName => {
-                        return (
-                          <div>
-                            <li className="subCategory_item" key={subName.parent_id}>{subName.name}</li>
-                          </div>
-                        )
-                      })
-                    } */}
-                  </div>
-                )
-              {/* } */}
-            })
-          }
-        </ul>
+       {this.renderSubCategories(category)}
       </div>
     )
   }
