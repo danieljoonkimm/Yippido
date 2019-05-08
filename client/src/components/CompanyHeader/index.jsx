@@ -97,7 +97,7 @@ class CompanyHeader extends Component {
         </div>
 
         <div className="col-xs-12 col-sm-6 col-md-3">
-          <div className="row">
+          <div className="row" id="companyHeader_countryDropDown">
             <div className="col-xs-6 col-sm-6 col-md-6">
               <CountryDropdown
                 className="col-xs-6 country"
@@ -115,12 +115,12 @@ class CompanyHeader extends Component {
             </div>
           </div>
 
-          <div className="row">
-            <div className="col-xs-6 col-sm-6 col-md-6">
+          <div className="row" id="companyHeader_registerSignIn">
+            <div className="col-xs-6 col-sm-6 col-md-6 companyHeader_signLog">
               <button>Register</button>
             </div>
 
-            <div className="col-xs-6 col-sm-6 col-md-6">
+            <div className="col-xs-6 col-sm-6 col-md-6 companyHeader_signLog">
               <button id="companyHeader_signInButton">SIGN IN</button>
             </div>
           </div>

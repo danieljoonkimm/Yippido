@@ -54,9 +54,31 @@
 }
 
 #companyheader_selectHelp {
-  width: fit-content;
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
 }
 
 #dropdown-menuAllVendors {
   line-height: 1.5em;
+  padding: .5em;
+}
+
+#companyHeader_countryDropDown {
+  display: flex;
+}
+
+#companyHeader_registerSignIn {
+  display: flex;
+
+  .companyHeader_signLog {
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+
+    #companyHeader_signInButton {
+      padding: .5em;
+    }
+  }
 }
