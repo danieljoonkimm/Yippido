@@ -3,11 +3,28 @@ import Yippido from "../../../public/images/Yippido.png";
 import "./companyHeader.scss";
 import { CountryDropdown } from "react-country-region-selector";
 
+const dummyData = [
+  "Daniels Company",
+  "SeansCompany",
+  "HyungMinsCompany",
+  "HansCompany",
+  "JaysCompany"
+]
+
 class CompanyHeader extends Component {
   constructor() {
     super();
 
-    this.state = { country: "", inputVendor: "", dummyData: ["Daniels Company", "SeansCompany", "HyungMinsCompany", "HansCompany", "JaysCompany"] };
+    this.state = {
+      country: "",
+      inputVendor: ""
+    };
+  }
+
+  vendorDropDown(e) {
+    e.map(vendors => {
+      return vendors;
+    });
   }
 
   inputSelect() {
@@ -31,14 +48,14 @@ class CompanyHeader extends Component {
     const { country } = this.state;
     return (
       <div className="container" id="companyHeader_container">
-        <div className="col-xs-3 col-sm-3 col-md-3">
+        <div className="col-xs-12 col-sm-6 col-md-3">
           <img src={Yippido} />
         </div>
 
-        <div className="col-xs-6 col-sm-6 col-md-6">
+        <div className="col-xs-12 col-sm-6 col-md-6">
           <div className="row" id="companyHeader_row">
             <div className="input-group">
-              <div className="input-group-btn search-panel">
+              <div className="dropdown input-group-btn search-panel">
                 <button
                   type="button"
                   className="btn btn-default dropdown-toggle"
@@ -47,23 +64,10 @@ class CompanyHeader extends Component {
                   <span id="search_concept">All</span>{" "}
                   <span className="caret" />
                 </button>
-                <ul>
-                  <li>
-                    <a href="#contains">Contains</a>
-                  </li>
-                  <li>
-                    <a href="#its_equal">It's equal</a>
-                  </li>
-                  <li>
-                    <a href="#greather_than">Greather than ></a>
-                  </li>
-                  <li>
-                    <a href="#less_than">Less than</a>
-                  </li>
-                  <li className="divider" />
-                  <li>
-                    <a href="#all">Anything</a>
-                  </li>
+                <ul className="dropdown-menu">
+                  <li>{dummyData.map(vendor => {
+                    return vendor
+                  })}</li>
                 </ul>
               </div>
               <input
@@ -88,17 +92,23 @@ class CompanyHeader extends Component {
           </div>
         </div>
 
-        <div className="col-xs-3 col-sm-3 col-md-3">
+        <div className="col-xs-12 col-sm-6 col-md-3">
           <div className="row">
             <div className="col-xs-6 col-sm-6 col-md-6">
               <CountryDropdown
                 className="col-xs-6 country"
+                id="companyHeader_selectCountry"
                 value={country}
                 onChange={val => this.selectCountry(val)}
               />
             </div>
 
-            <div className="col-xs-6 col-sm-6 col-md-6">Help</div>
+            <div
+              className="col-xs-6 col-sm-6 col-md-6"
+              id="companyheader_selectHelp"
+            >
+              Help
+            </div>
           </div>
 
           <div className="row">
