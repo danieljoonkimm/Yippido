@@ -65,9 +65,9 @@ class CompanyHeader extends Component {
                   <span className="caret" />
                 </button>
                 <ul className="dropdown-menu">
-                  <li>{dummyData.map(vendor => {
-                    return vendor
-                  })}</li>
+                  {dummyData.map( vendor => {
+                    return <li>{vendor}</li>
+                  })}
                 </ul>
               </div>
               <input
