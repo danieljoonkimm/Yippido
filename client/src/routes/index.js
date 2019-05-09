@@ -37,8 +37,8 @@ const routes = [
     component: IndividualVendorLanding,
   },
   {
-    path: '/buyerRegistration',
-    name: 'buyerRegistration',
+    path: '/buyerregistration',
+    name: 'buyerregistration',
     exact: true,
     component: BuyerRegisteration,
   }
