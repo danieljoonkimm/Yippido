@@ -27,7 +27,6 @@ class ViewImage extends Component {
     });
   };
 
-
   render() {
   
     const showModal = this.state.showModal ? (

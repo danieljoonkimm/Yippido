@@ -49,6 +49,10 @@ class CompanyHeader extends Component {
     this.props.history.push("/");
   }
 
+  searchVendor() {
+    this.props.history.push("/individualvendorlanding")
+  }
+
   render() {
     const { country } = this.state;
     return (
@@ -92,7 +96,7 @@ class CompanyHeader extends Component {
                 placeholder="type vendor name, item description, or style number"
               />
               <span className="input-group-btn">
-                <button className="btn btn-default" type="button">
+                <button className="btn btn-default" type="button" onClick={this.searchVendor.bind(this)}>
                   <span className="glyphicon glyphicon-search" />
                 </button>
               </span>
