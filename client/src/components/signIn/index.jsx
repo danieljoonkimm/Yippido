@@ -28,7 +28,7 @@ class signIn extends Component {
   }
 
   buyerRegistration() {
-    this.props.history.push("/buyerRegistration");
+    this.props.history.push("/buyerregistration");
   }
 
   render() {

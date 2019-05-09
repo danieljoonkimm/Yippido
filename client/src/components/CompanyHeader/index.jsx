@@ -46,8 +46,12 @@ class CompanyHeader extends Component {
     });
   }
 
-  signInRegister() {
+  signIn() {
     this.props.history.push("/");
+  }
+
+  register() {
+    this.props.history.push("/buyerregistration");
   }
 
   searchVendor() {
@@ -126,11 +130,11 @@ class CompanyHeader extends Component {
 
           <div className="row" id="companyHeader_registerSignIn">
             <div className="col-xs-6 col-sm-6 col-md-6 companyHeader_signLog">
-              <button>Register</button>
+              <button onClick={this.register.bind(this)}>Register</button>
             </div>
 
             <div className="col-xs-6 col-sm-6 col-md-6 companyHeader_signLog">
-              <button id="companyHeader_signInButton" onClick={this.signInRegister.bind(this)}>SIGN IN</button>
+              <button id="companyHeader_signInButton" onClick={this.signIn.bind(this)}>SIGN IN</button>
             </div>
           </div>
         </div>
