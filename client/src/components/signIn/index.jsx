@@ -3,7 +3,7 @@ import { withRouter } from "react-router-dom";
 import "./signIn.scss";
 import topdeals from "../../../public/images/topdeals.jpeg";
 
-class signIn extends Component {
+class SignIn extends Component {
   constructor() {
     super();
 
@@ -125,4 +125,4 @@ class signIn extends Component {
   }
 }
 
-export default withRouter(signIn);
+export default withRouter(SignIn);

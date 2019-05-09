@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Switch, Route } from 'react-router-dom';
 import Landing from "./landing/index.jsx";
-import SignIn from "./signIn/index.jsx";
+import SignIn from "./SignIn/index.jsx";
 import BuyerRegisteration from "./BuyerRegisteration/index.jsx";
 import CategoryMain from "./CategoryMain";
 import CategorySub from "./CategorySub";

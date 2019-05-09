@@ -1,5 +1,5 @@
 import SignInRegister from '../components/register';
-import signIn from '../components/signIn';
+import SignIn from '../components/signIn';
 import Vendor from '../components/Vendor';
 import Landing from '../components/landing';
 import IndividualVendorLanding from "../components/IndividualVendorLanding";
@@ -10,7 +10,7 @@ const routes = [
     path: '/',
     name: 'signin',
     exact: true,
-    component: signIn,
+    component: SignIn,
   },
   {
     path: '/register',
