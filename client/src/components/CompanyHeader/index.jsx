@@ -62,8 +62,8 @@ class CompanyHeader extends Component {
     const { country } = this.state;
     return (
       <div className="container" id="companyHeader_container">
-        <div className="col-xs-12 col-sm-6 col-md-3">
-          <img src={Yippido} />
+        <div className="col-xs-12 col-sm-6 col-md-3 companyHeader_logo">
+          <img src={Yippido} id="companyheader_img"/>
         </div>
 
         <div className="col-xs-12 col-sm-6 col-md-6">

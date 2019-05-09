@@ -32,6 +32,15 @@
   margin-top: 1em;
   color: black;
   overflow: -webkit-paged-x;
+  display: flex;
+  .companyHeader_logo {
+    margin-bottom: auto;
+    text-align: center;
+    #companyheader_img {
+      height: 2.5em;
+      width: auto;
+    }
+  }
   .companyHeader_searchAll {
     align-self: center;
     #companyHeader_searchButton {
@@ -51,7 +60,7 @@
 }
 
 #companyHeader_selectCountry {
-  width: fit-content;
+  width: 100%;
 }
 
 #companyheader_selectHelp {
@@ -82,5 +91,11 @@
     #companyHeader_signInButton {
       padding: .5em;
     }
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  #companyHeader_container {
+    flex-direction: column;
   }
 }
