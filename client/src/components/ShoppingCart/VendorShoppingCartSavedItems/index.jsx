@@ -124,7 +124,7 @@ class VendorShoppingCartSavedItems extends Component {
               $1000
             </div>
 
-            <div className="ccol-xs-1 col-sm-1 col-md-1 vendorShoppingCartSavedItems_product">
+            <div className="col-xs-1 col-sm-1 col-md-1 vendorShoppingCartSavedItems_product">
               <input type="checkbox" />
             </div>
           </div>
