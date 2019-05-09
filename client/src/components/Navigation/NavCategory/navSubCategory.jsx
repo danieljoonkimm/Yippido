@@ -6,22 +6,37 @@ export default class NavSubCategory extends Component {
     super(props);
 
   }
+  pushSubCategories(category) {
+    let childCat = [];
+    category.map(subCategory => {
+      childCat.push(subCategory);    
+    })
+    return childCat;
+  }
   renderSubCategories() {
-    let category = this.props.subItems;
+    let category = this.pushSubCategories(this.props.subItems);
     return category.map(subCategory => {
-      return (<ul><li className={"subCategory_name " + (subCategory.categories.length > 0  ? 'group' : 'single') } key={subCategory.category_id}>{subCategory.name}
-        {subCategory.categories.map(child => {
-          return <li key={child.category_id} className="subCategory_item">{child.name}</li>
-        })}
-        </li></ul>)
+      return (
+        <ul className={"subCategory_name " + (subCategory.categories.length > 0  ? 'group' : 'single') }>
+          <ul key={subCategory.category_id}>{subCategory.name}
+          {subCategory.categories.map(child => {
+            return <li key={child.category_id} className="subCategory_item">{child.name}</li>
+          })}
+          </ul>
+        </ul>
+      )
     })
   }
 
   render() {
-    let category = this.props.subItems;
+    let subCat, category = this.pushSubCategories(this.props.subItems);
+    for (let i = 0; i < category.length; i++) {
+      subCat = category[i].categories.length;
+      console.log(subCat, 'index')
+    }
     return(
-      <div>
-       {this.renderSubCategories(category)}
+      <div className={"subCategory_container " + (subCat > 0 ? 'groupContainer' : 'singleContainer')}>
+       {this.renderSubCategories()}
       </div>
     )
   }

@@ -35,9 +35,7 @@ export default class Navigation extends Component {
               <ReactTooltip id='navCat' place="bottom" globalEventOff='click' type="light" aria-haspopup='true' 
               role='example' effect="solid" border={true} className="navbar_tooltip"
               clickable={true} scrollHide={false}>
-              <div className="category_container">
                 <NavCategory />
-              </div>
               </ReactTooltip>
             <li className="bm-item-list" data-tip data-for="navVendor" data-event="click focus">
               Vendors <Icon icon={ic_arrow_drop_down}/>

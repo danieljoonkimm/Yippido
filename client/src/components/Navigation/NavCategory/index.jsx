@@ -86,6 +86,7 @@ const data = [
             name: 'dressy tops',
             categories: []
           },
+          
         ]
       },
       {
@@ -112,7 +113,107 @@ const data = [
             categories: []
           },
         ]
-      }
+      },
+      {
+        "category_id": 10,
+        "parent_id": 1,
+        name: "tops",
+        categories: [
+          {
+            "category_id": 20,
+            "parent_id": 10,
+            name: "bodysuits",
+            categories: []
+          },
+          {
+            "category_id": 21,
+            "parent_id": 10,
+            name: "casual",
+            categories: []
+          },
+          {
+            "category_id": 22,
+            "parent_id": 10,
+            name: 'dressy tops',
+            categories: []
+          },
+        ]
+      },
+      {
+        "category_id": 11,
+        "parent_id": 1,
+        name: "denim",
+        categories: [
+          {
+            "category_id": 23,
+            "parent_id": 11,
+            name: "jackets & outerwear",
+            categories: []
+          },
+          {
+            "category_id": 24,
+            "parent_id": 11,
+            name: "jeans",
+            categories: []
+          },
+          {
+            "category_id": 25,
+            "parent_id": 1,
+            name: 'jumpsuit & romper',
+            categories: []
+          },
+        ]
+      },
+      {
+        "category_id": 10,
+        "parent_id": 1,
+        name: "tops",
+        categories: [
+          {
+            "category_id": 20,
+            "parent_id": 10,
+            name: "bodysuits",
+            categories: []
+          },
+          {
+            "category_id": 21,
+            "parent_id": 10,
+            name: "casual",
+            categories: []
+          },
+          {
+            "category_id": 22,
+            "parent_id": 10,
+            name: 'dressy tops',
+            categories: []
+          },
+        ]
+      },
+      {
+        "category_id": 11,
+        "parent_id": 1,
+        name: "denim",
+        categories: [
+          {
+            "category_id": 23,
+            "parent_id": 11,
+            name: "jackets & outerwear",
+            categories: []
+          },
+          {
+            "category_id": 24,
+            "parent_id": 11,
+            name: "jeans",
+            categories: []
+          },
+          {
+            "category_id": 25,
+            "parent_id": 1,
+            name: 'jumpsuit & romper',
+            categories: []
+          },
+        ]
+      },
     ]
   },
   {
@@ -186,6 +287,7 @@ export default class NavCategory extends Component {
         }
       })
     })
+    // console.log(subCat, 'subcat array')
     return subCat
   }
 
@@ -193,7 +295,6 @@ export default class NavCategory extends Component {
     return categories.map(title => {
       return <ul onClick={this.handleSelectedId(title.category_id, depthLevel)} className="category_title" key={title.category_id}>{title.name}</ul>
     })
-    this.toggleCategories();
   }
 
   render() {
