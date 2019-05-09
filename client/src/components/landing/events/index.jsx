@@ -17,7 +17,7 @@ class Events extends Component {
             <img
               className="img-responsive"
               alt=""
-              src={dummyImg}
+              src="https://dummyimage.com/400x600/26628a/fff"
             />
           </div>
 
@@ -25,7 +25,7 @@ class Events extends Component {
             <img
               className="img-responsive"
               alt=""
-              src={dummyImg}
+              src="https://dummyimage.com/400x600/26628a/fff"
             />
           </div>
 
@@ -33,7 +33,7 @@ class Events extends Component {
             <img
               className="img-responsive"
               alt=""
-              src={dummyImg}
+              src="https://dummyimage.com/400x600/26628a/fff"
             />
           </div>
         </div>

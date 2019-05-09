@@ -18,7 +18,7 @@ class NewVendors extends Component {
               <img
                 className="img-responsive highlightVendors_bigImage"
                 alt=""
-                src={dummyImg}
+                src="https://dummyimage.com/400x600/26628a/fff"
               />
             </div>
           </div>
@@ -30,7 +30,7 @@ class NewVendors extends Component {
                   className="img-responsive"
                   id="highlightVendors_topLeft"
                   alt=""
-                  src={dummyImg}
+                  src="https://dummyimage.com/400x600/26628a/fff"
                 />
               </div>
 
@@ -39,7 +39,7 @@ class NewVendors extends Component {
                   className="img-responsive"
                   id="highlightVendors_topRight"
                   alt=""
-                  src={dummyImg}
+                  src="https://dummyimage.com/400x600/26628a/fff"
                 />
               </div>
             </div>
@@ -50,7 +50,7 @@ class NewVendors extends Component {
                   className="img-responsive"
                   id="highlightVendors_bottomLeft"
                   alt=""
-                  src={dummyImg}
+                  src="https://dummyimage.com/400x600/26628a/fff"
                 />
               </div>
 
@@ -59,7 +59,7 @@ class NewVendors extends Component {
                   className="img-responsive"
                   id="highlightVendors_bottomRight"
                   alt=""
-                  src={dummyImg}
+                  src="https://dummyimage.com/400x600/26628a/fff"
                 />
               </div>
             </div>
@@ -70,7 +70,7 @@ class NewVendors extends Component {
               <img
                 className="img-responsive highlightVendors_bigImage"
                 alt=""
-                src={dummyImg}
+                src="https://dummyimage.com/400x600/26628a/fff"
               />
             </div>
           </div>
@@ -82,7 +82,7 @@ class NewVendors extends Component {
                   className="img-responsive"
                   id="highlightVendors_topLeft"
                   alt=""
-                  src={dummyImg}
+                  src="https://dummyimage.com/400x600/26628a/fff"
                 />
               </div>
 
@@ -91,7 +91,7 @@ class NewVendors extends Component {
                   className="img-responsive"
                   id="highlightVendors_topRight"
                   alt=""
-                  src={dummyImg}
+                  src="https://dummyimage.com/400x600/26628a/fff"
                 />
               </div>
             </div>
@@ -102,7 +102,7 @@ class NewVendors extends Component {
                   className="img-responsive"
                   id="highlightVendors_bottomLeft"
                   alt=""
-                  src={dummyImg}
+                  src="https://dummyimage.com/400x600/26628a/fff"
                 />
               </div>
 
@@ -111,7 +111,7 @@ class NewVendors extends Component {
                   className="img-responsive"
                   id="highlightVendors_bottomRight"
                   alt=""
-                  src={dummyImg}
+                  src="https://dummyimage.com/400x600/26628a/fff"
                 />
               </div>
             </div>

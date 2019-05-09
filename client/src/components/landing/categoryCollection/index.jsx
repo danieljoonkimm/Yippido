@@ -57,25 +57,25 @@ class CategoryCollection extends Component {
             <div className="row" id="categoryCollection_topRow">
               <div className="col-xs-3 col-sm-3 col-sm-3 categoryCollection_imageContainer">
                 <div className="col-xs-12 col-sm-12 col-md-12 categoryCollection_image">
-                  <img className="img-responsive" alt="" src={dummyImg} />
+                  <img className="img-responsive" alt="" src="https://dummyimage.com/400x600/26628a/fff" />
                 </div>
               </div>
 
               <div className="col-xs-3 col-sm-3 col-sm-3 categoryCollection_imageContainer">
                 <div className="col-xs-12 col-sm-12 col-md-12 categoryCollection_image">
-                  <img className="img-responsive" alt="" src={dummyImg} />
+                  <img className="img-responsive" alt="" src="https://dummyimage.com/400x600/26628a/fff" />
                 </div>
               </div>
 
               <div className="col-xs-3 col-sm-3 col-sm-3 categoryCollection_imageContainer">
                 <div className="col-xs-12 col-sm-12 col-md-12 categoryCollection_image">
-                  <img className="img-responsive" alt="" src={dummyImg} />
+                  <img className="img-responsive" alt="" src="https://dummyimage.com/400x600/26628a/fff" />
                 </div>
               </div>
 
               <div className="col-xs-3 col-sm-3 col-sm-3 categoryCollection_imageContainer">
                 <div className="col-xs-12 col-sm-12 col-md-12 categoryCollection_image">
-                  <img className="img-responsive" alt="" src={dummyImg} />
+                  <img className="img-responsive" alt="" src="https://dummyimage.com/400x600/26628a/fff" />
                 </div>
               </div>
             </div>
@@ -83,31 +83,31 @@ class CategoryCollection extends Component {
             <div className="row" id="categoryCollection_bottomRow">
               <div className="col-xs-4 col-sm-4 col-md-4">
                 <div className="col-xs-6 col-sm-6 col-md-6 categoryCollection_subImage categoryCollection_image1">
-                  <img className="img-responsive img-responsive-left" alt="" src={dummyImg}/>
+                  <img className="img-responsive img-responsive-left" alt="" src="https://dummyimage.com/400x600/26628a/fff"/>
                 </div>
 
                 <div className="col-xs-6 col-sm-6 col-md-6 categoryCollection_subImage categoryCollection_image2">
-                  <img className="img-responsive img-responsive-right" alt="" src={dummyImg} />
+                  <img className="img-responsive img-responsive-right" alt="" src="https://dummyimage.com/400x600/26628a/fff" />
                 </div>
               </div>
 
               <div className="col-xs-4 col-sm-4 col-md-4">
                 <div className="col-xs-6 col-sm-6 col-md-6 categoryCollection_subImage categoryCollection_image1">
-                  <img className="img-responsive img-responsive-left" alt="" src={dummyImg} />
+                  <img className="img-responsive img-responsive-left" alt="" src="https://dummyimage.com/400x600/26628a/fff" />
                 </div>
 
                 <div className="col-xs-6 col-sm-6 col-md-6 categoryCollection_subImage categoryCollection_image2">
-                  <img className="img-responsive img-responsive-right" alt="" src={dummyImg} />
+                  <img className="img-responsive img-responsive-right" alt="" src="https://dummyimage.com/400x600/26628a/fff" />
                 </div>
               </div>
 
               <div className="col-xs-4 col-sm-4 col-md-4">
                 <div className="col-xs-6 col-sm-6 col-md-6 categoryCollection_subImage categoryCollection_image1">
-                  <img className="img-responsive img-responsive-left" alt="" src={dummyImg} />
+                  <img className="img-responsive img-responsive-left" alt="" src="https://dummyimage.com/400x600/26628a/fff" />
                 </div>
 
                 <div className="col-xs-6 col-sm-6 col-md-6 categoryCollection_subImage categoryCollection_image2">
-                  <img className="img-responsive img-responsive-right" alt="" src={dummyImg}/>
+                  <img className="img-responsive img-responsive-right" alt="" src="https://dummyimage.com/400x600/26628a/fff"/>
                 </div>
               </div>
             </div>

@@ -18,7 +18,7 @@ class LookBook extends Component {
             className="col-xs-12 col-sm-12 col-md-12"
             id="lookBookMain_mainImage"
           >
-            <img className="img-responsive" alt="" src={dummyImg} />
+            <img className="img-responsive" alt="" src="https://dummyimage.com/400x600/26628a/fff" />
             <p>SAMPLE</p>
             <p>SAMPLE</p>
           </div>
@@ -27,12 +27,12 @@ class LookBook extends Component {
           <div className="col-xs-4 col-sm-4 col-md-4 lookBookMain_subParent">
             <div className="row lookBook_subImages">
               <div className="col-xs-6 col-sm-6 col-md-6 lookBookMain_subImage">
-                <img className="img-responsive" alt="" src={dummyImg} />
+                <img className="img-responsive" alt="" src="https://dummyimage.com/400x600/26628a/fff" />
                 <p>SAMPLE</p>
                 <p>SAMPLE</p>
               </div>
               <div className="col-xs-6 col-sm-6 col-md-6 lookBookMain_subImage">
-                <img className="img-responsive" alt="" src={dummyImg} />
+                <img className="img-responsive" alt="" src="https://dummyimage.com/400x600/26628a/fff" />
                 <div />
               </div>
             </div>
@@ -41,12 +41,12 @@ class LookBook extends Component {
           <div className="col-xs-4 col-sm-4 col-md-4 lookBookMain_subParent">
             <div className="row lookBook_subImages">
               <div className="col-xs-6 col-sm-6 col-md-6 lookBookMain_subImage">
-                <img className="img-responsive" alt="" src={dummyImg} />
+                <img className="img-responsive" alt="" src="https://dummyimage.com/400x600/26628a/fff" />
                 <p>SAMPLE</p>
                 <p>SAMPLE</p>
               </div>
               <div className="col-xs-6 col-sm-6 col-md-6 lookBookMain_subImage">
-                <img className="img-responsive" alt="" src={dummyImg} />
+                <img className="img-responsive" alt="" src="https://dummyimage.com/400x600/26628a/fff" />
               </div>
             </div>
           </div>
