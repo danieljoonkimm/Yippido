@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import Yippido from "../../../public/images/Yippido.png";
 import "./companyHeader.scss";
 import { CountryDropdown } from "react-country-region-selector";
@@ -50,7 +51,7 @@ class CompanyHeader extends Component {
   }
 
   searchVendor() {
-    this.props.history.push("/individualvendorlanding")
+    this.props.history.push("/individualvendorlanding");
   }
 
   render() {
@@ -138,4 +139,4 @@ class CompanyHeader extends Component {
   }
 }
 
-export default CompanyHeader;
+export default withRouter(CompanyHeader);
