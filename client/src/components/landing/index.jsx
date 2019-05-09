@@ -6,6 +6,7 @@ import LookBook from "./lookbook/index.jsx";
 import CategoryCollection from "./categoryCollection/index.jsx";
 import Events from "./events/index.jsx";
 import NewVendors from "./newVendors/index.jsx";
+import CompanyHeader from "../CompanyHeader/index.jsx";
 import "./landing.scss";
 
 import CompanyFooter from "../CompanyFooter/index.jsx";
@@ -19,6 +20,7 @@ class Landing extends Component {
   render() {
     return (
       <div>
+        <CompanyHeader/>
         <Vendors />
         <FeaturedItems />
         <HighlightVendors />

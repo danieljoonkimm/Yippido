@@ -24,7 +24,11 @@ class signIn extends Component {
     if (!!this.state.email.length > 6 && !!this.state.password.length > 4) {
       alert("Username and/or Password Invalid");
     }
-    this.props.history.push("/landing");
+    this.props.history.push("/individualVendorLanding");
+  }
+
+  buyerRegistration() {
+    this.props.history.push("/buyerRegistration");
   }
 
   render() {
@@ -107,6 +111,7 @@ class signIn extends Component {
                     type="button"
                     id="sendlogin"
                     className="btn btn-primary"
+                    onClick={this.buyerRegistration.bind(this)}
                   >
                     CREATE ACCOUNT
                   </button>

@@ -45,6 +45,10 @@ class CompanyHeader extends Component {
     });
   }
 
+  signInRegister() {
+    this.props.history.push("/");
+  }
+
   render() {
     const { country } = this.state;
     return (
@@ -121,7 +125,7 @@ class CompanyHeader extends Component {
             </div>
 
             <div className="col-xs-6 col-sm-6 col-md-6 companyHeader_signLog">
-              <button id="companyHeader_signInButton">SIGN IN</button>
+              <button id="companyHeader_signInButton" onClick={this.signInRegister.bind(this)}>SIGN IN</button>
             </div>
           </div>
         </div>
