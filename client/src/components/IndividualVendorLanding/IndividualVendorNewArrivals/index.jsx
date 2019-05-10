@@ -69,7 +69,11 @@ class VendorLandingNewArrvials extends Component {
               images={image} 
               isViewable={false}
             />
-            <div>
+            <div className="col-xs-6 col-sm-6 col-md-6">
+              <div>{item.model} / <strong>${item.price}</strong></div>
+              <div>{item.name}</div>
+            </div>
+            <div className="col-xs-6 col-sm-6 col-md-6">
               <div>{item.model} / <strong>${item.price}</strong></div>
               <div>{item.name}</div>
             </div>
