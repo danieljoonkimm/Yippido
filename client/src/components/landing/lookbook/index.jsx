@@ -7,43 +7,43 @@ class LookBook extends Component {
   constructor() {
     super();
 
-    this.lookBookMain = [
+    this.lookBook = [
       [
-        { url: 'https://dummyimage.com/400x600/e3d187/#fff'},
-      ]
-    ];
-
-    this.lookBookSub = [
-      [
-        { url: 'https://dummyimage.com/400x600/e3d187/#fff'},
-        { url: 'https://dummyimage.com/400x600/a4e099/#fff'},
+        { url: 'https://dummyimage.com/800x600/e3d187/#fff'},
       ],
       [
-        { url: 'https://dummyimage.com/400x600/e3d187/#fff'},
-        { url: 'https://dummyimage.com/400x600/a4e099/#fff'},
-      ]
+        { url: 'https://dummyimage.com/400x600/26628a/#fff'},
+        { url: 'https://dummyimage.com/400x600/9b192e/#fff'}
+      ],
+      [ 
+        { url: 'https://dummyimage.com/400x600/929ded/#fff'},
+        { url: 'https://dummyimage.com/400x600/bbdbf3/#fff'}
+      ],
     ];
 
     this.state = {};
   }
 
 
-  convertGrid (images) {  
+  generateMockData (images) {
+    let mock = [];
+    
     const item = {
       name: 'Aisley Rose',
       price: 18,
       model: 'L4777R',
       image: "https://dummyimage.com/400x600/26628a/fff"
     }
-
-    return images.map( image => { 
-      if ( image.length === 1 ) {
-        return (
-          <div className="col-xs-12 col-sm-12 col-md-12" style={{ padding: '5px'}}>
-            <ProductImage
+    
+    for (let i = 0; i < images.length; i++) {
+      
+      if ( images[i].length === 1) {
+        mock.push( 
+          <div className="col-xs-4 col-sm-4 col-md-4" style={{padding: '5px'}}>
+            <ProductImage 
               className="col-xs-12 col-sm-12 col-md-12" 
               name={'default'}
-              images={image} 
+              images={images[i]} 
               isViewable={false}
             />
             <div>
@@ -51,14 +51,14 @@ class LookBook extends Component {
               <div>{item.name}</div>
             </div>
           </div>
-        )
+        );
       } else {
-        return (
-          <div className="col-xs-6 col-sm-6 col-md-6" style={{ padding: '5px'}}>
-            <ProductImage
+        mock.push( 
+          <div className="col-xs-4 col-sm-4 col-md-4" style={{padding: '5px'}}>
+            <ProductImage 
               className="col-xs-6 col-sm-6 col-md-6" 
-              name={'duo'}
-              images={image} 
+              name={'default'}
+              images={images[i]} 
               isViewable={false}
             />
             <div>
@@ -66,9 +66,12 @@ class LookBook extends Component {
               <div>{item.name}</div>
             </div>
           </div>
-        )
+          
+        );
       }
-    });
+    }
+
+    return mock;
   }
 
   render() {
@@ -77,12 +80,7 @@ class LookBook extends Component {
       <div className="container" >
         <h1>FROM THE LOOK BOOK</h1>
         <div className="row" style={{ margin: 0 }}>
-        <div className="col-xs-4 col-sm-4 col-md-4">
-        {this.convertGrid(this.lookBookMain)}
-        </div>
-        <div className="col-xs-8 col-sm-8 col-md-8">
-        {this.convertGrid(this.lookBookSub)}
-        </div>
+        {this.generateMockData(this.lookBook)}
         </div>
       </div>
     </div>
