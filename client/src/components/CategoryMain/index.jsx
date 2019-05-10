@@ -53,8 +53,8 @@ class CategoryMain extends Component {
         <CategoryNav category={category}/>
         <CategoryBanner/>
         <RNVendors name={'Favorite'} images={this.fav}/>
-        <RNVendors name={'Recommended'} images={this.newRecommended}/>
-        <RNVendors name={'New'} images={this.newRecommended}/>
+        {/* <RNVendors name={'Recommended'} images={this.newRecommended}/> */}
+        {/* <RNVendors name={'New'} images={this.newRecommended}/> */}
         <NewArrivals/>
       </div>
     );
