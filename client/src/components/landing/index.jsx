@@ -20,14 +20,14 @@ class Landing extends Component {
   render() {
     return (
       <div>
-        {/* <CompanyHeader/> */}
-        {/* <Vendors /> */}
+        <CompanyHeader/>
+        <Vendors />
         <FeaturedItems />
-        {/* <HighlightVendors /> */}
-        {/* <LookBook /> */}
-        {/* <CategoryCollection /> */}
-        {/* <Events/> */}
-        {/* <NewVendors/> */}
+        <HighlightVendors />
+        <LookBook />
+        <CategoryCollection />
+        <Events/>
+        <NewVendors/>
         
         <CompanyFooter/>
       </div>
