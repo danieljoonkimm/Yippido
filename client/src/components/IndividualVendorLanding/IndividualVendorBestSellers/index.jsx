@@ -22,6 +22,14 @@ class VendorLandingBestSellers extends Component {
       [ 
         { url: 'https://dummyimage.com/400x600/929ded/#fff'},
         { url: 'https://dummyimage.com/400x600/bbdbf3/#fff'}
+      ],
+      [ 
+        { url: 'https://dummyimage.com/400x600/929ded/#fff'},
+        { url: 'https://dummyimage.com/400x600/bbdbf3/#fff'}
+      ],
+      [ 
+        { url: 'https://dummyimage.com/400x600/929ded/#fff'},
+        { url: 'https://dummyimage.com/400x600/bbdbf3/#fff'}
       ]
     ];
 
@@ -38,7 +46,7 @@ class VendorLandingBestSellers extends Component {
 
     return images.map( image => { 
         return (
-          <div className="col-xs-6 col-sm-6 col-md-6" style={{ padding: '5px'}}>
+          <div className="col-xs-4 col-sm-4 col-md-4" style={{ padding: '5px'}}>
           <ProductImage
             className="col-xs-6 col-sm-6 col-md-6" 
             name={'duo'}
