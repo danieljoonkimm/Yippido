@@ -31,7 +31,8 @@ class App extends Component {
       //   ))}
       // </Switch>
       <div>
-        <Vendor/>
+        <CategoryMain/>
+        <Landing/>
       </div>
     );
   }
