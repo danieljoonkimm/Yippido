@@ -1,6 +1,8 @@
 
 import React, { Component } from 'react';
 
+import ProductImage from '../../Vendor/ProductImage';
+
 
 import '../CategoryBanner/categoryBanner.scss';
 import './vendor.scss';
@@ -8,39 +10,63 @@ import './vendor.scss';
 class RNVendors extends Component {
   constructor(props) {
     super(props);
+
+    this.generateMockData = this.generateMockData.bind(this);
+  }
+
+  generateMockData (images) {
+    let mock = [];
+    
+    for (let i = 0; i < images.length; i++) {
+      
+      if ( images[i].length === 1 && this.props.name !== 'Favorite') {
+        mock.push( 
+          <div className="col-xs-4 col-sm-4 col-md-4" style={{padding: '5px'}}>
+            <ProductImage 
+              className="col-xs-12 col-sm-12 col-md-12" 
+              name={'default'}
+              images={images[i]} 
+              isViewable={false}
+            />
+          </div>
+        );
+      } else if ( this.props.name === 'Favorite') {
+        mock.push( 
+          <div className="col-xs-3 col-sm-3 col-md-3" style={{padding: '5px'}}>
+            <ProductImage 
+              className="col-xs-12 col-sm-12 col-md-12" 
+              name={'default'}
+              images={images[i]} 
+              isViewable={false}
+            />
+          </div>
+        );
+
+      } else {
+        mock.push( 
+          <div className="col-xs-4 col-sm-4 col-md-4" style={{padding: '5px'}}>
+            <ProductImage 
+              className="col-xs-6 col-sm-6 col-md-6" 
+              name={'duo'}
+              images={images[i]} 
+              isViewable={false}
+            />
+          </div>
+        );
+      }
+    }
+
+    return mock;
   }
 
   render() {
+    
     return (
       <div id="RNVendors">
         <div className="container">
           <h1>{this.props.name} Vendors</h1>
-          <div className="gallery-new-vendors row align-items-center">
-            <div className="new-vendor-item col-xs-4 col-sm-4 col-md-4">
-              <div className="new-vendor-box-item col-xs-12 col-sm-12 col-md-12">
-                <img className="img-fluid" src="https://dummyimage.com/500x400/54b8b8/fff" alt=""/>
-              </div>
-            </div>
-            <div className="new-vendor-item col-xs-4 col-sm-4 col-md-4">
-              <div className="new-vendor-box row">
-                <div className="new-vendor-box-item col-xs-6 col-sm-6 col-md-6 ">
-                  <img className="img-fluid new-vendor-left" src="https://dummyimage.com/250x400/10e689/fff" alt=""/>
-                </div>
-                <div className="new-vendor-box-item col-xs-6 col-sm-6 col-md-6">
-                  <img className="img-fluid new-vendor-right" src="https://dummyimage.com/250x400/10e689/fff" alt=""/>
-                </div>
-              </div>
-            </div>
-            <div className="new-vendor-item col-xs-4 col-sm-4 col-md-4">
-              <div className="new-vendor-box row">
-                <div className="new-vendor-box-item col-xs-6 col-sm-6 col-md-6 ">
-                  <img className="img-fluid new-vendor-left" src="https://dummyimage.com/250x400/10e689/fff" alt=""/>
-                </div>
-                <div className="new-vendor-box-item col-xs-6 col-sm-6 col-md-6">
-                  <img className="img-fluid new-vendor-right" src="https://dummyimage.com/250x400/10e689/fff" alt=""/>
-                </div>
-              </div>
-            </div>
+          <div className="row">
+            { this.generateMockData(this.props.images) }
           </div>
 
           <div className="btn-group banner-buttons" role="group" aria-label="Basic example">
@@ -58,5 +84,3 @@ class RNVendors extends Component {
 }
 
 export default RNVendors;
-
-// https://dummyimage.com/250x400/10e689/fff

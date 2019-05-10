@@ -5,7 +5,6 @@ import Modal from '../../globals/Modal';
 import './viewImage.scss';
 
 
-
 class ViewImage extends Component {
   constructor(props) {
     super(props);
@@ -27,6 +26,7 @@ class ViewImage extends Component {
     });
   };
 
+
   render() {
   
     const showModal = this.state.showModal ? (
@@ -37,14 +37,25 @@ class ViewImage extends Component {
 
             <ol className="carousel-indicators view">
               <li data-target="#carousel-example-generic" data-slide-to="0" className="active">
-                <div className="row">
-                  <div className="col-xs-6 col-sm-6 col-md-6">
-                    <img src={this.props.images[0].url} alt="..."/>
-                  </div>
-                  <div  className="col-xs-6 col-sm-6 col-md-6">
-                    <img src={this.props.images[1].url} alt="..."/>
-                  </div>
-                </div>
+        
+                  {
+                    this.props.images.length === 1 ? (
+                      <div className="row">
+                        <div className="col-xs-6 col-sm-6 col-md-6">
+                          <img src={this.props.images[0].url} alt="..."/>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="row">
+                        <div className="col-xs-6 col-sm-6 col-md-6">
+                          <img src={this.props.images[0].url} alt="..."/>
+                        </div>
+                        <div  className="col-xs-6 col-sm-6 col-md-6">
+                          <img src={this.props.images[1].url} alt="..."/>
+                        </div>
+                      </div>
+                    )
+                  }
               </li>
               {
                 this.props.otherImages.map( (images, i) => {
@@ -68,16 +79,24 @@ class ViewImage extends Component {
 
             <div className="carousel-inner" role="listbox">
               <div className="item active">
-                <div className="row">
-                  <div className="col-xs-6 col-sm-6 col-md-6">
-                    <img src={this.props.images[0].url} alt="..."/>
-                  </div>
-                  <div  className="col-xs-6 col-sm-6 col-md-6">
-                    <img src={this.props.images[1].url} alt="..."/>
-                  </div>
-                </div>
-             
-                
+                 { 
+                    this.props.images.length === 1 ? (
+                      <div className="row">
+                        <div className="col-xs-6 col-sm-6 col-md-6">
+                          <img src={this.props.images[0].url} alt="..."/>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="row">
+                        <div className="col-xs-6 col-sm-6 col-md-6">
+                          <img src={this.props.images[0].url} alt="..."/>
+                        </div>
+                        <div  className="col-xs-6 col-sm-6 col-md-6">
+                          <img src={this.props.images[1].url} alt="..."/>
+                        </div>
+                      </div>
+                    )
+                  }
               </div>
               {
                 this.props.otherImages.map( images => {

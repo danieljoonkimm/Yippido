@@ -20,7 +20,25 @@ class Product extends Component {
         Made: 'Import',
         Stock: 'In Stock',
         Label: 'Labeled',
-      }
+      },
+      availableColors: [
+        { 
+          name: 'Mocha',
+          hex: '#c666a0'
+        },
+        { 
+          name: 'Brown',
+          hex: '#654321'
+        },
+        { 
+          name: 'Blue',
+          hex: '#4169e1'
+        },
+        { 
+          name: 'Black',
+          hex: '#000'
+        },
+      ],
     }
   }
 
@@ -31,6 +49,7 @@ class Product extends Component {
       mock.push( 
         <div className="product__spec col-xs-3 col-sm-3 col-md-3">{key}</div>
       )
+      
       mock.push(<div className="product__spec col-xs-9 col-sm-9 col-md-9">{this.product.specs[key]}</div>)
     }
 
@@ -59,6 +78,18 @@ class Product extends Component {
         <div className="product__specs">
           <div className="row"> 
             { this.generateMockData() }
+          </div>
+          <div className="row" style={{ padding: '10px 5px'}}>
+            { this.product.availableColors.map( color => {
+              return (
+                <div className="col-xs-3 col-sm-3 col-md-3"  key={ color.hex} style={{ display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
+                  <div style={{ height: '25px', width: '25px', backgroundColor: color.hex, borderRadius: "50%"}}>
+                  </div>
+                  <div style={{ width: '50px', paddingLeft: '5px'}}>{ color.name }</div>
+                </div>
+                  
+              )
+            })}
           </div>
         </div>
         {/* <Purchase/> */}

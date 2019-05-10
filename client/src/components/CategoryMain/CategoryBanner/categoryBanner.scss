@@ -3,11 +3,15 @@
   background-color: #efefef;
   border-bottom: 1px solid rgba(0,0,0,.1);
 
+  .row {
+    margin: 0;
+  }
   .gallery {
     background-color: white;
     display: flex;
     border-radius: 8px 0 0 8px;
     align-items: center;
+
   }
 
   .brand-item {
@@ -22,68 +26,15 @@
     padding: 0 5px;
   }
   
-
   .gallery-item {
     padding: 5px 8px;
 
-
     img {
-      border-radius: 8px;
       display: flex;
     }
-
-    .top-left {
-      border-radius: 8px 0 0 0;
-    }
-    .top-right {
-      border-radius: 0 8px 0 0;
-    }
-    .bottom-right {
-      border-radius: 0 0 8px 0;
-    }
-    .bottom-left {
-      border-radius: 0 0 0 8px;
-    } 
   }
 }
-.category-title {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  
 
-  h1 {
-    font-size: 36px;
-    padding: 20px 0;
-    margin: 0;
-    width: 200px;
-    text-transform: uppercase;
-  }
-  
-  .category-dropdown-menus {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    .category-dropdown-btns {
-      width: 250px;
-
-      .category-dropdown-btn {
-        width: 250px;
-
-        span {
-          margin-left: 5px;
-        }
-
-      }
-      .category-dropdown {
-        width: 200px;
-      }
-    }
-  }
-  
-}
 
 .banner-buttons {
   margin: 20px auto 30px auto;

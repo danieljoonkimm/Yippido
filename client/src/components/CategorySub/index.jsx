@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import ItemList from './ItemList';
+import ItemList from '../globals/ItemGrid/ItemList.jsx';
 
 import '../CategoryMain/CategoryBanner/categoryBanner.scss';
 import './subCategory.scss';

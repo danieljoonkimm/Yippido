@@ -28,30 +28,32 @@
     }
 
     
+    .carousel-indicators{
+      list-style: none;
+    
+      display: flex;
+      justify-content: center;
+    }
+    .carousel-indicators li, .carousel-indicators li.active{
+      width: 100px;
+      height: 70px;
+      border: none;
+      position: relative;
+      margin: 0 5px;
+    }
+    .carousel-indicators img{
+      position: absolute;
+    
+      top: 0;
+      left: 0;            
+    }
+    
+    .carousel-control.right, .carousel-control.left {
+      background: none;
+      width: 5%;
+    }
   }
+
 }
 
-.carousel-indicators{
-  list-style: none;
 
-  display: flex;
-  justify-content: center;
-}
-.carousel-indicators li, .carousel-indicators li.active{
-  width: 100px;
-  height: 70px;
-  border: none;
-  position: relative;
-  margin: 0 5px;
-}
-.carousel-indicators img{
-  position: absolute;
-
-  top: 0;
-  left: 0;            
-}
-
-.carousel-control.right, .carousel-control.left {
-  background: none;
-  width: 5%;
-}

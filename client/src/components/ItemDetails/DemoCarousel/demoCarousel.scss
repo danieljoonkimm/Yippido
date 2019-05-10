@@ -1,0 +1,44 @@
+#demoCarousel {
+  margin-bottom: 50px;
+  width: 100%;
+  .row {
+    margin: 0;
+  }
+
+  .demo-indicators{
+    list-style: none;
+    height: 100%;
+ 
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0;
+    justify-content: center;
+    top: 100%;
+    width: 100%;
+    position: relative;
+    margin-left: 0;
+    margin: 10px 0;
+
+    li {
+      margin: 0 5px;
+    }
+
+    li:first-child {
+      margin-left: 0;
+    }
+
+    li:last-child {
+      margin-right: 0;
+    }
+  }
+
+  
+    
+  .carousel-control.right, .carousel-control.left {
+    background: none;
+    width: 5%;
+  }
+    
+    
+    
+  }

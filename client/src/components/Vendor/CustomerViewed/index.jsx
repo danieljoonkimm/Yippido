@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Image from '../Image';
+import ProductImage from '../ProductImage';
 
 import './customerViewed.scss';
 
@@ -17,8 +17,8 @@ class CustomerViewed extends Component {
       let price = `${(Math.random() * 20 + 10).toFixed(2)}`
 
       mockData.push(
-        <div key={i  + 'customer view'} className="customerViewed__vendor scol-xs-4 col-sm-4 col-md-4">
-          <Image className="col-xs-6 col-sm-6 col-md-6" images={images} otherImages={[images]}/>
+        <div key={i  + 'customer view'} className="customerViewed__vendor scol-xs-4 col-sm-4 col-md-4" style={{ padding: '5px'}}>
+          <ProductImage  name="duo" className="col-xs-6 col-sm-6 col-md-6" images={images} otherImages={[images]}/>
           <h6 >BLUELEMON</h6>
           <span>{model} / <strong>${price}</strong></span>
         </div>

@@ -1,5 +1,8 @@
 
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
+
+import ProductImage from '../../Vendor/ProductImage';
 
 import './categoryBanner.scss';
 
@@ -9,88 +12,74 @@ class CategoryBanner extends Component {
   }
 
   render() {
+    const images = [
+      [
+        { url: 'https://dummyimage.com/400x600/e3d187/#fff'},
+        { url: 'https://dummyimage.com/400x600/a4e099/#fff'}
+      ],
+      [
+        { url: 'https://dummyimage.com/400x600/26628a/#fff'},
+        { url: 'https://dummyimage.com/400x600/9b192e/#fff'}
+      ],
+      [ 
+        { url: 'https://dummyimage.com/400x600/929ded/#fff'},
+        { url: 'https://dummyimage.com/400x600/bbdbf3/#fff'}
+      ],
+      [
+        { url: 'https://dummyimage.com/400x600/ed3462/#fff'},
+        { url: 'https://dummyimage.com/400x600/4c634f/#fff'}
+      ],
+      [
+        { url: 'https://dummyimage.com/400x600/6bbf1f/#fff'},
+        { url: 'https://dummyimage.com/400x600/cea7d7/#fff'}
+      ],
+    ]
+
     return (
       <div id="categoryBanner">
         <div className="container">
-          <div className="category-title">
-            <h1>Women</h1>
-            <div className="category-dropdown-menus">
-              <div className="btn-group category-dropdown-btns">
-                <button type="button" className="btn btn-default dropdown-toggle category-dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Women Category <span className="caret"></span>
-                </button>
-                <ul className="dropdown-menu category-dropdown">
-                  <li><a href="#">Women Category</a></li>
-                </ul>
-              </div>
-              <div className="btn-group category-dropdown-btns">
-                <button type="button" className="btn btn-default dropdown-toggle category-dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Women Vendors <span className="caret"></span>
-                </button>
-                <ul className="dropdown-menu category-dropdown">
-                  <li><a href="#">Women Vendors</a></li>
-                </ul>
-              </div>
-              <div className="btn-group category-dropdown-btns">
-                <button type="button" className="btn btn-default dropdown-toggle category-dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Look Book <span className="caret"></span>
-                </button>
-                <ul className="dropdown-menu category-dropdown">
-                  <li><a href="#">Look Book</a></li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-          <div className="gallery row align-items-center">
+          <div className="gallery row">
               <div className="brand-item col-xs-3 col-sm-3 col-md-3">
-                <img className="img-fluid" src="https://dummyimage.com/400x600/26628a/fff" alt=""/>
+              <ProductImage 
+                name="default"
+                className=""
+                images={[{ url: 'https://dummyimage.com/400x600/26628a/fff' }]}
+                otherImages={images}
+                onClick={() => { console.log('hey', ); this.props.history.push('/vendor') }}
+              />  
               </div>
               <div className="item col-xs-9 col-sm-9 col-md-9">
                 <div className="portfolio-item row">
-
                   <div className="gallery-item col-xs-4 col-sm-4 col-md-4">
-
                     <div className="gallery-box row">
-
-                      <div className="gallery-box-item col-xs-6 col-sm-6 col-md-6">
-                        <img className="img-fluid top-left" src="https://dummyimage.com/400x600/26628a/fff" alt=""/>
-                      </div>
-                      <div className="gallery-box-item col-xs-6 col-sm-6 col-md-6">
-                        <img className="img-fluid top-right" src="https://dummyimage.com/400x600/26628a/fff" alt=""/>
-                      </div>
-                      <div className="w-100"></div>
-                      <div className="gallery-box-item col-xs-6 col-sm-6 col-md-6">
-                        <img className="img-fluid bottom-left" src="https://dummyimage.com/400x600/26628a/fff" alt=""/>
-                      </div>
-                      <div className="gallery-box-item col-xs-6 col-sm-6 col-md-6">
-                        <img className="img-fluid bottom-right" src="https://dummyimage.com/400x600/26628a/fff" alt=""/>
-                      </div>
+                      <ProductImage 
+                        name="quad"
+                        className="gallery-box-item col-xs-6 col-sm-6 col-md-6"
+                        images={[{ url: 'https://dummyimage.com/400x600/26628a/fff'},{ url: 'https://dummyimage.com/400x600/26628a/fff'},{ url: 'https://dummyimage.com/400x600/26628a/fff'},{ url: 'https://dummyimage.com/400x600/26628a/fff'}]}
+                        otherImages={images}
+                        onClick={() => { console.log('hey', ); this.props.history.push('/vendor') }}
+                      />
                     </div>
                   </div>
-
-                  <div className="gallery-item col-xs-4 col-sm-4 col-md-4">
-
-                    <img className="img-fluid" src="https://dummyimage.com/400x600/26628a/fff" alt=""/>
+                  <div >
+                    <ProductImage 
+                      name="default"
+                      className="gallery-item col-xs-4 col-sm-4 col-md-4"
+                      images={[{ url: 'https://dummyimage.com/400x600/26628a/fff' }]}
+                      otherImages={images}
+                      onClick={() => { console.log('hey', ); this.props.history.push('/vendor') }}
+                    />    
                   </div>
 
                   <div className="gallery-item col-xs-4 col-sm-4 col-md-4">
-
                     <div className="gallery-box row">
-
-                      <div className="gallery-box-item col-xs-6 col-sm-6 col-md-6">
-                        <img className="img-fluid top-left" src="https://dummyimage.com/400x600/26628a/fff" alt=""/>
-                      </div>
-                      <div className="gallery-box-item col-xs-6 col-sm-6 col-md-6">
-                        <img className="img-fluid top-right" src="https://dummyimage.com/400x600/26628a/fff" alt=""/>
-                      </div>
-                      <div className="w-100"></div>
-                      <div className="gallery-box-item col-xs-6 col-sm-6 col-md-6">
-                        <img className="img-fluid bottom-left" src="https://dummyimage.com/400x600/26628a/fff" alt=""/>
-                      </div>
-                      <div className="gallery-box-item col-xs-6 col-sm-6 col-md-6">
-                        <img className="img-fluid bottom-right" src="https://dummyimage.com/400x600/26628a/fff" alt=""/>
-                      </div>
+                      <ProductImage 
+                        name="quad"
+                        className="gallery-box-item col-xs-6 col-sm-6 col-md-6"
+                        images={[{ url: 'https://dummyimage.com/400x600/26628a/fff'},{ url: 'https://dummyimage.com/400x600/26628a/fff'},{ url: 'https://dummyimage.com/400x600/26628a/fff'},{ url: 'https://dummyimage.com/400x600/26628a/fff'}]}
+                        otherImages={images}
+                        onClick={() => { console.log('hey', ); this.props.history.push('/vendor') }}
+                      />
                     </div>
                   </div>
                 </div>
@@ -111,4 +100,4 @@ class CategoryBanner extends Component {
   }
 }
 
-export default CategoryBanner;
+export default withRouter(CategoryBanner);
