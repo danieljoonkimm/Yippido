@@ -89,7 +89,17 @@ class Vendors extends Component {
         </div>
         </div>
       </div>
+
+      <div className="btn-group banner-buttons" role="group" aria-label="Basic example">
+            <button type="button" className="btn btn-category">Ashes Belbet</button>
+            <div className="separator"></div>
+            <button type="button" className="btn btn-category">Zenana</button>
+            <div className="separator"></div>
+            <button type="button" className="btn btn-category">DoubleZero</button>
+          </div>
     </div>
+
+    
       // <div className="container" id="vendorMain_container">
       //   <div className="row" id="vendorMain_row">
       //     <div className="col-xs-4 col-sm-4 col-md-4" id="vendorMain_mainImage">

@@ -34,32 +34,36 @@ class FeaturedItems extends Component {
       ]
     ];
 
-    this.generateMockData = this.generateMockData.bind(this);
-
     this.state = {};
   }
 
-  
-
-  generateMockData (images) {
-    let mock = [];
-    
-    for (let i = 0; i < images.length; i++) {
-
-        mock.push( 
-          <div className="col-xs-3 col-sm-3 col-md-3" style={{padding: '5px'}}>
-            <ProductImage 
-              className="col-xs-12 col-sm-12 col-md-12" 
-              name={'default'}
-              images={images[i]} 
-              isViewable={false}
-            />
-          </div>
-        );
+  convertGrid (images) {  
+    const item = {
+      name: 'Aisley Rose',
+      price: 18,
+      model: 'L4777R',
+      image: "https://dummyimage.com/400x600/26628a/fff"
     }
 
-    return mock;
+    return images.map( image => { 
+        return (
+          <div className="col-xs-3 col-sm-3 col-md-3" style={{ padding: '5px'}}>
+            <ProductImage
+              className="col-xs-12 col-sm-12 col-md-12" 
+              name={'default'}
+              images={image} 
+              isViewable={false}
+            />
+            <div>
+              <div>{item.model} / <strong>${item.price}</strong></div>
+              <div>{item.name}</div>
+            </div>
+          </div>
+        )
+      
+    });
   }
+  
 
   render() {
     return (
@@ -67,7 +71,7 @@ class FeaturedItems extends Component {
       <div className="container">
         <h1>FEATURED ITEMS</h1>
         <div className="row">
-          { this.generateMockData(this.featuredItems) }
+          { this.convertGrid(this.featuredItems) }
         </div>
 
       </div>

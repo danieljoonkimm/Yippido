@@ -1,14 +1,16 @@
-#highlightVendors_container {
-  background-color: #efefef;
-  border: none;
-  padding: 1em;
-  width: 100%;
+#newVendors_container {
   h1 {
     text-align: center;
     font-weight: bold;
     padding: 0.5em;
     letter-spacing: 4px;
   }
+}
+#highlightVendors_container {
+  background-color: #efefef;
+  border: none;
+  padding: 1em;
+  width: 100%;
   .row {
     background-color: white;
   }

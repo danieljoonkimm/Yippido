@@ -22,14 +22,14 @@ class Landing extends Component {
       <div>
         {/* <CompanyHeader/> */}
         {/* <Vendors /> */}
-        {/* <FeaturedItems /> */}
+        <FeaturedItems />
         {/* <HighlightVendors /> */}
         {/* <LookBook /> */}
-        <CategoryCollection />
-        <Events/>
-        <NewVendors/>
+        {/* <CategoryCollection /> */}
+        {/* <Events/> */}
+        {/* <NewVendors/> */}
         
-        {/* <CompanyFooter/> */}
+        <CompanyFooter/>
       </div>
     );
   }
