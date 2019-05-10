@@ -9,6 +9,7 @@ import Vendor from "./Vendor";
 import Sale from "./sale/index.jsx";
 import IndividualVendorLanding from "./IndividualVendorLanding/index.jsx";
 import ShoppingCart from "./ShoppingCart/index.jsx";
+import Navigation from "./Navigation/index.jsx";
 
 import CompanyFooter from "./CompanyFooter/index.jsx";
 import CompanyHeader from "./CompanyHeader/index.jsx";
@@ -30,8 +31,9 @@ class App extends Component {
       //   ))}
       // </Switch>
       <div>
-        <CategoryMain/>
-        <IndividualVendorLanding/>
+        {/* <CategoryMain/> */}
+        {/* <IndividualVendorLanding/> */}
+        <Navigation/>
       </div>
     );
   }

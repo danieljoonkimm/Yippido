@@ -1,0 +1,59 @@
+@import '../../../../global/global.scss';
+
+
+.category_container {
+  display: flex;
+  width: fit-content;
+  min-width: 60%;
+}
+.category_title {
+  margin: 1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+}
+.category_title:hover {
+  color: $blue;
+}
+.category_upper {
+  width: fit-content;
+}
+.category_lower {
+  // width: fit-content;
+  // width: 100%;
+  // border-left: 2px solid $grey;
+}
+.subCategory_container {
+}
+.subCategory_container.groupContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.subCategory_name.group {
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 1em;
+}
+.subCategory_name.group:hover {
+  color: $blue;
+}
+.subCategory_name.single {
+  text-transform: capitalize;
+  color: $fontGrey;
+  margin: 1em;
+  font-weight: 600;
+
+}
+.subCategory_name.single:hover {
+  color: $blue;
+}
+.subCategory_item {
+  text-transform: capitalize;
+  color: $fontGrey;
+  margin: 1em 0;
+}
+.subCategory_item:hover {
+  color: $blue;
+}
