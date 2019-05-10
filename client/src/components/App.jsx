@@ -8,6 +8,7 @@ import CategorySub from "./CategorySub";
 import Vendor from "./Vendor";
 import Sale from "./sale/index.jsx";
 import IndividualVendorLanding from "./IndividualVendorLanding/index.jsx";
+import IndividualVendorAllItems from "./IndividualVendorLanding/IndividualVendorAllItems/index.jsx";
 import ShoppingCart from "./ShoppingCart/index.jsx";
 import Navigation from "./Navigation/index.jsx";
 
@@ -31,9 +32,9 @@ class App extends Component {
       //   ))}
       // </Switch>
       <div>
-        <CategoryMain/>
-        {/* <IndividualVendorLanding/> */}
-        <Landing/>
+        {/* <CategoryMain/> */}
+        <IndividualVendorAllItems/>
+        {/* <Landing/> */}
       </div>
     );
   }
