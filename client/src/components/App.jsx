@@ -14,7 +14,6 @@ import CompanyFooter from "./CompanyFooter/index.jsx";
 import CompanyHeader from "./CompanyHeader/index.jsx";
 import routes from "../routes";
 
-import DummyComponent from "./DummyComponent/index.jsx";
 
 class App extends Component {
   constructor() {
@@ -31,8 +30,8 @@ class App extends Component {
       //   ))}
       // </Switch>
       <div>
-        {/* <CategoryMain/> */}
-        <Landing/>
+        <CategoryMain/>
+        <IndividualVendorLanding/>
       </div>
     );
   }
