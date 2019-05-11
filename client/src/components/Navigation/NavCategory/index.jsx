@@ -250,22 +250,10 @@ export default class NavCategory extends Component {
     super();
     this.state = {
       selectedIds: [],
-      activeSub: {
-        isActive: false,
-        visibility: 'hidden'
-      },
-      subCat: [],
-      subItemToggle: {
-        toggle: false,
-        display: 'none',
-      }
     };
     
-    this.toggleCategories = this.toggleCategories.bind(this);
   }  
-  toggleCategories() {
-    this.state.subItemToggle.toggle ? this.setState({subItemToggle: {toggle: false, display: 'none'}, activeSub: {isActive: false, visibility: 'hidden'}}) : this.setState({subItemToggle: {display: "flex", toggle: true, borderLeft: '2px solid darkGrey'}, activeSub: {isActive: true, visibility: 'visible'}})
-  }
+
   handleSelectedId(selected, depthLevel) {
     return () => {
       const updatedArray = this.state.selectedIds.slice(0);
@@ -287,7 +275,6 @@ export default class NavCategory extends Component {
         }
       })
     })
-    // console.log(subCat, 'subcat array')
     return subCat
   }
 
@@ -310,48 +297,3 @@ export default class NavCategory extends Component {
     )
   }
 };
-
-  // renderCategories(categories, depthLevel = 0) {
-  //   let subCat = [];
-  //   return categories.map(title => {
-  //     title.categories.map(subCategories => {
-  //       if ((this.state.selectedIds[depthLevel]) === subCategories.parent_id) {
-  //         subCat.push(subCategories.name);
-  //         console.log(subCat, 'hello')
-  //         return subCat;
-  //       }
-  //     })
-  //     return <ul onClick={this.handleSelectedId(title.category_id, depthLevel)}>{title.name}</ul>
-  //   })
-  //   return subCat;
-  // }
-
-    // return categories.map(category => {
-    //   return (
-    //     <div className="tooltip_container">
-    //       <div className="col category_container" key={category.category_id}>
-    //         <ul className="category_item" onClick={this.handleSelectedId(category.category_id, depthLevel)}>{category.name}<Icon icon={ic_keyboard_arrow_right} style={this.state.isActive}/></ul>
-    //       </div>
-    //       <ul className="col subCategory_container" style={this.state.subItemToggle}>
-    //         {
-    //           category.categories.map(name => {
-    //             if((this.state.selectedIds[depthLevel] === name.parent_id)) {
-    //               return (
-    //                 <div className="subCategory_Con">
-    //                   <ul className="col subCategory_name" key={category.parent_id}>
-    //                   {name.name}
-    //                   </ul>
-    //                   {
-    //                     name.categories.map(subName => {
-    //                       return <li className="subCategory_item" key={subName.parent_id}>{subName.name}</li>
-    //                     })
-    //                   }
-    //                 </div>
-    //               )
-    //             }
-    //           })
-    //         }
-    //       </ul>
-    //     </div>
-    //   )
-    // })

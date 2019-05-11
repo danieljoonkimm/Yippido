@@ -32,7 +32,6 @@ export default class NavSubCategory extends Component {
     let subCat, category = this.pushSubCategories(this.props.subItems);
     for (let i = 0; i < category.length; i++) {
       subCat = category[i].categories.length;
-      console.log(subCat, 'index')
     }
     return(
       <div className={"subCategory_container " + (subCat > 0 ? 'groupContainer' : 'singleContainer')}>

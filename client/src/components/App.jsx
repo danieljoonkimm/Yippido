@@ -10,6 +10,8 @@ import SignIn from './signIn/index.jsx';
 import BuyerRegisteration from './BuyerRegisteration';
 import CategoryMain from './CategoryMain';
 import CategorySub from './CategorySub';
+import NavTabs from './NavTabs';
+import TEST from './TEST/test';
 
 class App extends Component {
   constructor() {
@@ -31,11 +33,14 @@ class App extends Component {
           <Route exact path="/login" component={Login} />
         </Switch> */}
         <Navigation />
+        <NavTabs />
         {/* <SignIn/>
-        <Register/>
-        <Landing/>
-        <CategorySub /> */}
-        <BuyerRegisteration/>
+        <Register/> */}
+        {/* <Landing/> */}
+        <CategoryMain />
+        <CategorySub />
+        <TEST />
+        {/* <BuyerRegisteration/> */}
       </div>
     );
   }

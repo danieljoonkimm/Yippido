@@ -127,7 +127,6 @@ export default class NavDailyNew extends Component {
             </div>
           </div>
         </div>
-
       </div>
     )
   }
