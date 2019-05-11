@@ -27,7 +27,7 @@ class LookBook extends Component {
 
   generateMockData (images) {
     let mock = [];
-    
+
     const item = {
       name: 'Aisley Rose',
       price: 18,
@@ -57,7 +57,7 @@ class LookBook extends Component {
           <div className="col-xs-4 col-sm-4 col-md-4" style={{padding: '5px'}}>
             <ProductImage 
               className="col-xs-6 col-sm-6 col-md-6" 
-              name={'default'}
+              name={'duo'}
               images={images[i]} 
               isViewable={false}
             />
