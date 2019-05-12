@@ -32,9 +32,10 @@ class App extends Component {
       //   ))}
       // </Switch>
       <div>
-        {/* <CompanyFooter/> */}
-        {/* <IndividualVendorAllItems/> */}
-        <Landing/>
+        {/* <CompanyFooter/>
+        <IndividualVendorAllItems/>
+        <Landing/> */}
+        <ShoppingCart/>
       </div>
     );
   }
