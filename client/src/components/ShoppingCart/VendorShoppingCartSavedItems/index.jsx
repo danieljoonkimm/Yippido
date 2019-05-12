@@ -65,14 +65,20 @@ class VendorShoppingCartSavedItems extends Component {
 
   convertShoppingCartHeader(data) {
     return data.map(data => {
-      return <div className="col-xs-1 col-sm-1 col-md-1">{data}</div>;
+      return <div>
+        <table>
+          <thead>
+            <tr>{data}</tr>
+          </thead>
+        </table>
+      </div>
     });
   }
 
   render() {
     return (
       <div className="container" id="vendorShoppingCartSavedItems_container">
-        <div className="row">
+        <div className="row" style={{display: "flex"}}>
           {this.convertShoppingCartHeader(this.shoppingCartHeader)}
         </div>
       </div>
