@@ -62,75 +62,79 @@ class VendorShoppingCartSavedItems extends Component {
       "Sel"
     ];
 
-    this.state = {};
+    this.state = {
+      quant: 1
+    };
+  }
+
+  changeQuant(e) {
+    e.preventDefault();
   }
 
   convertShoppingCartHeader(shoppingCartHeader, shoppingCartItems) {
     let shoppingCartHeaderShow = shoppingCartHeader.map(data => {
       return <tr>{data}</tr>;
     });
-    console.log(shoppingCartHeaderShow);
 
     let lengthOfProducts = shoppingCartItems.length;
 
     let shoppingCartItemsShow = shoppingCartItems.map(data => {
       return (
-        <tr>
+        <tr style={{ display: "flex" }}>
           <td>
             <img src={data.thumb} style={{ width: "50px", height: "auto" }} />
           </td>
           <td>{data.key}</td>
           <td>{data.color}</td>
           <td>{data.size}</td>
-          <td style={{display: "flex"}}>
-            <button
-              type="button"
-              class="btn btn-default btn-number"
-              disabled="disabled"
-              data-type="minus"
-              data-field="quant[1]"
-            >
-              <span class="glyphicon glyphicon-minus" />
-            </button>
+          <td style={{ display: "flex" }}>
+            <span className="input-group-btn">
+              <button
+                onClick={this.changeQuant.bind(this)}
+                type="button"
+                className="btn btn-default btn-number"
+                disabled="disabled"
+                data-type="minus"
+                data-field="quant[1]"
+              >
+                <span className="glyphicon glyphicon-minus" />
+              </button>
+            </span>
             <input
               type="text"
               name="quant[1]"
-              class="form-control input-number"
-              value="1"
+              className="form-control input-number"
+              defaultValue="1"
               min="1"
+              max="10000"
             />
-            <button
-              type="button"
-              class="btn btn-default btn-number"
-              data-type="plus"
-              data-field="quant[1]"
-            >
-              <span class="glyphicon glyphicon-plus" />
-            </button>
+            <span className="input-group-btn">
+              <button
+                onClick={this.changeQuant.bind(this)}
+                type="button"
+                className="btn btn-default btn-number"
+                data-type="plus"
+                data-field="quant[1]"
+              >
+                <span className="glyphicon glyphicon-plus" />
+              </button>
+            </span>
           </td>
           <td>{lengthOfProducts}</td>
           <td>{data.price}</td>
           <td>{data.total}</td>
-          <td><input type="checkbox"/></td>
+          <td>
+            <input type="checkbox" />
+          </td>
         </tr>
       );
     });
 
-    // <div class="input-group">
-    //       <span class="input-group-btn">
-    //           <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-    //               <span class="glyphicon glyphicon-minus"></span>
-    //           </button>
-    //       </span>
-    //       <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
-    //       <span class="input-group-btn">
-    //           <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
-    //               <span class="glyphicon glyphicon-plus"></span>
-    //           </button>
-    //       </span>
-    //   </div>
     return (
-      <table className="table">
+      <table
+        className="table"
+        style={{ display: "flex", flexDirection: "column" }}
+      >
         <thead style={{ display: "flex" }}>{shoppingCartHeaderShow}</thead>
         <tbody>{shoppingCartItemsShow}</tbody>
       </table>
