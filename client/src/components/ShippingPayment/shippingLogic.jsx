@@ -44,7 +44,7 @@ class ShippingLogic extends Component {
             <div className="col-xs-12 col-sm-12 col-md-12">
               <div className="col-xs-6 col-sm-6 col-md-6">{info.phone}</div>
               <div className="col-xs-3 col-sm-3 col-md-3">
-                <span class="glyphicon glyphicon-pencil">Edit</span>
+                <span className="glyphicon glyphicon-pencil">Edit</span>
               </div>
             </div>
           </div>
@@ -66,7 +66,7 @@ class ShippingLogic extends Component {
         className="col-xs-12 col-sm-12 col-md-12"
         style={{ padding: "10px" }}
       >
-        <div className="col-xs-12 col-sm-12 col-md-12">{orderLength}</div>
+        <div className="col-xs-12 col-sm-12 col-md-12">Orders({orderLength})</div>
         <div className="col-xs-6 col-sm-6 col-md-6">Order Total:</div>
         <div className="col-xs-6 col-sm-6 col-md-6">{totalAmount}</div>
         <div className="col-xs-12 col-sm-12 col-md-12">
