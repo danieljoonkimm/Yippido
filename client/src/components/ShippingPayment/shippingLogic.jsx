@@ -83,7 +83,7 @@ class ShippingLogic extends Component {
     return(
       <div className="row">
       <div
-        className="col-xs-12 col-sm-8 col-md-8"
+        className="col-xs-12 col-sm-9 col-md-9"
         style={{ padding: "10px" }}
       >
         <div
@@ -98,7 +98,7 @@ class ShippingLogic extends Component {
       </div>
 
       <div
-        className="col-xs-12 col-sm-4 col-md-4"
+        className="col-xs-12 col-sm-3 col-md-3"
         style={{
           padding: "10px",
           lineHeight: "20px",
