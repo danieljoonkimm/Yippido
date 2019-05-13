@@ -47,6 +47,48 @@ class VendorShoppingCartSavedItems extends Component {
             size: ["S", "M", "L"]
           }
         ]
+      },
+      CompanyName2: {
+        products: [
+          {
+            key: "726",
+            thumb: "https://img.pranavc.in/200",
+            name: "iPod Shuffle",
+            points: 0,
+            product_id: "34",
+            model: "Product 7",
+            option: [],
+            quantity: "2",
+            stock: true,
+            reward: "",
+            price: "$122.00",
+            recurring: "",
+            total: "$244.00",
+            price_raw: 122,
+            total_raw: 244,
+            color: "red",
+            size: ["S", "M", "L"]
+          },
+          {
+            key: "726",
+            thumb: "https://img.pranavc.in/200",
+            name: "iPod Shuffle2",
+            points: 0,
+            product_id: "34",
+            model: "Product 7",
+            option: [],
+            quantity: "2",
+            stock: true,
+            reward: "",
+            price: "$122.00",
+            recurring: "",
+            total: "$244.00",
+            price_raw: 122,
+            total_raw: 244,
+            color: "blue",
+            size: ["S", "M", "L"]
+          }
+        ]
       }
     };
 
@@ -73,7 +115,11 @@ class VendorShoppingCartSavedItems extends Component {
 
   convertShoppingCartHeader(shoppingCartHeader, shoppingCartItems) {
     let shoppingCartHeaderShow = shoppingCartHeader.map(data => {
-      return <tr>{data}</tr>;
+      return (
+        <tr>
+          {data}
+        </tr>
+      );
     });
 
     let lengthOfProducts = shoppingCartItems.length;
@@ -87,39 +133,27 @@ class VendorShoppingCartSavedItems extends Component {
           <td>{data.key}</td>
           <td>{data.color}</td>
           <td>{data.size}</td>
-          <td style={{ display: "flex" }}>
+          <td className="input-group" style={{ width: "50%" }}>
             <span className="input-group-btn">
-              <button
-                onClick={this.changeQuant.bind(this)}
-                type="button"
-                className="btn btn-default btn-number"
-                disabled="disabled"
-                data-type="minus"
-                data-field="quant[1]"
-              >
-                <span className="glyphicon glyphicon-minus" />
+              <button className="btn btn-white btn-minuse" type="button">
+                -
               </button>
             </span>
             <input
               type="text"
-              name="quant[1]"
-              className="form-control input-number"
+              className="form-control no-padding add-color text-center height-25"
+              maxLength="1000"
               defaultValue="1"
               min="1"
               max="10000"
             />
             <span className="input-group-btn">
-              <button
-                onClick={this.changeQuant.bind(this)}
-                type="button"
-                className="btn btn-default btn-number"
-                data-type="plus"
-                data-field="quant[1]"
-              >
-                <span className="glyphicon glyphicon-plus" />
+              <button className="btn btn-red btn-pluss" type="button">
+                +
               </button>
             </span>
           </td>
+
           <td>{lengthOfProducts}</td>
           <td>{data.price}</td>
           <td>{data.total}</td>
@@ -144,10 +178,28 @@ class VendorShoppingCartSavedItems extends Component {
   render() {
     return (
       <div className="container" id="vendorShoppingCartSavedItems_container">
-        {this.convertShoppingCartHeader(
-          this.shoppingCartHeader,
-          this.data.CompanyName.products
-        )}
+        <div className="row">
+          <div className="col-xs-12 col-sm-12 col-md-12">hi</div>
+          <div className="col-xs-12 col-sm-12 col-md-12">
+            {this.convertShoppingCartHeader(
+              this.shoppingCartHeader,
+              this.data.CompanyName.products
+            )}
+          </div>
+        </div>
+
+        <div className="col-xs-12 col-sm-12 col-md-12">
+          <div className="form-check" style={{display: "flex"}}>
+            <input
+              type="checkbox"
+              className="form-check-input"
+              id="exampleCheck1"
+            />
+            <label className="form-check-label">
+              Select All
+            </label>
+          </div>
+        </div>
       </div>
     );
   }

@@ -10,6 +10,7 @@ import Sale from "./sale/index.jsx";
 import IndividualVendorLanding from "./IndividualVendorLanding/index.jsx";
 import IndividualVendorAllItems from "./IndividualVendorLanding/IndividualVendorAllItems/index.jsx";
 import ShoppingCart from "./ShoppingCart/index.jsx";
+import ShippingPayment from "./ShippingPayment/index.jsx";
 import Navigation from "./Navigation/index.jsx";
 
 import CompanyFooter from "./CompanyFooter/index.jsx";
@@ -35,7 +36,7 @@ class App extends Component {
         {/* <CompanyFooter/>
         <IndividualVendorAllItems/>
         <Landing/> */}
-        <ShoppingCart/>
+        <ShippingPayment/>
       </div>
     );
   }
