@@ -49,6 +49,7 @@ class ShippingLogic extends Component {
             </div>
           </div>
         </div>
+        
       );
     });
   }

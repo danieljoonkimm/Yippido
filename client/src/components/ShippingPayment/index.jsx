@@ -1,10 +1,15 @@
 import React, { Component } from "react";
 import "./shippingPayment.scss";
 import ShippingLogic from "./shippingLogic.jsx";
+import ShippingMethodLogic from "./shippingMethodLogic.jsx";
 
 class ShippingPayment extends Component {
   constructor(props) {
     super(props);
+
+    this.companyInformation = {
+      companyLogo: "https://www.broadvoice.com/wp-content/uploads/2018/10/SBA-WOSB-Logo-300x248.png"
+    }
 
     this.orderSummary = [
       {
@@ -58,6 +63,7 @@ class ShippingPayment extends Component {
     return (
       <div className="container">
         <ShippingLogic orderSummary={this.orderSummary} shippingInformation={this.shippingInformation}/>
+        <ShippingMethodLogic companyInformation={this.companyInformation}/>
       </div>
     );
   }
