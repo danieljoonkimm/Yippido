@@ -30,13 +30,12 @@ class ShippingMethodLogic extends Component {
     }
     if (this.state.checkShipping === true) {
       this.setState({
-        checkShipping: false,
-        confirmedShipping: ""
+        confirmedShipping: e.currentTarget.id
       });
     } else {
       this.setState({
         checkShipping: true,
-        confirmedShipping: e.target.name
+        confirmedShipping: e.currentTarget.id
       });
     }
   }
@@ -88,15 +87,18 @@ class ShippingMethodLogic extends Component {
       return eachSub.map(eachh => {
         return eachh.map(final => {
           return (
-            <li className="form-check">
+            <p>
+              <label>
               <input
               className={final}
-                name={final}
+                name="eachSelector"
+                id={final}
+                type="radio"
                 onClick={this.handleShippingSelector.bind(this)}
-                type="checkbox"
               />
-              {final}
-            </li>
+              <span>{final}</span>
+              </label>
+            </p>
           );
         });
       });
@@ -132,8 +134,9 @@ class ShippingMethodLogic extends Component {
     console.log(this.state);
     return (
       <div className="row">
+      {this.shippingMethodLogic(this.props.companyInformation)}
         {this.shippingMethodsParent(this.shipping)}
-        <ul>{this.shippingMethodsChildren(this.shipping)}</ul>
+        <form action="#">{this.shippingMethodsChildren(this.shipping)}</form>
       </div>
     );
   }
