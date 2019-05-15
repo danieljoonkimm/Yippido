@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./shippingPayment.scss";
 import ShippingLogic from "./shippingLogic.jsx";
 import ShippingMethodLogic from "./shippingMethodLogic.jsx";
+import ShippingProtectPackage from "./shippingProtectPackage.jsx";
 
 class ShippingPayment extends Component {
   constructor(props) {
@@ -64,6 +65,7 @@ class ShippingPayment extends Component {
       <div className="container">
         <ShippingLogic orderSummary={this.orderSummary} shippingInformation={this.shippingInformation}/>
         <ShippingMethodLogic companyInformation={this.companyInformation}/>
+        <ShippingProtectPackage/>
       </div>
     );
   }
