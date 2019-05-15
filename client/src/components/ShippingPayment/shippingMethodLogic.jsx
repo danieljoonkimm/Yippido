@@ -131,9 +131,11 @@ class ShippingMethodLogic extends Component {
   }
 
   render() {
-    console.log(this.state);
+    const shippingHeader = "Shipping Method"
     return (
       <div className="row">
+      <div className="col-xs-9 col-sm-9 col-md-9">
+      <h2 style={{padding: "10px"}}>{shippingHeader}</h2></div>
       {this.shippingMethodLogic(this.props.companyInformation)}
         {this.shippingMethodsParent(this.shipping)}
         <form action="#">{this.shippingMethodsChildren(this.shipping)}</form>
