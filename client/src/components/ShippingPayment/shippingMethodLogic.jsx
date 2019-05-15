@@ -18,22 +18,21 @@ class ShippingMethodLogic extends Component {
 
     this.state = {
       checkShipping: false,
-      confirmedShipping: []
+      confirmedShipping: ''
     };
   }
 
   handleShippingSelector(e) {
     if(this.state.checkShipping === false) {
       this.setState({
-        checkShipping: !this.state.checkShipping
+        checkShipping: !this.state.checkShipping,
+        confirmedShipping: e.target.name
       })
-      confirmedShipping.splice(e.target.name, 1)
-      // console.log(confirmedShipping)
     } else {
       this.setState({
-        checkShipping: !this.state.checkingShipping
+        checkShipping: !this.state.checkingShipping,
+        confirmedShipping: ''
       })
-      confirmedShipping.push(e.target.name)
     }
   }
 
@@ -63,36 +62,67 @@ class ShippingMethodLogic extends Component {
     );
   }
 
-  shippingMethodsAvailable(methods) {
-    let method = [];
-    let methodType = [];
-    for (let key in methods) {
-      method.push(key);
-      methodType.push(methods[key]);
-    }
+  shippingMethodsParent(method) {
+    let shippingMethod = [];
 
-    let shippingType = method.map(shipping => {
+    for(let key in method) {
+      shippingMethod.push(key);
+    }
+    return shippingMethod.map(shipping => {
       return <div className="col-xs-4 col-sm-4 col-md-4">{shipping}</div>;
     });
-    let shippingTypeSub = methodType.map(shippingSub => {
-      return <div className="col-xs-4 col-sm-4 col-md-4">{shippingSub}</div>;
-    });
+  }
 
-    shippingType
+  shippingMethodsChildren(methods) {
+    let shippingMethods = {};
+    for(let key in methods) {
+      shippingMethods[key] = methods[key]
+      if(shippingMethods[key].length >1) {
+        return shippingMethods[key].map(shippers => {
+          let multipleShip = <li>{shippers}</li>
+        })
+      } else if (shippingMethods[key].length ===1) {
+          let singleShip = <li>{shippers}</li>
+      }
+    };
 
-    return(
-      <div className="col-xs-9 col-sm-9 col-md-9">
-        {shippingType}
-        {shippingTypeSub}
+    return (
+      <div className="col-xs-12 col-sm-12 col-md-12">
+        <div className="col-xs-4 col-sm-4 col-md-4">
+          {multipleShip}
+        </div>
       </div>
     )
+    // let shippingMethods = [];
+    
+    // for (let key in methods) {
+    //   shippingMethods.push(methods[key])
+    // }
+    // let eachIndividualShipping = shippingMethods.map(eachShip =>{
+    //   if (eachShip.length > 1) {
+    //     return eachShip.map(shippers => {
+    //       return <li>{shippers}</li>
+    //     })
+    //   } else if(eachShip.length ===1) {
+    //     return <li>{eachShip}</li>
+    //   } 
+    // })
+    // return(<div>
+    //   {eachIndividualShipping}
+    // </div>
+    // )
   }
 
   render() {
     return (
       <div className="row">
         {this.shippingMethodLogic(this.props.companyInformation)}
-        {this.shippingMethodsAvailable(this.shipping)}
+        <div className="col-xs-12 col-sm-12 col-md-12">
+          {this.shippingMethodsParent(this.shipping)}
+        </div>
+        <div className="col-xs-12 col-sm-12 col-md-12">
+          {this.shippingMethodsChildren(this.shipping)}
+        </div>
       </div>
     );
   }
