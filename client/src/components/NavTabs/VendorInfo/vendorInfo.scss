@@ -1,0 +1,21 @@
+@import '../../../../global/global.scss';
+
+#vendorInfo {
+  display: flex;
+  padding: 1em;
+
+  * {
+    outline: 1px solid red;
+  }
+}
+.sideNav {
+}
+.infoCategories {
+  font-size: 12px;
+  font-weight: 600;
+  color: $fontGrey;
+  line-height: 1.5;
+}
+.sideNavContents {
+
+}

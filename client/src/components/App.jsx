@@ -11,7 +11,6 @@ import BuyerRegisteration from './BuyerRegisteration';
 import CategoryMain from './CategoryMain';
 import CategorySub from './CategorySub';
 import NavTabs from './NavTabs';
-import TEST from './TEST/test';
 
 class App extends Component {
   constructor() {
@@ -32,14 +31,13 @@ class App extends Component {
         <Switch>
           <Route exact path="/login" component={Login} />
         </Switch> */}
-        <Navigation />
+        {/* <Navigation /> */}
         <NavTabs />
         {/* <SignIn/>
         <Register/> */}
         {/* <Landing/> */}
         <CategoryMain />
         <CategorySub />
-        <TEST />
         {/* <BuyerRegisteration/> */}
       </div>
     );

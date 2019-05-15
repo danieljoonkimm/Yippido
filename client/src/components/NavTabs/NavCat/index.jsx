@@ -3,7 +3,9 @@ import './tabCategory.scss';
 
 // components
 import NavCategory from '../../Navigation/NavCategory';
-import Checkboxes from '../Checkboxes';
+import Checkbox from '../Checkboxes';
+ 
+// let label;
 
 export default class NavCat extends Component {
   constructor() {
@@ -13,21 +15,98 @@ export default class NavCat extends Component {
     this.state = {
       checkboxes: []
     }
-    // this.state = {
-    //   checkboxes: [].reduce(
-    //     (options, option) => ({
-    //       ...options,
-    //       [option]: false
-    //     }),
-    //     {}
-    //   )
-    // }
-    // this.handleCheckbox = this.handleCheckbox.bind(this);
-    // this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
   }
-  componentDidMount() {
-    console.log(this.state.checkboxes)
+  // reduceCheckbox(labels) {
+  //   let check = labels.reduce(
+  //     (options, option) => ({
+  //       ...options,
+  //       [option]: false
+  //     }),
+  //     {}
+  //   )
+  //   // console.log(check);
+  //   this.setState({checkboxes: check})
+  // }
+  // handleCheckboxChange(changeEvent) {
+  //   const { name } = changeEvent.target;
+  
+  //   this.setState(prevState => ({
+  //     checkboxes: {
+  //       ...prevState.checkboxes,
+  //       [name]: !prevState.checkboxes[name]
+  //     }
+  //   }));
+  // };
+  formatCheckbox(header, labels) {
+    // console.log(this.reduceCheckbox(labels))
+    
+    return (
+      <div>
+        <h1 className="toggle_header">{header}</h1>
+        {
+          labels.map(label => {
+            {/* console.log(this.state.checkboxes[label]) */}
+            return (
+              <div className="toggle_checkboxes">
+                <label htmlFor="">
+                  <input type="checkbox" checked={this.state.checkboxes[label]} onClick={this.handleCheckboxChange}/>
+                  <span> {label}</span>
+                </label>
+              </div>
+            )
+          })
+        }
+      </div>
+    )
   }
+
+  // formatCheckbox(header, labels) {
+  //   return (
+  //     <div>
+  //       <h1 className="toggle_header">{header}</h1>
+  //       {
+  //         labels.map(label => {
+  //           console.log(this.state.checkboxes[label])
+  //           return (
+  //             <div className="toggle_checkboxes">
+  //               <label htmlFor="">
+  //                 <input type="checkbox" checked={this.state.checkboxes[label]} onClick={this.handleCheckboxChange}/>
+  //                 <span> {label}</span>
+  //               </label>
+  //             </div>
+  //           )
+  //         })
+  //       }
+  //     </div>
+  //   )
+  // }
+  render() {
+    return(
+      <div className="tabCategory">
+        <div>
+          <NavCategory />
+        </div>
+        <div className="tabToggles">
+          {this.formatCheckbox('style', ['active', 'fashion', 'streetwear', 'casual', 'formal'])}
+          {this.formatCheckbox('Size', ['One Size', 'S', 'L', '2xl', '4xl'])}
+          <div>
+            <h1 className="toggle_header">Search</h1>
+          </div>
+          {this.formatCheckbox('Clothing Length', ['Short', 'Regular', 'Long', 'X-long'])}
+          {this.formatCheckbox('Body Type', ['Junior', 'Young Contemporary', 'Missy', 'Plus Size', 'Maternity'])}
+          <div>
+            <h1 className="toggle_header">Color</h1>
+          </div>
+        </div>
+      </div>
+    )
+  }
+};
+// {this.createCheckbox('young')}
+{/* <Checkboxes label={['One Size', 'S', 'L', '2xl', '4xl']}
+
+/> */}
+
   // handleLabels(labels) {
   //   // for (let i = 0; i < labels.length; i++) {
   //     this.setState({ checkboxes: labels })
@@ -57,50 +136,3 @@ export default class NavCat extends Component {
   //     key={option}
   //     />
   // }
-  formatCheckbox(header, labels) {
-    return (
-      <div>
-        <h1 className="toggle_header">{header}</h1>
-        {
-          labels.map(label => {
-            console.log(label)
-            return (
-              <div className="toggle_checkboxes">
-                <label htmlFor="">
-                  <input type="checkbox" checked={this.state.checkboxes} name={label} ref="check_me"  ref="check_me"/>
-                  <span> {label}</span>
-                </label>
-              </div>
-            )
-          })
-        }
-      </div>
-    )
-  }
-  render() {
-    return(
-      <div className="tabCategory">
-        <div>
-          <NavCategory />
-        </div>
-        <div className="tabToggles">
-          {/* {this.handleLabels(['active', 'fashion', 'streetwear', 'casual', 'formal'])} */}
-          {this.formatCheckbox('style', ['active', 'fashion', 'streetwear', 'casual', 'formal'])}
-          {this.formatCheckbox('Size', ['One Size', 'S', 'L', '2xl', '4xl'])}
-          <div>
-            <h1 className="toggle_header">Search</h1>
-          </div>
-          {this.formatCheckbox('Clothing Length', ['Short', 'Regular', 'Long', 'X-long'])}
-          {this.formatCheckbox('Body Type', ['Junior', 'Young Contemporary', 'Missy', 'Plus Size', 'Maternity'])}
-          <div>
-            <h1 className="toggle_header">Color</h1>
-          </div>
-        </div>
-      </div>
-    )
-  }
-};
-// {this.createCheckbox('young')}
-{/* <Checkboxes label={['One Size', 'S', 'L', '2xl', '4xl']}
-
-/> */}

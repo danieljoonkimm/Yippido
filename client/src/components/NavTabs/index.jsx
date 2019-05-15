@@ -5,6 +5,7 @@ import Popup from 'reactjs-popup'
 
 
 import NavCat from './NavCat';
+import VendorInfo from './VendorInfo';
 
 
 const NavTabs = () => (
@@ -15,12 +16,9 @@ const NavTabs = () => (
         <NavCat />
       </Popup>
     {/* </button> */}
-    <button data-tip data-for="navPayment" data-event='click focus'>Payment
-      <ReactTooltip id='navPayment' place="bottom" globalEventOff='click' type="light" aria-haspopup='true' 
-        effect="solid" border={true} className="navbar_tooltip"
-        clickable={true} scrollHide={false}>
-      </ReactTooltip>
-    </button>
+    <Popup trigger={<button> Vendor Info</button>} position="bottom center" className="navbar_tooltip">
+        <VendorInfo />
+      </Popup>
     <button data-tip data-for="navVendors" data-event='click focus'>Vendor Info
       <ReactTooltip id='navVendors' place="bottom" globalEventOff='click' type="light" aria-haspopup='true' 
         effect="solid" border={true} className="navbar_tooltip"

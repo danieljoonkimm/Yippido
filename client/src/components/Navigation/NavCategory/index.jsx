@@ -291,7 +291,7 @@ export default class NavCategory extends Component {
           {this.renderCategories(data)}
         </div>
         <div className="category_lower">
-          <NavSubCategory subItems={this.pushCategories(data)} style={this.state.subItemToggle}/>
+          <NavSubCategory subItems={this.pushCategories(data)}/>
         </div>
       </div>
     )
