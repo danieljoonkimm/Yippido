@@ -24,6 +24,10 @@ class ShippingMethodLogic extends Component {
 
   handleShippingSelector(e) {
     console.log(e.target.name, "name");
+    let x = document.getElementsByClassName(e.target.name);
+   for(let i=0; i<=x.length; i++) {
+      x.className = e.target.checked;
+    }
     if (this.state.checkShipping === true) {
       this.setState({
         checkShipping: false,
@@ -86,6 +90,7 @@ class ShippingMethodLogic extends Component {
           return (
             <li className="form-check">
               <input
+              className={final}
                 name={final}
                 onClick={this.handleShippingSelector.bind(this)}
                 type="checkbox"
