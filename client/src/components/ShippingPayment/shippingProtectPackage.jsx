@@ -17,18 +17,18 @@ class ShippingProtectPackage extends Component {
   }
 
   handleCheckbox(e) {
-    console.log(e.target.name, this.state.isChecked, this.state.checkedData)
-    if(this.state.isChecked === false && this.state.checkedData.length === 0) {
-      let newCheckedData = this.state.checkedData.splice(e.target.name,1)
+    console.log(e.target.name, this.state.isChecked)
+    if(this.state.isChecked === false) {
+      // let newCheckedData = this.state.checkedData.splice(e.target.name,1)
       this.setState({
         isChecked: !this.state.isChecked,
-        checkedData: newCheckedData
+        // checkedData: newCheckedData
       })
     } else {
-      let newCheckedData =  checkedData.push(e.target.name)
+      // checkedData.push(e.target.name)
       this.setState({
         isChecked: !this.state.isChecked,
-        checkedData: newCheckedData
+        // checkedData: checkedData
       })
     }
   }
