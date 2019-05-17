@@ -10,18 +10,19 @@ import VendorInfo from './VendorInfo';
 
 const NavTabs = () => (
   <div id="navTabs">
-    <Popup trigger={<button> Vendor Category</button>} position="bottom center" className="navbar_tooltip">
+    <Popup trigger={<button> Vendor Category</button>} position="bottom center" className="navTab_container">
       <NavCat />
     </Popup>
-    <Popup trigger={<button> Vendor Info</button>} position="bottom center" className="navbar_tooltip">
-        <VendorInfo />
-      </Popup>
-    <button data-tip data-for="navVendors" data-event='click focus'>Vendor Info
+    <Popup trigger={<button> Vendor Info</button>} position="bottom center" className="navTab_container">
+      <VendorInfo />
+    </Popup>
+    
+    {/* <button data-tip data-for="navVendors" data-event='click focus'>Vendor Info
       <ReactTooltip id='navVendors' place="bottom" globalEventOff='click' type="light" aria-haspopup='true' 
         effect="solid" border={true} className="navbar_tooltip"
         clickable={true} scrollHide={false}>
       </ReactTooltip>
-    </button>
+    </button> */}
   </div>
 );
 export default NavTabs;
