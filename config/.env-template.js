@@ -23,10 +23,11 @@ const envBuild = {
   //   'AWS_HOST=',
   //   'AWS_PASSWORD=',
   //   'AWS_PORT=',
+  
   // ],
   'client': [
     'NODE_ENV=development',
-    'REACT_APP_API_KEY=',
+    'apiSecretKey= ',
   ]
 };
 
