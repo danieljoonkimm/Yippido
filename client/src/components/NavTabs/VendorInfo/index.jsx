@@ -10,15 +10,15 @@ const data = [
     "company info": {
       name: "Aisly Rose",
       description_1: "Young Contemporary",
-      addres: "149 Catalina St",
+      address: "149 Catalina St",
       phone: '1232143243',
-      emai: "john@gmail.com",
+      email: "john@gmail.com",
       description_2: "blah blah blah"    
     },
     FAQ: [
       {
         header: "Account",
-
+        contents: 'blah blah blah'
       },
       {
         header: "Member Center"
@@ -44,37 +44,37 @@ const data = [
     ],
     "Show Schedule": [
       {
-        name: "Atlanta Americasmart",
+        name: "Atlanta Americasmart1",
         booth: '#123213',
         date: 'Jan 26 1993',
         city: 'Los Angeles'
       },
       {
-        name: "Atlanta Americasmart",
+        name: "Atlanta Americasmart2",
         booth: '#123213',
         date: 'Jan 26 1993',
         city: 'Los Angeles'
       },
       {
-        name: "Atlanta Americasmart",
+        name: "Atlanta Americasmart3",
         booth: '#123213',
         date: 'Jan 26 1993',
         city: 'Los Angeles'
       },
       {
-        name: "Atlanta Americasmart",
+        name: "Atlanta Americasmart4",
         booth: '#123213',
         date: 'Jan 26 1993',
         city: 'Los Angeles'
       },
       {
-        name: "Atlanta Americasmart",
+        name: "Atlanta Americasmart5",
         booth: '#123213',
         date: 'Jan 26 1993',
         city: 'Los Angeles'
       },
       {
-        name: "Atlanta Americasmart",
+        name: "Atlanta Americasmart6",
         booth: '#123213',
         date: 'Jan 26 1993',
         city: 'Los Angeles'
@@ -97,24 +97,56 @@ export default class VendorInfo extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { selected: [] }
+    this.state = { 
+      selected: [],
+      header: '',
+      faqContents: [],
+      child: [],
+    }
   }
   pushVendorInfo(info, infos) {
     for (let key in infos) {
       if (key === info) {
         this.setState({
-          selected: infos[key]
+          selected: infos[key],
+          header: info,
         })
+      }
+      if (key === "FAQ") {
+        this.setState({faqContents: infos[key]})
+        // return this.renderImmediateChild(key);
       }
     }
   }
+  // handleSelectedId(selected, depthLevel) {
+  //   return () => {
+  //     const updatedArray = this.state.child.slice(0);
 
+  //     updatedArray[depthLevel] = selected;
+
+  //     this.setState({
+  //       child: updatedArray,
+  //     })
+  //   }
+  // }
   renderVendorInfoNav(vendorInfo){   
     return vendorInfo.map(infos => {
       return Object.keys(infos).map(info => {
-        return <ul className="infoCategories" onClick={() => this.pushVendorInfo(info, infos)}>{info}</ul>
+        // if (info === "FAQ") {
+          
+        // }
+        return (
+          <ul className="infoCategories" onClick={() => this.pushVendorInfo(info, infos)}>
+            {info}
+          </ul>
+        )
       })
     }) 
+  }
+  renderImmediateChild(faq) {
+    return faq.map(subHeaders => {
+      return <li>{subHeaders.header}</li>
+    })
   }
 
   render() {
@@ -122,9 +154,10 @@ export default class VendorInfo extends Component {
       <div id="vendorInfo" ref="referree">
         <div className="sideNav">
           {this.renderVendorInfoNav(data)}
+          {/* {this.renderImmediateChild(this.state.faqContents)} */}
         </div>
         <div className="sideNavContents">
-          <SideNavContents contents={this.state.selected}/>
+          <SideNavContents contents={this.state}/>
         </div>
       </div>
     )

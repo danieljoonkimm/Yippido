@@ -5,10 +5,11 @@
   padding: 1em;
 
   * {
-    outline: 1px solid red;
+    // outline: 1px solid red;
   }
 }
 .sideNav {
+  width: fit-content;
 }
 .infoCategories {
   font-size: 12px;
@@ -17,5 +18,11 @@
   line-height: 1.5;
 }
 .sideNavContents {
-
+  width: 100%;
+}
+.sideNavSchedule {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: fit-content;
 }

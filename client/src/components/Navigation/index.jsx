@@ -40,14 +40,17 @@ export default class Navigation extends Component {
                effect="solid" border={true} className="navbar_tooltip"
               clickable={true} scrollHide={false}>
               </ReactTooltip> */}
-            <li className="bm-item-list" data-tip data-for="navVendor" data-event="click focus">
+            <Popup trigger={<li className="bm-item-list">Vendors<Icon icon={ic_arrow_drop_down}/></li>} position="bottom center" className="navbar_tooltip">
+              <NavVendor />
+            </Popup>
+            {/* <li className="bm-item-list" data-tip data-for="navVendor" data-event="click focus">
               Vendors <Icon icon={ic_arrow_drop_down}/>
               <ReactTooltip id='navVendor' place="bottom" globalEventOff='click' type="light" aria-haspopup='true' 
                effect="solid" border={true} className="navbar_tooltip"
               clickable={true} scrollHide={false}>
                 <NavVendor />
               </ReactTooltip>
-            </li>
+            </li> */}
             <li className="bm-item-list" data-tip data-for="navDailyNew" data-event="click focus">
               Daily New <Icon icon={ic_arrow_drop_down}/>
               <ReactTooltip id='navDailyNew' place="bottom" globalEventOff='click' type="light" aria-haspopup='true' 

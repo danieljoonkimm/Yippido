@@ -10,12 +10,9 @@ import VendorInfo from './VendorInfo';
 
 const NavTabs = () => (
   <div id="navTabs">
-    <button onClick={() => { console.log('hello ')}}>hello</button>
-    {/* <button data-tip data-for="subCat" data-event='click'>NavCat */}
-      <Popup trigger={<button> Trigger</button>} position="bottom center" className="navbar_tooltip">
-        <NavCat />
-      </Popup>
-    {/* </button> */}
+    <Popup trigger={<button> Vendor Category</button>} position="bottom center" className="navbar_tooltip">
+      <NavCat />
+    </Popup>
     <Popup trigger={<button> Vendor Info</button>} position="bottom center" className="navbar_tooltip">
         <VendorInfo />
       </Popup>
