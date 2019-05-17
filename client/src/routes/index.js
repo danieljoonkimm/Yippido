@@ -11,6 +11,7 @@ import ItemDetails from '../components/ItemDetails';
 import Favorites from '../components/Favorites';
 import Settings from '../components/Settings';
 import CategorySub from "../components/CategorySub";
+import Sale from "../components/CategoryMain/Sale/index.jsx";
 
 const routes = [
   {
@@ -24,6 +25,12 @@ const routes = [
     name: 'register',
     exact: true,
     component: SignInRegister,
+  },
+  {
+    path: '/sale',
+    name: 'sale',
+    exact: true,
+    component: Sale,
   },
   {
     path: '/vendor',

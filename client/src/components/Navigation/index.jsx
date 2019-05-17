@@ -3,6 +3,7 @@ import './navigation.scss';
 import { slide as Menu} from "react-burger-menu";
 import ReactTooltip from 'react-tooltip';
 import Popup from "reactjs-popup";
+import {withRouter} from "react-router-dom";
 
 
 // Components
@@ -20,7 +21,7 @@ import {ic_arrow_drop_down} from 'react-icons-kit/md/ic_arrow_drop_down';
 
 
 
-export default class Navigation extends Component {
+class Navigation extends Component {
   constructor(props) {
     super(props);
 
@@ -58,9 +59,9 @@ export default class Navigation extends Component {
               clickable={true} scrollHide={false}>
                 <NavDailyNew />
               </ReactTooltip>
-            </li>            
-            <li className="bm-item-list">Best Seller</li>
-            <li className="bm-item-list">Sale</li>
+            </li>
+            <li onClick={() => {this.props.history.push("/bestSeller")}} className="bm-item-list">Best Seller</li>
+            <li onClick={() => {this.props.history.push("/sale")}} className="bm-item-list">Sale</li>
             <li className="bm-item-list">Look Book</li>
           </ul>
         </div>
@@ -68,3 +69,5 @@ export default class Navigation extends Component {
     );
   }
 };
+
+export default withRouter(Navigation);

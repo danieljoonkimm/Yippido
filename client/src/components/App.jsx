@@ -8,7 +8,7 @@ import BuyerRegisteration from "./BuyerRegisteration/index.jsx";
 import CategoryMain from "./CategoryMain";
 import CategorySub from "./CategorySub";
 import Vendor from "./Vendor";
-import Sale from "./sale/index.jsx";
+import Sale from "./CategoryMain/Sale/index.jsx";
 import IndividualVendorLanding from "./IndividualVendorLanding/index.jsx";
 import IndividualVendorAllItems from "./IndividualVendorLanding/IndividualVendorAllItems/index.jsx";
 import ShoppingCart from "./ShoppingCart/index.jsx";
