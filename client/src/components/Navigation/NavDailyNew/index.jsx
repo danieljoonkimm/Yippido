@@ -98,12 +98,11 @@ class NavDailyNew extends Component {
   renderCategories(category) {
     console.log(this.props, "this is props")
     return category.map(categories => {
-      return <li onClick={()=> {this.props.history.push(`/category/dailyNew`)}} className="dailyNew_categories" key={categories.category_id}>{categories.name} <span className="item_count">(500)</span></li>
+      return <li onClick={()=> {this.props.history.push(`/${categories.name}/dailyNew`)}} className="dailyNew_categories" key={categories.category_id}>{categories.name} <span className="item_count">(500)</span></li>
     })
   }
 
   render() {
-    console.log(this.props, 'whattttt')
     return(
       <div className="container" id="navDailyNew_container">
         <h1 className="nav_title">NEW Items <span className="item_count">(1,500)</span></h1>

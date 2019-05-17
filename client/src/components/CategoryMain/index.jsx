@@ -47,15 +47,26 @@ class CategoryMain extends Component {
     const { match } = this.props;
 
     const category = match.params.category_name;
+    const dailyNew = "Daily New";
+    console.log(category, 'cat')
 
     return (
       <div id="categoryMain" >
-        <CategoryNav category={category}/>
+      {category} ? <div> <CategoryNav category={category}/>
+        <CategoryBanner/>
+        <RNVendors name={'Favorite'} images={this.fav}/>
+        <RNVendors name={'Recommended'} images={this.newRecommended}/>
+        <RNVendors name={'New'} images={this.newRecommended}/>
+        <NewArrivals/></div> :
+        
+        <div>
+        <CategoryNav category={dailyNew}/>
         <CategoryBanner/>
         <RNVendors name={'Favorite'} images={this.fav}/>
         <RNVendors name={'Recommended'} images={this.newRecommended}/>
         <RNVendors name={'New'} images={this.newRecommended}/>
         <NewArrivals/>
+        </div>
       </div>
     );
   }
