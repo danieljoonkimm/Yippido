@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Purchase from '../Purchase';
+
 import './products.scss';
 
 class Product extends Component {
@@ -58,7 +60,7 @@ class Product extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{ padding: '0 5px' }}>
         <div className="product__details">
           <h2>{this.product.name}</h2>
           <h4>{this.product.model} / {this.product.type}</h4>
@@ -80,19 +82,20 @@ class Product extends Component {
             { this.generateMockData() }
           </div>
           <div className="row" style={{ padding: '10px 5px'}}>
-            { this.product.availableColors.map( color => {
-              return (
-                <div className="col-xs-3 col-sm-3 col-md-3"  key={ color.hex} style={{ display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
-                  <div style={{ height: '25px', width: '25px', backgroundColor: color.hex, borderRadius: "50%"}}>
+            { 
+              this.product.availableColors.map( color => {
+                return (
+                  <div  key={color.url + color.name} className="col-xs-3 col-sm-3 col-md-3"  key={ color.hex} style={{ display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
+                    <div style={{ height: '25px', width: '25px', backgroundColor: color.hex, borderRadius: "50%"}}>
+                    </div>
+                    <div style={{ width: '50px', paddingLeft: '5px'}}>{ color.name }</div>
                   </div>
-                  <div style={{ width: '50px', paddingLeft: '5px'}}>{ color.name }</div>
-                </div>
-                  
-              )
-            })}
+                )
+              })
+            }
           </div>
         </div>
-        {/* <Purchase/> */}
+        <Purchase/>
         {/* <Model/> */}
       </div>
     );

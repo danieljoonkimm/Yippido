@@ -47,7 +47,7 @@ class CompanyHeader extends Component {
   }
 
   signIn() {
-    this.props.history.push("/");
+    this.props.history.push("/signin");
   }
 
   register() {

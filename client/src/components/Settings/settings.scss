@@ -1,0 +1,34 @@
+#settings {
+
+  background-color: #efefef;
+
+  .settings__activeTab {
+    color: #3491e9
+  }
+
+  .settings__tablist {
+    padding: 20px;
+    font-size: 14px;
+
+    .settings__mainTab {
+      color: #000;
+      padding: 10px;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      
+      .grow {
+        overflow: hidden;
+        -moz-transition: height .5s;
+        -ms-transition: height .5s;
+        -o-transition: height .5s;
+        -webkit-transition: height .5s;
+        transition: height .5s;
+      }
+
+      
+      .settings__subTab {
+        padding: 10px 10px 1px 10px;
+        outline: 0;
+      }
+    }
+  }
+}

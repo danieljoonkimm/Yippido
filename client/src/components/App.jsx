@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Switch, Route } from 'react-router-dom';
 import Landing from "./landing/index.jsx";
 import SignIn from "./SignIn/index.jsx";
+import Navigation from "./Navigation/index.jsx";
+import NavTabs from './NavTabs';
 import BuyerRegisteration from "./BuyerRegisteration/index.jsx";
 import CategoryMain from "./CategoryMain";
 import CategorySub from "./CategorySub";
@@ -11,7 +13,7 @@ import IndividualVendorLanding from "./IndividualVendorLanding/index.jsx";
 import IndividualVendorAllItems from "./IndividualVendorLanding/IndividualVendorAllItems/index.jsx";
 import ShoppingCart from "./ShoppingCart/index.jsx";
 import ShippingPayment from "./ShippingPayment/index.jsx";
-import Navigation from "./Navigation/index.jsx";
+import Favorites from "./Favorites/index.jsx";
 
 import CompanyFooter from "./CompanyFooter/index.jsx";
 import CompanyHeader from "./CompanyHeader/index.jsx";
@@ -27,17 +29,17 @@ class App extends Component {
 
   render() {
     return (
-      // <Switch>
-      //   {routes.map(route => (
-      //     <Route key={`route-${route.name}`} {...route} />
-      //   ))}
-      // </Switch>
-      <div>
-        {/* <CompanyFooter/>
-        <IndividualVendorAllItems/>
-        <Landing/> */}
-        <ShippingPayment/>
-      </div>
+      <Switch>
+        {routes.map(route => (
+          <Route key={`route-${route.name}`} {...route} />
+        ))}
+      </Switch>
+      // <div>
+      //   {/* <CompanyFooter/>
+      //   <IndividualVendorAllItems/>
+      //   <Landing/> */}
+      //   {/* <Favorites/> */}
+      // </div>
     );
   }
 }

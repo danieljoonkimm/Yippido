@@ -1,0 +1,27 @@
+@import '../../../../global/global.scss';
+
+.tabCategory {
+  display: flex;
+  flex-direction: row !important;
+  width: 100%;
+}
+.tabToggles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: fit-content;
+  grid-gap: 5px;
+}
+.toggle_header {
+  font-weight: 600;
+  text-transform: capitalize;
+  text-align: start;
+  border-bottom: 2px solid $fontGrey;
+  white-space: nowrap;
+}
+.toggle_checkboxes {
+  color: $fontGrey;
+  text-transform: capitalize;
+  text-align: start;
+  width: fit-content;
+}

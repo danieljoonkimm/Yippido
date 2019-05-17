@@ -25,3 +25,24 @@
 .product__quad-botLeft {
   border-radius: 0 0 0 8px;
 }
+
+.img__btn__overlay {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 89%;
+  right: 0;
+  border-radius: 50%;
+  color: black;
+  margin-top: 5px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 14px;
+  padding-top: 3px;
+  border: 1px solid #efefef;
+  background-color: #efefef;
+  text-align: center;
+  cursor: pointer;
+}

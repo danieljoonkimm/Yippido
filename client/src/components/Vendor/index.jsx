@@ -26,7 +26,7 @@ class Vendor extends Component {
         </div>
         <div style={{ backgroundColor: "#efefef", paddingBottom: '40px' }}>
           <div className="container">
-            <CustomerViewed/>   
+            <CustomerViewed name="Customer Also Viewed"/>   
           </div>
         </div>
 

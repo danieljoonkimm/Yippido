@@ -16,15 +16,16 @@ class ProductImage extends Component {
   }
 
   _generateViewImages (images) {
-    
     return images.map( (image, i ) => (
-      <div key={i + image.url} className={this.props.className} onClick={() => { console.log(`image: ${image.url}`)}}>
-        <img className={this[this.props.name][i]} src={image.url} alt=""/>
+      <div key={i + image.url} className={this.props.className} >
+        <img  className={this[this.props.name][i]} src={image.url} alt=""/>
+        { this.props.isDeletable ? (<div data-id={image.id} onClick={this.props.onClick} className="img__btn__overlay">x</div> ) : null }
       </div>
     ));
   }
 
   render() {
+    console.log(this.props.isViewable)
     const products = this.props.isViewable ? (
       <ViewImage images={this.props.images} otherImages={this.props.otherImages}>
         { this._generateViewImages(this.props.images) }

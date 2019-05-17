@@ -1,0 +1,65 @@
+#model {
+
+  background-color: #efefef;
+  padding: 10px;
+  margin: 10px 5px;
+
+  .model__stats {
+    display: flex;
+    flex-direction: row;
+
+    h1 {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin: auto 0;
+    }
+
+    .model__showMore {
+      outline: 0;
+      font-size: 24px;
+      background-color: #efefef;
+    }
+  }
+
+  .model__collaspse {
+    .well {
+      min-height: 0;
+      padding: 0;
+      margin-bottom: 0;
+      background-color: #efefef;
+      border: 1px solid #efefef;
+      border-radius: 0;
+      box-shadow: none;
+      font-size: 14px;
+
+      .row {
+        padding: 10px 0;
+      }
+
+      .model__name {
+        padding: 10px 0;
+        font-weight: 700;
+      }
+
+      .model__dimensions {
+        padding: 10px 0;
+
+        li {
+          padding: 3px 0;
+        }
+
+        li:first-child {
+          padding-top: 0;
+        }
+      }
+
+      
+
+      img {
+        height: 150px;
+        width: 100px;
+      }
+    }
+  }
+}

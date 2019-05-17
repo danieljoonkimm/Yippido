@@ -1,0 +1,57 @@
+#viewHistory {
+  .favorite__addToCart {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px 0;
+  
+    button {
+      padding: 8px 10px;
+      outline: 0;
+      color: #2C2F33;
+      background-color: #fff;
+      border: 1px solid #2C2F33;
+    }
+  
+    button:hover {
+      background-color: #2C2F33;
+      border: 1px solid #2C2F33;
+      color: #fff;
+  
+    }
+  }
+  .view__history {
+    color: #000;
+    display: flex;
+    align-items: center;
+
+
+    h3 {
+      display: flex;
+      width: 50px;
+      height: 100%;
+    }
+
+    .view__date {
+      display: flex;
+      justify-content: flex-end;
+
+      .delete__history {
+        width :25px;
+      }
+    }
+  }
+  .favorites__item__desc {
+    padding: 10px 0;
+    h4 {
+      font-size: 16px;
+      color: #2C2F33;
+    }
+    div {
+      padding-top: 3px;
+      font-size: 14px;
+      color: rgb(70, 75, 82);
+    }
+  }
+}
