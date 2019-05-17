@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './navCategory.scss';
 import NavSubCategory from './navSubCategory.jsx'
+import { withRouter } from 'react-router-dom';
 
 // Icons
 import { Icon } from 'react-icons-kit';
@@ -245,7 +246,7 @@ const data = [
   }
 ]
 
-export default class NavCategory extends Component {
+class NavCategory extends Component {
   constructor() {
     super();
     this.state = {
@@ -271,16 +272,18 @@ export default class NavCategory extends Component {
     categories.map(title => {
       title.categories.map(subCategories => {
       if((this.state.selectedIds[depthLevel] === subCategories.parent_id)) {
+        subCategories.parent = title.name
         subCat.push(subCategories);
         }
       })
     })
+
     return subCat
   }
 
   renderCategories(categories, depthLevel = 0) {
     return categories.map(title => {
-      return <ul onClick={this.handleSelectedId(title.category_id, depthLevel)} className="category_title" key={title.category_id}>{title.name}</ul>
+      return <ul onClick={() => {this.props.history.push(`/category/${title.name}`)}} onMouseEnter={this.handleSelectedId(title.category_id, depthLevel)} className="category_title" key={title.category_id}>{title.name}</ul>
     })
   }
 
@@ -297,3 +300,5 @@ export default class NavCategory extends Component {
     )
   }
 };
+
+export default withRouter(NavCategory);

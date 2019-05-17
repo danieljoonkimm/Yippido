@@ -10,6 +10,7 @@ import NewVendors from '../components/CategoryMain/NewVendors';
 import ItemDetails from '../components/ItemDetails';
 import Favorites from '../components/Favorites';
 import Settings from '../components/Settings';
+import CategorySub from "../components/CategorySub";
 
 const routes = [
   {
@@ -84,6 +85,12 @@ const routes = [
     exact: true,
     component: Category,
   },
+  {
+    path: '/category/:category_name/:subCategory_name',
+    name: 'category',
+    exact: true,
+    component: CategorySub,
+  }
 ];
 
 export default routes;

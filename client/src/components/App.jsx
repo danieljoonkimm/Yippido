@@ -29,11 +29,15 @@ class App extends Component {
 
   render() {
     return (
+      <div>
+         <CompanyHeader/>
+        <Navigation/>
       <Switch>
         {routes.map(route => (
           <Route key={`route-${route.name}`} {...route} />
         ))}
       </Switch>
+      </div>
       // <div>
       //   {/* <CompanyFooter/>
       //   <IndividualVendorAllItems/>

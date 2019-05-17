@@ -8,7 +8,6 @@ import Events from "./events/index.jsx";
 import NewVendors from "./newVendors/index.jsx";
 import CompanyHeader from "../CompanyHeader/index.jsx";
 import "./landing.scss";
-import Navigation from "../Navigation/index.jsx";
 
 import CompanyFooter from "../CompanyFooter/index.jsx";
 
@@ -21,8 +20,6 @@ class Landing extends Component {
   render() {
     return (
       <div>
-        <CompanyHeader/>
-        <Navigation/>
         <Vendors />
         <FeaturedItems />
         <HighlightVendors />

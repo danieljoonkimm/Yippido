@@ -11,7 +11,7 @@ class Category extends Component {
   render() {
     return (
       <div>
-
+        
         <Route path={`/category/:category_name`} component={CategoryMain}/> 
       </div>
     );

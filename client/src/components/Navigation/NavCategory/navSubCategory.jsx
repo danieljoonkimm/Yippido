@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import './navCategory.scss';
 
-export default class NavSubCategory extends Component {
+class NavSubCategory extends Component {
   constructor(props) {
     super(props);
 
@@ -15,9 +16,10 @@ export default class NavSubCategory extends Component {
   }
   renderSubCategories() {
     let category = this.pushSubCategories(this.props.subItems);
+    console.log(this.props.subItems, 'fuck you')
     return category.map(subCategory => {
       return (
-        <ul className={"subCategory_name " + (subCategory.categories.length > 0  ? 'group' : 'single') }>
+        <ul onClick={()=> { this.props.history.push(`/category/${subCategory.parent}/${subCategory.name}`)}} className={"subCategory_name " + (subCategory.categories.length > 0  ? 'group' : 'single') }>
           <ul key={subCategory.category_id}>{subCategory.name}
           {subCategory.categories.map(child => {
             return <li key={child.category_id} className="subCategory_item">{child.name}</li>
@@ -40,3 +42,5 @@ export default class NavSubCategory extends Component {
     )
   }
 }
+
+export default withRouter(NavSubCategory);
