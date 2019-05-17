@@ -95,16 +95,16 @@ const routes = [
     component: Category,
   },
   {
+    path: '/:category_name/dailyNew',
+    name: 'category',
+    exact: true,
+    component: Category,
+  },
+  {
     path: '/category/:category_name/:subCategory_name',
     name: 'category',
     exact: true,
     component: CategorySub,
-  },
-  {
-    path: '/:category_name/dailyNew',
-    name: 'category',
-    exact: true,
-    component: CategoryMain,
   },
 ];
 
