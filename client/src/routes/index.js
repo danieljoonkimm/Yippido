@@ -11,7 +11,9 @@ import ItemDetails from '../components/ItemDetails';
 import Favorites from '../components/Favorites';
 import Settings from '../components/Settings';
 import CategorySub from "../components/CategorySub";
-import Sale from "../components/CategoryMain/Sale/index.jsx";
+import Sale from "../components/Sale";
+import NavDailyNew from "../components/Navigation/NavDailyNew";
+import CategoryMain from "../components/CategoryMain";
 
 const routes = [
   {
@@ -97,7 +99,13 @@ const routes = [
     name: 'category',
     exact: true,
     component: CategorySub,
-  }
+  },
+  {
+    path: '/:category_name/dailyNew',
+    name: 'category',
+    exact: true,
+    component: CategoryMain,
+  },
 ];
 
 export default routes;

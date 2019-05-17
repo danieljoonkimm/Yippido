@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './navDailyNew.scss';
+import {withRouter} from "react-router-dom";
 
 const data = [
   {
@@ -90,17 +91,18 @@ const data = [
 const images = ["https://dummyimage.com/400x600/26628a/fff", 'https://dummyimage.com/400x600/26628a/fff'];
 
 
-export default class NavDailyNew extends Component {
-  constructor() {
-    super();
+class NavDailyNew extends Component {
+  constructor(props) {
+    super(props);
   }
   renderCategories(category) {
     return category.map(categories => {
-      return <li className="dailyNew_categories" key={categories.category_id}>{categories.name} <span className="item_count">(500)</span></li>
+      return <li onClick={()=> {this.props.history.push(`/category/dailyNew`)}} className="dailyNew_categories" key={categories.category_id}>{categories.name} <span className="item_count">(500)</span></li>
     })
   }
 
   render() {
+    console.log(this.props, 'whattttt')
     return(
       <div className="container" id="navDailyNew_container">
         <h1 className="nav_title">NEW Items <span className="item_count">(1,500)</span></h1>
@@ -131,3 +133,5 @@ export default class NavDailyNew extends Component {
     )
   }
 }
+
+export default withRouter(NavDailyNew);

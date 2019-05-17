@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import CategoryMain from '../../components/CategoryMain';
 
@@ -11,8 +11,11 @@ class Category extends Component {
   render() {
     return (
       <div>
-        
+        <Switch>
         <Route path={`/category/:category_name`} component={CategoryMain}/> 
+        <Route path={`/:category_name/dailyNew`} component={CategoryMain}/> 
+          </Switch>
+        
       </div>
     );
   }
