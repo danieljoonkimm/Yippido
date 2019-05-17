@@ -151,7 +151,6 @@ class CategoryCollection extends Component {
             </div>
           </div>
         </div>
-        //{" "}
       </div>
       // <div className="container" id="categoryCollection_container">
       //   <h1 className="categoryCollection_header">CATEGORY COLLECTION</h1>

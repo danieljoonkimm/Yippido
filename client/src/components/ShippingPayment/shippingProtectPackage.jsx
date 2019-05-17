@@ -5,10 +5,13 @@ class ShippingProtectPackage extends Component {
     super();
 
     this.options = [
-      "Yes, please protect my package(s) with insurance",
-      "Yes, please protect my package(s) with signature requirement *Additional fees will be applied"
+      {
+        option1: "Yes, please protect my package(s) with insurance"
+      },
+      {
+        options2 : "Yes, please protect my package(s) with signature requirement *Additional fees will be applied"
+      }
     ]
-
 
     this.state = {
       isChecked: false,
@@ -17,12 +20,12 @@ class ShippingProtectPackage extends Component {
   }
 
   handleCheckbox(e) {
-    console.log(this.state.checkedData, 'this is data')
+    console.log(e.target)
     if(this.state.isChecked === false) {
       let newCheckedData = this.state.checkedData.splice(e.target.name,1)
       this.setState({
         isChecked: !this.state.isChecked,
-        checkedData: newCheckedData
+        checkedData: this.state.checkedData
       })
     } else {
       this.state.checkedData.push(e.target.name)
@@ -36,11 +39,13 @@ class ShippingProtectPackage extends Component {
   convertPackageOptions(options) {
     return(
       options.map(options => {
-        return (
-          <div className="form-group">
-            <input type="checkbox" name="eachSelector" onClick={this.handleCheckbox.bind(this)}/> {options}
-          </div>
-        )
+        for(let key in options) {
+          return(
+            <div className="col-xs-12 col-sm-12 col-md-12 form-group">
+              <input type="checkbox"/> {options[key]}
+            </div>
+          )
+        }
       })
     )
   }
@@ -48,7 +53,7 @@ class ShippingProtectPackage extends Component {
   render() {
     const protectPackage = "Would you like to protect your package(s)?"
     return(
-      <div className="row">
+      <div className="row" style={{fontSize: "12px"}}>
         <h2>{protectPackage}</h2>
         <div className="col-xs-9 col-sm-9 col-md-9">
           {this.convertPackageOptions(this.options)}
