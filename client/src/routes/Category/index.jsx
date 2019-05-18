@@ -13,7 +13,8 @@ class Category extends Component {
       <div>
         <Switch>
         <Route path={`/category/:category_name`} component={CategoryMain}/> 
-        <Route path={`/:category_name/dailyNew`} component={CategoryMain}/> 
+         
+        <Route path={`/:category_main/:category_name`} component={CategoryMain}/> 
           </Switch>
         
       </div>

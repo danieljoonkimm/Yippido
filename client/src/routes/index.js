@@ -95,7 +95,7 @@ const routes = [
     component: Category,
   },
   {
-    path: '/:category_name/dailyNew',
+    path: '/dailyNew/:categoryname',
     name: 'category',
     exact: true,
     component: Category,
