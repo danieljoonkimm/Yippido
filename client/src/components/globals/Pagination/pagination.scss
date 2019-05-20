@@ -1,3 +1,15 @@
 .pagination {
   display: flex;
+  margin: 0 !important;
+  text-align: center;
+
+  li a {
+    padding: 0;
+     border: none;
+  }
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+  background-color: white;
+  color: black;
 }
