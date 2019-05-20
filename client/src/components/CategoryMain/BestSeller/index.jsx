@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import ProductImage from '../../Vendor/ProductImage';
+import {withRouter} from "react-router-dom";
 
 class BestSeller extends Component {
   constructor(props) {
@@ -88,7 +89,7 @@ class BestSeller extends Component {
 
     for ( let i = 0; i < 3; i++ ) {
       mock.push(
-        <div className="col-xs-4 col-sm-4 col-md-4" style={{ padding: '10px'}}>
+        <div className="col-xs-4 col-sm-4 col-md-4" style={{ padding: '10px'}} onClick={() => {this.props.history.push("/vendor")}}>
           <ProductImage 
             className="col-xs-12 col-sm-12 col-md-12" 
             name={'default'}
@@ -108,7 +109,7 @@ class BestSeller extends Component {
 
     for ( let i = 0; i < 15; i++ ) {
       mock.push(
-        <div className="col-xs-4 col-sm-4 col-md-4" style={{ padding: '10px'}}>
+        <div className="col-xs-4 col-sm-4 col-md-4" style={{ padding: '10px'}} onClick={() => {this.props.history.push("/vendor")}}>
           <ProductImage 
             className="col-xs-6 col-sm-6 col-md-6" 
             name={'duo'}
@@ -141,4 +142,4 @@ class BestSeller extends Component {
   }
 }
 
-export default BestSeller;
+export default withRouter(BestSeller);
