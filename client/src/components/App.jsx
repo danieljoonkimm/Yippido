@@ -13,7 +13,7 @@ import IndividualVendorAllItems from "./IndividualVendorLanding/IndividualVendor
 import ShoppingCart from "./ShoppingCart/index.jsx";
 import ShippingPayment from "./ShippingPayment/index.jsx";
 import Favorites from "./Favorites/index.jsx";
-
+import ItemDetail from "../components/ItemDetails/index.jsx";
 import CompanyFooter from "./CompanyFooter/index.jsx";
 import CompanyHeader from "./CompanyHeader/index.jsx";
 import routes from "../routes";
@@ -29,14 +29,13 @@ class App extends Component {
   render() {
     return (
       <div>
-         {/* <CompanyHeader/>
-        <Navigation/> */}
-        <IndividualVendorAllItems/>
-      {/* <Switch>
+         <CompanyHeader/>
+        <Navigation/>
+      <Switch>
         {routes.map(route => (
           <Route key={`route-${route.name}`} {...route} />
         ))}
-      </Switch> */}
+      </Switch>
       </div>
       // <div>
       //   {/* <CompanyFooter/>

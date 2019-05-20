@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import {withRouter} from "react-router-dom";
 import './individualVendorFeatured.scss';
 
 class VendorLandingFeaturedItems extends Component {
@@ -25,7 +25,7 @@ class VendorLandingFeaturedItems extends Component {
     return vendorFeaturedItems.map( item => { 
       return (
         <div className="item-list-col col-xs-3 col-sm-3 col-md-3">
-          <div>
+          <div onClick={() => {this.props.history.push("/vendor")}}>
             <img className="img-fluid top-left" src={item.image} alt=""/>
             <div>{item.model} / <strong>${item.price}</strong></div>
             <div>{item.name}</div>
@@ -50,4 +50,4 @@ class VendorLandingFeaturedItems extends Component {
   }
 }
 
-export default VendorLandingFeaturedItems;
+export default withRouter(VendorLandingFeaturedItems);

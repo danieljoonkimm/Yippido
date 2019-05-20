@@ -44,10 +44,12 @@ class IndividualVendorAllItems extends Component {
   constructAllVendorItems() {
     return (
       <div className="col-xs-12 col-sm-12 col-md-12" style={{fontSize: "11px"}}>
-        <h2>All Items</h2>
+        <h2 className="col-xs-12 col-sm-12 col-md-12">All Items (2,348 Items)</h2>
+        <div className="col-xs-12 col-sm-12 col-md-12" style={{display: "flex", justifyContent: "space-around"}}>
         {this.constructAllVendorFilter()}
         <PaginationLogic numberOfItems={this.state.numberOfItems} />
         {this.constructAllVendorSort()}
+        </div>
       </div>
     );
   }

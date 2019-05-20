@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import "./individualVendorBestSellers.scss";
 import ProductImage from '../../Vendor/ProductImage';
+import {withRouter} from "react-router-dom";
 
 class VendorLandingBestSellers extends Component {
   constructor() {
@@ -46,7 +47,7 @@ class VendorLandingBestSellers extends Component {
 
     return images.map( image => { 
         return (
-          <div className="col-xs-4 col-sm-4 col-md-4" style={{ padding: '5px'}}>
+          <div className="col-xs-4 col-sm-4 col-md-4" style={{ padding: '5px'}} onClick={() => {this.props.history.push("/vendor")}}>
           <ProductImage
             className="col-xs-6 col-sm-6 col-md-6" 
             name={'duo'}
@@ -151,4 +152,4 @@ class VendorLandingBestSellers extends Component {
   }
 };
 
-export default VendorLandingBestSellers;
+export default withRouter(VendorLandingBestSellers);

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./individualVendorNewArrivals.scss";
 import ProductImage from '../../Vendor/ProductImage';
+import {withRouter} from "react-router-dom";
 
 class VendorLandingNewArrvials extends Component {
   constructor() {
@@ -47,7 +48,7 @@ class VendorLandingNewArrvials extends Component {
     return images.map( image => { 
       if ( image.length === 1 ) {
         return (
-          <div className="col-xs-4 col-sm-4 col-md-4" style={{ padding: '5px'}}>
+          <div className="col-xs-4 col-sm-4 col-md-4" style={{ padding: '5px'}} onClick={() => {this.props.history.push("/vendor")}}>
             <ProductImage
               className="col-xs-12 col-sm-12 col-md-12" 
               name={'default'}
@@ -62,7 +63,7 @@ class VendorLandingNewArrvials extends Component {
         )
       } else {
         return (
-          <div className="col-xs-4 col-sm-4 col-md-4" style={{ padding: '5px'}}>
+          <div className="col-xs-4 col-sm-4 col-md-4" style={{ padding: '5px'}} onClick={() => {this.props.history.push("/vendor")}}>
             <ProductImage
               className="col-xs-6 col-sm-6 col-md-6" 
               name={'duo'}
@@ -194,4 +195,4 @@ class VendorLandingNewArrvials extends Component {
   }
 }
 
-export default VendorLandingNewArrvials;
+export default withRouter(VendorLandingNewArrvials);

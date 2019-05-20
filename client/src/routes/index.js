@@ -35,7 +35,7 @@ const routes = [
     component: Sale,
   },
   {
-    path: '/vendor',
+    path: '/vendor/',
     name: 'vendors',
     exact: true,
     component: Vendor,
