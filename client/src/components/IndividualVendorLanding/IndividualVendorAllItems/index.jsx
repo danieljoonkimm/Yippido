@@ -14,30 +14,26 @@ class IndividualVendorAllItems extends Component {
   }
 
   constructAllVendorFilter() {
-    return(
+    return (
       <div className="col-xs-4 col-sm-4 col-md-4">
-      <form style={{display: "flex"}}>
-        <select><option value="test"></option></select>
-        <input type="text" placeholder="Price min"/>
-        <input type="text" placeholder="Price max"/>
-        <button>Search</button>
+        <form style={{ display: "flex", fontSize:"11px" }}>
+          <select>
+            <option value="test" />
+          </select>
+          <input type="text" placeholder="Price min" />
+          <input type="text" placeholder="Price max" />
+          <button>Search</button>
         </form>
       </div>
-    )
+    );
   }
 
   constructAllVendorItems() {
     return (
-      <div className="row" id="individualVendorAllItems_row">
-        <div className="col-xs-12 col-sm-12 col-md-12">
-          <h2>All Items</h2>
-          {this.constructAllVendorFilter()}
-          <PaginationLogic numberOfItems={this.state.numberOfItems} />
-        </div>
-
-        <div className="col-xs-12 col-sm-12 col-md-12">
-          <IndividualVendorAllItemsList />
-        </div>
+      <div className="col-xs-12 col-sm-12 col-md-12">
+        <h2>All Items</h2>
+        {this.constructAllVendorFilter()}
+        <PaginationLogic numberOfItems={this.state.numberOfItems} />
       </div>
     );
   }
@@ -45,7 +41,12 @@ class IndividualVendorAllItems extends Component {
   render() {
     return (
       <div className="container" id="individualVendorAllItems_container">
-        {this.constructAllVendorItems()}
+        <div className="row" style={{ width: "100%" }}>
+          {this.constructAllVendorItems()}
+          <div className="col-xs-12 col-sm-12 col-md-12">
+            <IndividualVendorAllItemsList />
+          </div>
+        </div>
       </div>
     );
   }

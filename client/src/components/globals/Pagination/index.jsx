@@ -33,7 +33,7 @@ class PaginationLogic extends Component {
   }
 
   render() {
-    return <div className="col-xs-4 col-sm-4 col-md-4">{this.constructPagination()}</div>;
+    return <div className="col-xs-4 col-sm-4 col-md-4" style={{fontSize: "11px"}}>{this.constructPagination()}</div>;
   }
 }
 
