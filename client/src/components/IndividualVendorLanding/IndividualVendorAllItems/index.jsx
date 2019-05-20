@@ -15,10 +15,10 @@ class IndividualVendorAllItems extends Component {
 
   constructAllVendorFilter() {
     return (
-      <div className="col-xs-4 col-sm-4 col-md-4">
-        <form style={{ display: "flex", fontSize:"11px" }}>
+      <div className="col-xs-4 col-sm-4 col-md-4" style={{width: "fit-content"}}>
+        <form style={{ display: "flex"}}>
           <select>
-            <option value="test" />
+            <option value="">Style No.</option>
           </select>
           <input type="text" placeholder="Price min" />
           <input type="text" placeholder="Price max" />
@@ -28,12 +28,26 @@ class IndividualVendorAllItems extends Component {
     );
   }
 
+  constructAllVendorSort() {
+    return(
+      <div className="col-xs-4 col-sm-4 col-md-4" style={{width: "fit-content"}}>
+        <form>
+          SORT BY<select>
+            <option value="">New</option>
+          </select>
+          ITEM PER PAGE<select><option value=""></option>40</select>
+        </form>
+      </div>
+    )
+  }
+
   constructAllVendorItems() {
     return (
-      <div className="col-xs-12 col-sm-12 col-md-12">
+      <div className="col-xs-12 col-sm-12 col-md-12" style={{fontSize: "11px"}}>
         <h2>All Items</h2>
         {this.constructAllVendorFilter()}
         <PaginationLogic numberOfItems={this.state.numberOfItems} />
+        {this.constructAllVendorSort()}
       </div>
     );
   }
