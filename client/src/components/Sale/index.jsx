@@ -16,7 +16,6 @@ class Sale extends Component {
     return (
       <div className="container" id="sales_container">
         <div className="row" id="sales_row">
-
         <SaleList/>
             
         </div>

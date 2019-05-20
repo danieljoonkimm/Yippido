@@ -35,9 +35,11 @@ class SaleList extends Component {
   }
 
   render() {
+    const SalesHeader = "Sale";
     return (
       <div className="container" id="productList">
         <div className="row" style={{ width: "100%" }}>
+        <h1 style={{textAlign: "left"}}>{SalesHeader}</h1>
           {this.convertGrid()}
         </div>
       </div>
