@@ -28,6 +28,12 @@ class PaginationLogic extends Component {
         onChange={this.handlePageChange}
         itemsCountPerPage={dataRows*dataColumns}
         totalItemsCount={this.props.numberOfItems}
+        nextPageText="Next >"
+        prevPageText="< Prev"
+        firstPageText=""
+        lastPageText=""
+        linkClassPrev="prev"
+        linkClassNext="next"
       />
     );
   }
