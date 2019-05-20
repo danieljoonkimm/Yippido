@@ -7,12 +7,6 @@ class IndividualVendorAllItemsList extends Component {
     super(props);
   }
 
-  paginationLogic() {
-    //first api call is going to give me a list of ALL products for company
-    // axios.get("/products/manufacturer/{id}")
-    //when i get that back response.data.products.map( products => {return products.image, products.model, products.item, products.name})
-
-  }
   convertGrid() {
     const AllItem = [];
 

@@ -2,51 +2,50 @@ import React, { Component } from "react";
 
 import IndividualVendorAllItemsList from "./individualVendorAllItemsList.jsx";
 import "./individualVendorAllItems.scss";
+import PaginationLogic from "../../globals/Pagination/index.jsx";
 
 class IndividualVendorAllItems extends Component {
   constructor() {
     super();
 
-    let pages = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    this.state = {
+      numberOfItems: 400
+    };
+  }
 
-    this.state = {};
+  constructAllVendorFilter() {
+    return(
+      <div className="col-xs-4 col-sm-4 col-md-4">
+      <form style={{display: "flex"}}>
+        <select><option value="test"></option></select>
+        <input type="text" placeholder="Price min"/>
+        <input type="text" placeholder="Price max"/>
+        <button>Search</button>
+        </form>
+      </div>
+    )
+  }
+
+  constructAllVendorItems() {
+    return (
+      <div className="row" id="individualVendorAllItems_row">
+        <div className="col-xs-12 col-sm-12 col-md-12">
+          <h2>All Items</h2>
+          {this.constructAllVendorFilter()}
+          <PaginationLogic numberOfItems={this.state.numberOfItems} />
+        </div>
+
+        <div className="col-xs-12 col-sm-12 col-md-12">
+          <IndividualVendorAllItemsList />
+        </div>
+      </div>
+    );
   }
 
   render() {
     return (
       <div className="container" id="individualVendorAllItems_container">
-        <div className="row" id="individualVendorAllItems_row">
-          <div className="row" id="individualVendorAllItems_pagination" style={{ display: "flex"}}>
-            <h2>All Items</h2>
-            <nav aria-label="Page navigation" style={{ width: "fit-content"}} >
-              <ul class="pagination" style={{ display: "flex", flexDirection:"row"}} >
-                <li>
-                  <a href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                  </a>
-                </li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">6</a></li>
-                <li><a href="#">7</a></li>
-                <li><a href="#">8</a></li>
-                <li><a href="#">9</a></li>
-                <li>
-                  <a href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-
-          <div className="row">
-            <IndividualVendorAllItemsList />
-          </div>
-        </div>
+        {this.constructAllVendorItems()}
       </div>
     );
   }
