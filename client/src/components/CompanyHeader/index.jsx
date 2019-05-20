@@ -130,7 +130,7 @@ class CompanyHeader extends Component {
 
           <div className="row" id="companyHeader_registerSignIn">
             <div className="col-xs-6 col-sm-6 col-md-6 companyHeader_signLog">
-              <button onClick={this.register.bind(this)}>Register</button>
+              <button id="companyHeader_registerButton" onClick={this.register.bind(this)}>Register</button>
             </div>
 
             <div className="col-xs-6 col-sm-6 col-md-6 companyHeader_signLog">

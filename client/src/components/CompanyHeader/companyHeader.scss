@@ -29,6 +29,7 @@
   color:white;
 }
 #companyHeader_container {
+  font-size: 13px;
   margin-top: 1em;
   color: black;
   overflow: -webkit-paged-x;
@@ -61,10 +62,13 @@
 
 #companyHeader_selectCountry {
   width: 100%;
+  border: none;
+  outline: none;
+  background-color: white;
 }
 
 #companyheader_selectHelp {
-  width: 100%;
+  width: fit-content;
   margin-top: auto;
   margin-bottom: auto;
   text-align: center;
@@ -77,16 +81,25 @@
 
 #companyHeader_countryDropDown {
   display: flex;
+  justify-content: space-evenly;
 }
 
 #companyHeader_registerSignIn {
   display: flex;
   padding: .5em;
+  justify-content: center;
 
   .companyHeader_signLog {
     margin-top: auto;
     margin-bottom: auto;
     text-align: center;
+    border: none;
+    width: fit-content;
+
+    #companyHeader_registerButton {
+      border: none;
+      outline: none;
+    }
 
     #companyHeader_signInButton {
       padding: .5em;
