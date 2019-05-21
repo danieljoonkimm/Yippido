@@ -38,7 +38,7 @@ class CategoryBanner extends Component {
     return (
       <div id="categoryBanner">
         <div className="container">
-          <div className="gallery row">
+          <div className="gallery row" onClick={() => {this.props.history.push("/individualVendorLanding")}}>
               <div className="brand-item col-xs-3 col-sm-3 col-md-3">
               <ProductImage 
                 name="default"

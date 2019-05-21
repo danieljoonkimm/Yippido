@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 
 import ProductImage from '../../Vendor/ProductImage';
 
+import {withRouter} from "react-router-dom";
+
 
 import '../CategoryBanner/categoryBanner.scss';
 import './vendor.scss';
@@ -65,7 +67,7 @@ class RNVendors extends Component {
       <div id="RNVendors">
         <div className="container">
           <h1>{this.props.name} Vendors</h1>
-          <div className="row">
+          <div className="row" onClick={() => {this.props.history.push("/individualVendorLanding")}}>
             { this.generateMockData(this.props.images) }
           </div>
 
@@ -83,4 +85,4 @@ class RNVendors extends Component {
   }
 }
 
-export default RNVendors;
+export default withRouter(RNVendors);

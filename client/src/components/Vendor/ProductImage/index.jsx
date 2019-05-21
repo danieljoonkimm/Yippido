@@ -17,7 +17,7 @@ class ProductImage extends Component {
 
   _generateViewImages (images) {
     return images.map( (image, i ) => (
-      <div key={i + image.url} className={this.props.className} >
+      <div key={i + image.url} className={this.props.className}>
         <img  className={this[this.props.name][i]} src={image.url} alt=""/>
         { this.props.isDeletable ? (<div data-id={image.id} onClick={this.props.onClick} className="img__btn__overlay">x</div> ) : null }
       </div>
@@ -36,7 +36,7 @@ class ProductImage extends Component {
       </div>
     );
     return (
-      <div>{products}</div>
+      <div >{products}</div>
     );
   }
 }

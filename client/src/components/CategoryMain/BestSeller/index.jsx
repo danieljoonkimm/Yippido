@@ -89,7 +89,7 @@ class BestSeller extends Component {
 
     for ( let i = 0; i < 3; i++ ) {
       mock.push(
-        <div className="col-xs-4 col-sm-4 col-md-4" style={{ padding: '10px'}} onClick={() => {this.props.history.push("/vendor")}}>
+        <div className="col-xs-4 col-sm-4 col-md-4" style={{ padding: '10px'}}>
           <ProductImage 
             className="col-xs-12 col-sm-12 col-md-12" 
             name={'default'}

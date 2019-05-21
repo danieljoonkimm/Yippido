@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import "./sales.scss";
+import {withRouter} from "react-router-dom";
 
 class SaleList extends Component {
   constructor(props) {
@@ -22,7 +23,7 @@ class SaleList extends Component {
     return salesItem.map(item => {
       return (
         <div className="item-list-col col-xs-3 col-sm-3 col-md-3">
-          <div>
+          <div onClick={() => {this.props.history.push("/vendor")}}>
             <img className="img-fluid top-left" src={item.image} alt="" />
             <div>
               {item.model} / <strong>${item.price}</strong>
@@ -47,4 +48,4 @@ class SaleList extends Component {
   }
 }
 
-export default SaleList;
+export default withRouter(SaleList);
