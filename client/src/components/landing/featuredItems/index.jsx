@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import dummyImg from "../../../../public/images/dummyImg.jpg";
 import "./featuredItems.scss";
 import ProductImage from '../../Vendor/ProductImage';
+import {withRouter} from "react-router-dom";
 
 class FeaturedItems extends Component {
   constructor() {
@@ -47,7 +48,7 @@ class FeaturedItems extends Component {
 
     return images.map( image => { 
         return (
-          <div className="col-xs-3 col-sm-3 col-md-3" style={{ padding: '5px'}}>
+          <div className="col-xs-3 col-sm-3 col-md-3" style={{ padding: '5px'}} onClick={() => {this.props.history.push("/vendor")}}>
             <ProductImage
               className="col-xs-12 col-sm-12 col-md-12" 
               name={'default'}
@@ -165,4 +166,4 @@ class FeaturedItems extends Component {
   }
 }
 
-export default FeaturedItems;
+export default withRouter(FeaturedItems);

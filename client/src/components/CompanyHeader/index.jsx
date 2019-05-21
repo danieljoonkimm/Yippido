@@ -55,7 +55,7 @@ class CompanyHeader extends Component {
   }
 
   searchVendor() {
-    this.props.history.push("/individualvendorlanding");
+    this.props.history.push("/vendor");
   }
 
   render() {
