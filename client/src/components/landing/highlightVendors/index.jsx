@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import dummyImg from "../../../../public/images/dummyImg.jpg";
 import "./highlightVendors.scss";
 import ProductImage from '../../Vendor/ProductImage';
+import {withRouter} from "react-router-dom";
 
 class HighlightVendors extends Component {
   constructor() {
@@ -36,7 +37,7 @@ class HighlightVendors extends Component {
       <div id="categoryBanner">
       <div className="container" id="highlightVendors_container">
       <h1>HIGHLIGHT VENDORS</h1>
-        <div className="gallery row">
+        <div className="gallery row" onClick={()=> {this.props.history.push("/individualVendorLanding")}}>
             <div className="brand-item col-xs-3 col-sm-3 col-md-3">
             <ProductImage 
               name="default"
@@ -154,4 +155,4 @@ class HighlightVendors extends Component {
   }
 }
 
-export default HighlightVendors;
+export default withRouter(HighlightVendors);

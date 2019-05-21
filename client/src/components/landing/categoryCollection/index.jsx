@@ -3,6 +3,8 @@ import dummyImg from "../../../../public/images/dummyImg.jpg";
 import "./categoryCollection.scss";
 import ProductImage from "../../Vendor/ProductImage";
 
+import {withRouter} from "react-router-dom";
+
 class CategoryCollection extends Component {
   constructor() {
     super();
@@ -76,6 +78,7 @@ class CategoryCollection extends Component {
           <div
             className="col-xs-3 col-sm-3 col-md-3"
             style={{ padding: "5px" }}
+            onClick={() => {this.props.history.push("/vendor")}}
           >
             <ProductImage
               className="col-xs-12 col-sm-12 col-md-12"
@@ -96,6 +99,7 @@ class CategoryCollection extends Component {
           <div
             className="col-xs-4 col-sm-4 col-md-4"
             style={{ padding: "5px" }}
+            onClick={() => {this.props.history.push("/vendor")}}
           >
             <ProductImage
               className="col-xs-6 col-sm-6 col-md-6"
@@ -229,4 +233,4 @@ class CategoryCollection extends Component {
   }
 }
 
-export default CategoryCollection;
+export default withRouter(CategoryCollection);
