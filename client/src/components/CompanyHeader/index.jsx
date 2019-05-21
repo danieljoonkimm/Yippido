@@ -83,7 +83,7 @@ class CompanyHeader extends Component {
 
                 <ul className="dropdown-menu" id="dropdown-menuAllVendors">
                   {dummyData.map(vendor => {
-                    return <li>{vendor}</li>;
+                    return <li style={{cursor: "pointer"}} onClick={() => {this.props.history.push("/individualVendorLanding")}}>{vendor}</li>;
                   })}
                 </ul>
               </div>
