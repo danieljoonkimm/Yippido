@@ -31,7 +31,7 @@ class App extends Component {
       <div>
          <CompanyHeader/>
         <Navigation/>
-        <CompanyHeader/>
+        {/* <CompanyHeader/> */}
       <Switch>
         {routes.map(route => (
           <Route key={`route-${route.name}`} {...route} />

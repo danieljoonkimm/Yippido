@@ -20,12 +20,33 @@ class Navigation extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {lettersFinal: []}
-  }  
+    this.listenScrollEvent = this.listenScrollEvent.bind(this);
+
+    this.state = {lettersFinal: [],
+      position: {
+        position: "relative",
+        top: null
+      }
+    }
+  }
+
+  
+  listenScrollEvent(e) {
+    if (window.scrollY > 70) {
+      this.setState({position: {position: "fixed", top: 0}
+    })
+    } else {
+      this.setState({position: {position: 'relative', top: null}})
+    }
+  }
+  componentDidMount() {
+    window.addEventListener('scroll', this.listenScrollEvent)
+  }
+
   render () {
     return (
       <div>
-        <div id="navbar-desktop">
+        <div id="navbar-desktop" style={this.state.position}>
           <ul className="navbar-item">
             <Popup trigger={<li className="bm-item-list">Categories<Icon icon={ic_arrow_drop_down}/></li>} position="bottom center" className="navbar_tooltip">
               {/* <NavCat /> */}
