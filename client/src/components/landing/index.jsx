@@ -28,7 +28,7 @@ class Landing extends Component {
         <Events/>
         <NewVendors/>
         
-        <CompanyFooter/>
+        {/* <CompanyFooter/> */}
       </div>
     );
   }

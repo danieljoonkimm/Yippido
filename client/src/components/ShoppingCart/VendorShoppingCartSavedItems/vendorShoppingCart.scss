@@ -1,3 +1,10 @@
 .vendorShoppingCartSavedItems_column-labels {
   display: flex;
 }
+
+.input-group-btn {
+  button {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+}

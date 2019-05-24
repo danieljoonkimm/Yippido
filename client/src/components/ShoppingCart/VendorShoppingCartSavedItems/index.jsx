@@ -131,7 +131,7 @@ class VendorShoppingCartSavedItems extends Component {
             <img src={data.thumb} style={{ width: "50px", height: "auto" }} />
           </td>
           <td>{data.key}</td>
-          <td>{data.color}</td>
+          <td>{data.color}<br/> <button>Move to Cart</button></td>
           <td>{data.size}</td>
           <td className="input-group" style={{ width: "50%" }}>
             <span className="input-group-btn">
@@ -167,7 +167,7 @@ class VendorShoppingCartSavedItems extends Component {
     return (
       <table
         className="table"
-        style={{ display: "flex", flexDirection: "column" }}
+        style={{ display: "flex", flexDirection: "column", textAlign: "center" }}
       >
         <thead style={{ display: "flex" }}>{shoppingCartHeaderShow}</thead>
         <tbody>{shoppingCartItemsShow}</tbody>
