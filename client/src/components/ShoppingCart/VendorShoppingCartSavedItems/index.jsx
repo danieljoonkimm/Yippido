@@ -186,7 +186,8 @@ class VendorShoppingCartSavedItems extends Component {
     return (
       <table
         className="table"
-        style={{textAlign: "center" }}
+        style={{textAlign: "center", float: "none",
+        margin: "0 auto" }}
       >
         <thead><tr>{shoppingCartHeaderShow}</tr></thead>
         <tbody>{shoppingCartItemsShow}</tbody>
