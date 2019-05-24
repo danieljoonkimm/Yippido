@@ -29,6 +29,7 @@ class RNVendors extends Component {
               name={'default'}
               images={images[i]} 
               isViewable={false}
+              onClick={() => {this.props.history.push("/individualVendorLanding")}}
             />
           </div>
         );
@@ -40,6 +41,7 @@ class RNVendors extends Component {
               name={'default'}
               images={images[i]} 
               isViewable={false}
+              onClick={() => {this.props.history.push("/individualVendorLanding")}}
             />
           </div>
         );
@@ -52,6 +54,7 @@ class RNVendors extends Component {
               name={'duo'}
               images={images[i]} 
               isViewable={false}
+              onClick={() => {this.props.history.push("/individualVendorLanding")}}
             />
           </div>
         );
@@ -67,7 +70,7 @@ class RNVendors extends Component {
       <div id="RNVendors">
         <div className="container">
           <h1>{this.props.name} Vendors</h1>
-          <div className="row" onClick={() => {this.props.history.push("/individualVendorLanding")}}>
+          <div className="row">
             { this.generateMockData(this.props.images) }
           </div>
 

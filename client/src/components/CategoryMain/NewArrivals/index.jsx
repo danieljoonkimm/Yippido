@@ -49,12 +49,13 @@ class NewArrivals extends Component {
     return images.map( image => { 
       if ( image.length === 1 ) {
         return (
-          <div className="col-xs-4 col-sm-4 col-md-4" style={{ padding: '5px'}} onClick={() => {this.props.history.push("/vendor")}}>
+          <div className="col-xs-4 col-sm-4 col-md-4" style={{ padding: '5px'}}>
             <ProductImage
               className="col-xs-12 col-sm-12 col-md-12" 
               name={'default'}
               images={image} 
               isViewable={false}
+              onClick={() => {this.props.history.push("/vendor")}}
             />
             <div>
               <div>{item.model} / <strong>${item.price}</strong></div>
@@ -64,12 +65,13 @@ class NewArrivals extends Component {
         )
       } else {
         return (
-          <div className="col-xs-4 col-sm-4 col-md-4" style={{ padding: '5px'}} onClick={() => {this.props.history.push("/vendor")}}>
+          <div className="col-xs-4 col-sm-4 col-md-4" style={{ padding: '5px'}}>
             <ProductImage
               className="col-xs-6 col-sm-6 col-md-6" 
               name={'duo'}
               images={image} 
               isViewable={false}
+              onClick={() => {this.props.history.push("/vendor")}}
             />
             <div>
               <div>{item.model} / <strong>${item.price}</strong></div>

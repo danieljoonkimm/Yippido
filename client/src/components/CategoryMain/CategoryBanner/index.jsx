@@ -38,14 +38,14 @@ class CategoryBanner extends Component {
     return (
       <div id="categoryBanner">
         <div className="container">
-          <div className="gallery row" onClick={() => {this.props.history.push("/individualVendorLanding")}}>
+          <div className="gallery row">
               <div className="brand-item col-xs-3 col-sm-3 col-md-3">
               <ProductImage 
                 name="default"
                 className=""
                 images={[{ url: 'https://dummyimage.com/400x600/26628a/fff' }]}
                 otherImages={images}
-                onClick={() => { console.log('hey', ); this.props.history.push('/vendor') }}
+                onClick={() => {this.props.history.push("/individualVendorLanding")}}
               />  
               </div>
               <div className="item col-xs-9 col-sm-9 col-md-9">
@@ -57,7 +57,7 @@ class CategoryBanner extends Component {
                         className="gallery-box-item col-xs-6 col-sm-6 col-md-6"
                         images={[{ url: 'https://dummyimage.com/400x600/26628a/fff'},{ url: 'https://dummyimage.com/400x600/26628a/fff'},{ url: 'https://dummyimage.com/400x600/26628a/fff'},{ url: 'https://dummyimage.com/400x600/26628a/fff'}]}
                         otherImages={images}
-                        onClick={() => { console.log('hey', ); this.props.history.push('/vendor') }}
+                        onClick={() => {this.props.history.push("/individualVendorLanding")}}
                       />
                     </div>
                   </div>
@@ -67,7 +67,7 @@ class CategoryBanner extends Component {
                       className="gallery-item col-xs-4 col-sm-4 col-md-4"
                       images={[{ url: 'https://dummyimage.com/400x600/26628a/fff' }]}
                       otherImages={images}
-                      onClick={() => { console.log('hey', ); this.props.history.push('/vendor') }}
+                      onClick={() => {this.props.history.push("/individualVendorLanding")}}
                     />    
                   </div>
 
@@ -78,7 +78,7 @@ class CategoryBanner extends Component {
                         className="gallery-box-item col-xs-6 col-sm-6 col-md-6"
                         images={[{ url: 'https://dummyimage.com/400x600/26628a/fff'},{ url: 'https://dummyimage.com/400x600/26628a/fff'},{ url: 'https://dummyimage.com/400x600/26628a/fff'},{ url: 'https://dummyimage.com/400x600/26628a/fff'}]}
                         otherImages={images}
-                        onClick={() => { console.log('hey', ); this.props.history.push('/vendor') }}
+                        onClick={() => {this.props.history.push("/individualVendorLanding")}}
                       />
                     </div>
                   </div>
