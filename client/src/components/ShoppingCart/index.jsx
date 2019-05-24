@@ -11,7 +11,7 @@ class ShoppingCart extends Component {
 
   render() {
     return (
-      <div className="container" id="shoppingCart_container">
+      <div className="container" id="shoppingCart_container" style={{fontSize: "11px"}}>
         <VendorShoppingCartSavedItems/>
       </div>
     );

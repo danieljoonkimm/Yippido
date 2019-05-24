@@ -28,7 +28,7 @@ class VendorShoppingCartSavedItems extends Component {
             size: ["S", "M", "L"]
           },
           {
-            key: "726",
+            key: "722",
             thumb: "https://img.pranavc.in/200",
             name: "iPod Shuffle2",
             points: 0,
@@ -113,12 +113,31 @@ class VendorShoppingCartSavedItems extends Component {
     e.preventDefault();
   }
 
+  convertShoppingCartVendorName() {
+    let vendorName = "Daniels Company"
+    return(
+      <div className="col-xs-12 col-sm-12 col-md-12">
+        <div className="col-xs-2 col-sm-2 col-md-2">
+          <h2>{vendorName}</h2>
+        </div>
+        <div className="col-xs-6 col-sm-6 col-md-6">
+        </div>
+        <div className="col-xs-2 col-sm-2 col-md-2">
+          <h2><button>Move to Cart</button></h2>
+        </div>
+        <div className="col-xs-2 col-sm-2 col-md-2">
+          <h2><button>Delete</button></h2>
+        </div>
+      </div>
+    )
+  }
+
   convertShoppingCartHeader(shoppingCartHeader, shoppingCartItems) {
     let shoppingCartHeaderShow = shoppingCartHeader.map(data => {
       return (
-        <tr>
+          <th style={{minWidth: "100px", textAlign: "center"}}>
           {data}
-        </tr>
+          </th>
       );
     });
 
@@ -126,14 +145,14 @@ class VendorShoppingCartSavedItems extends Component {
 
     let shoppingCartItemsShow = shoppingCartItems.map(data => {
       return (
-        <tr style={{ display: "flex" }}>
-          <td>
+        <tr>
+          <td className="shoppingCart_data">
             <img src={data.thumb} style={{ width: "50px", height: "auto" }} />
           </td>
-          <td>{data.key}</td>
-          <td>{data.color}<br/> <button>Move to Cart</button></td>
-          <td>{data.size}</td>
-          <td className="input-group" style={{ width: "50%" }}>
+          <td className="shoppingCart_data">{data.key}</td>
+          <td className="shoppingCart_data">{data.color}<br/> <button style={{border: "none", textDecoration: "underline"}}>Move to Cart</button></td>
+          <td className="shoppingCart_data">{data.size}</td>
+          <td className="input-group shoppingCart_data" style={{ width: "50%" }}>
             <span className="input-group-btn">
               <button className="btn btn-white btn-minuse" type="button">
                 -
@@ -154,10 +173,10 @@ class VendorShoppingCartSavedItems extends Component {
             </span>
           </td>
 
-          <td>{lengthOfProducts}</td>
-          <td>{data.price}</td>
-          <td>{data.total}</td>
-          <td>
+          <td className="shoppingCart_data">{lengthOfProducts}</td>
+          <td className="shoppingCart_data">{data.price}</td>
+          <td className="shoppingCart_data">{data.total}</td>
+          <td className="shoppingCart_data">
             <input type="checkbox" />
           </td>
         </tr>
@@ -167,9 +186,9 @@ class VendorShoppingCartSavedItems extends Component {
     return (
       <table
         className="table"
-        style={{ display: "flex", flexDirection: "column", textAlign: "center" }}
+        style={{textAlign: "center" }}
       >
-        <thead style={{ display: "flex" }}>{shoppingCartHeaderShow}</thead>
+        <thead><tr>{shoppingCartHeaderShow}</tr></thead>
         <tbody>{shoppingCartItemsShow}</tbody>
       </table>
     );
@@ -179,7 +198,7 @@ class VendorShoppingCartSavedItems extends Component {
     return (
       <div className="container" id="vendorShoppingCartSavedItems_container">
         <div className="row">
-          <div className="col-xs-12 col-sm-12 col-md-12">hi</div>
+        {this.convertShoppingCartVendorName()}
           <div className="col-xs-12 col-sm-12 col-md-12">
             {this.convertShoppingCartHeader(
               this.shoppingCartHeader,
