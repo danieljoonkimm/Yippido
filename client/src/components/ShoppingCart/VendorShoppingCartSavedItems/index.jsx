@@ -105,12 +105,29 @@ class VendorShoppingCartSavedItems extends Component {
     ];
 
     this.state = {
-      quant: 1
-    };
+      quant: 0
+    }
   }
 
-  changeQuant(e) {
+  changeShoppingQuantInput(e) {
     e.preventDefault();
+    this.setState({
+      quant : e.target.value
+    })
+  }
+
+  changeShoppingQuantPlus(e) {
+    e.preventDefault();
+      this.setState({
+        quant: this.state.quant+1
+      })
+  }
+
+  changeShoppingQuantMinus(e) {
+    e.preventDefault();
+      this.setState({
+        quant: this.state.quant-1
+      })
   }
 
   convertShoppingCartVendorName() {
@@ -154,20 +171,22 @@ class VendorShoppingCartSavedItems extends Component {
           <td className="shoppingCart_data">{data.size}</td>
           <td className="input-group shoppingCart_data" style={{ width: "50%" }}>
             <span className="input-group-btn">
-              <button className="btn btn-white btn-minuse" type="button">
+              <button className="btn btn-white btn-minuse" id="btn-minus" type="button" onClick={(e) => {this.changeShoppingQuantMinus(e)}}>
                 -
               </button>
             </span>
             <input
+              onChange={this.changeShoppingQuantInput.bind(this)}
               type="text"
               className="form-control no-padding add-color text-center height-25"
               maxLength="1000"
-              defaultValue="1"
-              min="1"
+              value={this.state.quant}
+              min="0"
               max="10000"
+              name="shoppingCartQuantity"
             />
             <span className="input-group-btn">
-              <button className="btn btn-red btn-pluss" type="button">
+              <button className="btn btn-red btn-pluss" id="btn-plus" type="button" onClick={(e) => {this.changeShoppingQuantPlus(e)}}>
                 +
               </button>
             </span>
