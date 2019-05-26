@@ -177,6 +177,7 @@ class VendorShoppingCartSavedItems extends Component {
               </button>
             </span>
             <input
+              style={{width: "60px"}}
               onChange={(e) => {this.changeShoppingQuantInput(e)}}
               type="text"
               className="form-control no-padding add-color text-center height-25"
