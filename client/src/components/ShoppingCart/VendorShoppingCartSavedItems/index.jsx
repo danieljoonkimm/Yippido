@@ -110,23 +110,24 @@ class VendorShoppingCartSavedItems extends Component {
   }
 
   changeShoppingQuantInput(e) {
-    e.preventDefault();
+    console.log(typeof e.target.value)
     this.setState({
-      quant : e.target.value
+      quant: e.target.value
     })
   }
 
-  changeShoppingQuantPlus(e) {
-    e.preventDefault();
+  changeShoppingQuantPlus() {
       this.setState({
-        quant: this.state.quant+1
+        quant: parseInt(this.state.quant)+1
       })
   }
 
-  changeShoppingQuantMinus(e) {
-    e.preventDefault();
+  changeShoppingQuantMinus() {
+    if(this.state.quant <= 0) {
+      alert("not allowed")
+    }
       this.setState({
-        quant: this.state.quant-1
+        quant: parseInt(this.state.quant)-1
       })
   }
 
@@ -171,22 +172,22 @@ class VendorShoppingCartSavedItems extends Component {
           <td className="shoppingCart_data">{data.size}</td>
           <td className="input-group shoppingCart_data" style={{ width: "50%" }}>
             <span className="input-group-btn">
-              <button className="btn btn-white btn-minuse" id="btn-minus" type="button" onClick={(e) => {this.changeShoppingQuantMinus(e)}}>
+              <button className="btn btn-white btn-minuse" id="btn-minus" type="button" onClick={() => {this.changeShoppingQuantMinus()}}>
                 -
               </button>
             </span>
             <input
-              onChange={this.changeShoppingQuantInput.bind(this)}
+              onChange={(e) => {this.changeShoppingQuantInput(e)}}
               type="text"
               className="form-control no-padding add-color text-center height-25"
               maxLength="1000"
               value={this.state.quant}
               min="0"
-              max="10000"
+              max="1000"
               name="shoppingCartQuantity"
             />
             <span className="input-group-btn">
-              <button className="btn btn-red btn-pluss" id="btn-plus" type="button" onClick={(e) => {this.changeShoppingQuantPlus(e)}}>
+              <button className="btn btn-red btn-pluss" id="btn-plus" type="button" onClick={() => {this.changeShoppingQuantPlus()}}>
                 +
               </button>
             </span>
