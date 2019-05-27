@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import VendorShoppingCartSavedItems from "./VendorShoppingCartSavedItems/index.jsx";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import ShoppingCartProgress from "./ShoppingCartProgress/index.jsx";
 import "react-tabs/style/react-tabs.css";
 
 class ShoppingCart extends Component {
@@ -9,7 +10,34 @@ class ShoppingCart extends Component {
 
     this.tabData = ["Shopping Cart", "Saved Items"];
 
-    this.state = {};
+    this.state = {
+      reactSteps: [
+        {
+          MyShoppingCart: {
+            active: true,
+            color: "black"
+          },
+          ShippingPayments: {
+            active: false,
+            color: "gray"
+          },
+          Confirmation: {
+            active: false,
+            color: "gray"
+          }
+        }
+      ]
+    };
+  }
+
+  constructShoppingCartProgressBar() {
+    const {reactSteps} = this.state;
+
+    return reactSteps.map( steps => {
+     return Object.keys(steps).map(step => {
+       return <div className="col-xs-4 col-sm-4 col-md-4">{step}</div>
+     })
+    })
   }
 
   switchTabs() {
@@ -25,6 +53,8 @@ class ShoppingCart extends Component {
         id="shoppingCart_container"
         style={{ fontSize: "11px" }}
       >
+        <div className="row"><div className="col-xs-9 col-sm-9 col-md-9">{this.constructShoppingCartProgressBar()}</div></div>
+        
         <Tabs className="row" selectedTabClassName="settings__activeTab">
           <div className="col-xs-3 col-sm-3 col-md-3">
             <TabList>{this.switchTabs()}</TabList>

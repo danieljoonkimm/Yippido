@@ -25,7 +25,8 @@ class VendorShoppingCartSavedItems extends Component {
             price_raw: 122,
             total_raw: 244,
             color: "red",
-            size: ["S", "M", "L"]
+            size: ["S", "M", "L"],
+            selected: false
           },
           {
             key: "722",
@@ -44,7 +45,8 @@ class VendorShoppingCartSavedItems extends Component {
             price_raw: 122,
             total_raw: 244,
             color: "blue",
-            size: ["S", "M", "L"]
+            size: ["S", "M", "L"],
+            selected: false
           }
         ]
       },
@@ -67,7 +69,8 @@ class VendorShoppingCartSavedItems extends Component {
             price_raw: 122,
             total_raw: 244,
             color: "red",
-            size: ["S", "M", "L"]
+            size: ["S", "M", "L"],
+            selected: false
           },
           {
             key: "726",
@@ -86,7 +89,8 @@ class VendorShoppingCartSavedItems extends Component {
             price_raw: 122,
             total_raw: 244,
             color: "blue",
-            size: ["S", "M", "L"]
+            size: ["S", "M", "L"],
+            selected: false
           }
         ]
       }
@@ -106,31 +110,24 @@ class VendorShoppingCartSavedItems extends Component {
 
     this.state = {
       quant: 0,
-      selected: false,
       arrayOfItems: []
     }
   }
 
-  selectShoppingCartItems(data) {
-    const {selected, arrayOfItems} = this.state;
+  onDeleteButton() {
+    const {arrayOfItems} = this.state;
 
-    if(selected === false) {
-      let search_item = data;
-      for(var i = arrayOfItems.length-1; i>0; i--) {
-        if(arrayOfItems[i] === search_item) {
-          arrayOfItems.splice(i, 1);
-        }
-      }
-      this.setState({
-        selected: !this.state.selected
-      })
-    } else {
-      arrayOfItems.push(data)
-      this.setState({
-        selected: !this.state.selected
-      })
-    }
-    console.log(this.state.arrayOfItems, 'what')
+    return arrayOfItems.map(items => {
+      return items
+    })
+  }
+
+  selectShoppingCartItems(data) {
+    const {arrayOfItems} = this.state;
+
+    arrayOfItems.push(data.key)
+
+    console.log(arrayOfItems);
   }
 
   changeShoppingQuantInput(e) {
@@ -222,7 +219,7 @@ class VendorShoppingCartSavedItems extends Component {
           <td className="shoppingCart_data">{data.price}</td>
           <td className="shoppingCart_data">{data.total}</td>
           <td className="shoppingCart_data">
-            <input id={data.key} onClick={() => {this.selectShoppingCartItems(data.key)}} type="checkbox" />
+            <input id={data.key} onClick={() => {this.selectShoppingCartItems(data)}} type="checkbox" />
           </td>
         </tr>
       );
@@ -241,6 +238,7 @@ class VendorShoppingCartSavedItems extends Component {
   }
 
   render() {
+    console.log(this.state.arrayOfItems, this.state.selected, 'what')
     return (
       <div className="container" id="vendorShoppingCartSavedItems_container">
         <div className="row">
