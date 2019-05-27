@@ -141,10 +141,10 @@ class VendorShoppingCartSavedItems extends Component {
         <div className="col-xs-6 col-sm-6 col-md-6">
         </div>
         <div className="col-xs-2 col-sm-2 col-md-2">
-          <h2><button>Move to Cart</button></h2>
+          <h2><button style={{border: "none", textDecoration: "underline"}}>Move to Cart</button></h2>
         </div>
         <div className="col-xs-2 col-sm-2 col-md-2">
-          <h2><button>Delete</button></h2>
+          <h2><button style={{border: "none", textDecoration: "underline"}}>Delete</button></h2>
         </div>
       </div>
     )
