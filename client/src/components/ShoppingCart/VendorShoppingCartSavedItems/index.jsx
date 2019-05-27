@@ -105,8 +105,32 @@ class VendorShoppingCartSavedItems extends Component {
     ];
 
     this.state = {
-      quant: 0
+      quant: 0,
+      selected: false,
+      arrayOfItems: []
     }
+  }
+
+  selectShoppingCartItems(data) {
+    const {selected, arrayOfItems} = this.state;
+
+    if(selected === false) {
+      let search_item = data;
+      for(var i = arrayOfItems.length-1; i>0; i--) {
+        if(arrayOfItems[i] === search_item) {
+          arrayOfItems.splice(i, 1);
+        }
+      }
+      this.setState({
+        selected: !this.state.selected
+      })
+    } else {
+      arrayOfItems.push(data)
+      this.setState({
+        selected: !this.state.selected
+      })
+    }
+    console.log(this.state.arrayOfItems, 'what')
   }
 
   changeShoppingQuantInput(e) {
@@ -198,7 +222,7 @@ class VendorShoppingCartSavedItems extends Component {
           <td className="shoppingCart_data">{data.price}</td>
           <td className="shoppingCart_data">{data.total}</td>
           <td className="shoppingCart_data">
-            <input type="checkbox" />
+            <input id={data.key} onClick={() => {this.selectShoppingCartItems(data.key)}} type="checkbox" />
           </td>
         </tr>
       );
