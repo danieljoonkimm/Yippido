@@ -1,4 +1,10 @@
-
+// INITIAL STATE
+// --------------------
+// --> initialState
+// 
+// FUNCTIONS
+// --------------------
+// --> getOptionsArray
 // 
 // ACTIONS
 // --------------------
@@ -129,6 +135,123 @@ const getOptionsArray = (count) => {
   return array;
 };
 
+// ACTIONS
+// addToCart
+const addToCart = (id, count) => (
+  {
+    type: 'ADD_TO_CART',
+    id,
+    count,
+  }
+);
+
+// removeFromCart
+const removeFromCart = (id) => (
+  {
+    type: 'REMOVE_FROM_CART',
+    id,
+  }
+);
+
+// updateCartItem
+const updateCartItem = (id, count) => (
+  {
+    type: 'UPDATE_CART_ITEM',
+    id,
+    count,
+  }
+);
+
+// removeStockItem
+const removeStockItem = (id, count) => (
+  {
+    type: 'REMOVE_STOCK_ITEM',
+    id,
+    count,
+  }
+);
+
+
+// REDUCERS
+// cartItem
+const cartItem = (state, action) => {
+  switch (action.type) {
+    case 'ADD_TO_CART':
+      return {
+        id: action.id,
+        count: action.count,
+      };
+    case 'REMOVE_FROM_CART':
+      return state.id !== action.id;
+    case 'UPDATE_CART_ITEM':
+      if (state.id !== action.id) {
+        return state;
+      }
+
+      return Object.assign(
+        {},
+        state,
+        {
+          count: action.count,
+        }
+      );
+    default:
+      return state;
+  }
+};
+
+// cart
+const cart = (state = [], action) => {
+  switch (action.type) {
+    case 'ADD_TO_CART':
+      return [
+        ...state,
+        cartItem(undefined, action),
+      ];
+    case 'REMOVE_FROM_CART':
+      return state.filter(item => cartItem(item, action));
+    case 'UPDATE_CART_ITEM':
+      return state.map(item => cartItem(item, action));
+    default:
+      return state;
+  }
+};
+
+// stockItem
+const stockItem = (state, action) => {
+  switch (action.type) {
+    case 'REMOVE_STOCK_ITEM':
+      if (state.id !== action.id) {
+        return state;
+      }
+
+      return Object.assign(
+        {},
+        state,
+        {
+          count: state.count - action.count,
+        }
+      );
+    default:
+      return state;
+  }
+};
+
+// stock
+const stock = (state = [], action) => {
+  switch (action.type) {
+    case 'REMOVE_STOCK_ITEM':
+      return state.map(item => stockItem(item, action));
+    default:
+      return state;
+  }
+};
+
+// reducers
+const reducers = Redux.combineReducers({
+  cart,
+  stock,
+});
 
 
 // COMPONENTS

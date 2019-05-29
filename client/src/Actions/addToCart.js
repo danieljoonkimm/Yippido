@@ -1,9 +1,9 @@
 // ACTIONS
 // addToCart
-export const addToCart = (id, count) => (
+
+const addToCart = (id) => (
   {
     type: 'ADD_TO_CART',
-    id,
-    count,
+    id
   }
 );

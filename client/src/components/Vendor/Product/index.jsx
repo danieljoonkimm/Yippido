@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Purchase from '../Purchase';
 
 import './products.scss';
+import PropTypes from "prop-types";
 
 class Product extends Component {
   constructor(props) {

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Switch, Route } from 'react-router-dom';
+
 import Landing from "./landing/index.jsx";
 import SignIn from "./SignIn/index.jsx";
 import Navigation from "./Navigation/index.jsx";
@@ -19,6 +19,17 @@ import CompanyHeader from "./CompanyHeader/index.jsx";
 import routes from "../routes";
 
 
+import GetCartButton from "./ShoppingCart/CartLogic/getCartButton.jsx";
+import ItemContainer from "./ShoppingCart/CartLogic/itemContainer.jsx";
+import CartContainer from "./ShoppingCart/CartLogic/cartContainer.jsx";
+import {Router,
+  Route,
+  Switch,
+  Link,
+  IndexRoute,
+  hashHistory} from "react-router-dom";
+import VendorShoppingCart from "./ShoppingCart/VendorShoppingCart/index.jsx";
+
 class App extends Component {
   constructor() {
     super();
@@ -30,19 +41,23 @@ class App extends Component {
     return (
       <div>
          {/* <CompanyHeader/> */}
-        <ShoppingCart/>
+        {/* <ShoppingCart/> */}
         {/* <CompanyHeader/> */}
-      {/* <Switch>
+      <Switch>
         {routes.map(route => (
           <Route key={`route-${route.name}`} {...route} />
         ))}
-      </Switch> */}
+      </Switch>
       </div>
       // <div>
       //   {/* <CompanyFooter/>
       //   <IndividualVendorAllItems/>
       //   <Landing/> */}
       //   {/* <Favorites/> */}
+      // </div>
+      // <div>
+
+      //   <ShoppingCart/>
       // </div>
     );
   }

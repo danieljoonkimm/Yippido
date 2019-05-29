@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import VendorShoppingCartSavedItems from "./VendorShoppingCartSavedItems/index.jsx";
+import VendorShoppingCart from "./VendorShoppingCart/index.jsx";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import ShoppingCartProgress from "./ShoppingCartProgress/index.jsx";
 import "react-tabs/style/react-tabs.css";
 
 class ShoppingCart extends Component {
@@ -67,7 +67,7 @@ class ShoppingCart extends Component {
             <TabList>{this.switchTabs()}</TabList>
           </div>
           <TabPanel>
-            <VendorShoppingCartSavedItems />
+            <VendorShoppingCart />
           </TabPanel>
           <TabPanel>
             <VendorShoppingCartSavedItems />
