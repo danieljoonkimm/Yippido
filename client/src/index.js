@@ -3,6 +3,12 @@ import { render } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import App from './components/App';
 
-render(<BrowserRouter>
+import {createStore} from 'redux';
+import {Provider} from 'react-redux';
+import allReducers from '../src/Reducers/index.jsx';
+
+const store = createStore(allReducers);
+
+render(<Provider store={store}><BrowserRouter>
 <App />
-</BrowserRouter>, document.getElementById('app'));
+</BrowserRouter></Provider>, document.getElementById('app'));

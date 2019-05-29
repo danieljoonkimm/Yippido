@@ -1,5 +1,5 @@
 // updateCartItem
-const updateCartItem = (id, count) => (
+export const updateCartItem = (id, count) => (
   {
     type: 'UPDATE_CART_ITEM',
     id,
