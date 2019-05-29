@@ -110,7 +110,8 @@ class VendorShoppingCartSavedItems extends Component {
 
     this.state = {
       quant: 0,
-      arrayOfItems: []
+      arrayOfItems: [],
+      rawData: this.data
     }
   }
 
@@ -126,11 +127,10 @@ class VendorShoppingCartSavedItems extends Component {
     const {arrayOfItems} = this.state;
 
     arrayOfItems.push(data.key)
-
-    console.log(arrayOfItems);
   }
 
-  changeShoppingQuantInput(e) {
+  changeShoppingQuantInput(e, data) {
+    console.log(data.key, 'what is this')
     this.setState({
       quant: e.target.value
     })
@@ -197,9 +197,8 @@ class VendorShoppingCartSavedItems extends Component {
               </button>
             </span>
             <input
-              name={this.state.quant}
               style={{width: "60px"}}
-              onChange={(e) => {this.changeShoppingQuantInput(e)}}
+              onChange={(e) => {this.changeShoppingQuantInput(e, data)}}
               type="text"
               className="form-control no-padding add-color text-center height-25"
               maxLength="1000"
@@ -238,7 +237,7 @@ class VendorShoppingCartSavedItems extends Component {
   }
 
   render() {
-    console.log(this.state.arrayOfItems, this.state.selected, 'what')
+    console.log(this.state.rawData, 'what')
     return (
       <div className="container" id="vendorShoppingCartSavedItems_container">
         <div className="row">
@@ -246,7 +245,7 @@ class VendorShoppingCartSavedItems extends Component {
           <div className="col-xs-12 col-sm-12 col-md-12">
             {this.convertShoppingCartHeader(
               this.shoppingCartHeader,
-              this.data.CompanyName.products
+              this.state.rawData.CompanyName.products
             )}
           </div>
         </div>
