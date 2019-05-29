@@ -131,7 +131,6 @@ class VendorShoppingCartSavedItems extends Component {
   }
 
   changeShoppingQuantInput(e) {
-    console.log(typeof e.target.value)
     this.setState({
       quant: e.target.value
     })
@@ -198,6 +197,7 @@ class VendorShoppingCartSavedItems extends Component {
               </button>
             </span>
             <input
+              name={this.state.quant}
               style={{width: "60px"}}
               onChange={(e) => {this.changeShoppingQuantInput(e)}}
               type="text"
