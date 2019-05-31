@@ -5,7 +5,8 @@ import PropTypes from "prop-types";
 import {connect} from "react-redux";
 import addToCart from "../../../Actions/addToCart.js";
 
-const Purchase = ( id, onSubmit ) => {
+const Purchase = ( {id, onSubmit} ) => {
+  console.log(onSubmit, 'this')
   return (
     <div>
       <div id="purchase">
@@ -29,7 +30,7 @@ const Purchase = ( id, onSubmit ) => {
         </div>
       </div>
       <div className="purchase__btn">
-        <button  className="addToBag" onSubmit={e => {
+        <button type="submit" className="addToBag" onClick={e => {
         e.preventDefault();
         onSubmit(e, id);
       }}>Add To Bag</button>
@@ -46,7 +47,7 @@ Purchase.PropTypes = {
 };
 
 const addItemGetSelectedValue = (e) => (
-  e = 1
+  console.log(e, 'this is addItemGetSelectedvalue')
 );
 
 const AddItemContainer = connect(
