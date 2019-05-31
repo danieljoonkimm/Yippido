@@ -29,7 +29,7 @@ const Purchase = ( id, onSubmit ) => {
         </div>
       </div>
       <div className="purchase__btn">
-        <button type="submit" className="addToBag"  onSubmit={e => {
+        <button  className="addToBag" onSubmit={e => {
         e.preventDefault();
         onSubmit(e, id);
       }}>Add To Bag</button>

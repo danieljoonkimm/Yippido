@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
+import {Link} from "react-router-dom";
 
 const CartItem = (
   { id, name, price, img, count, stockCount, onQtyChange, onRemoveClick }

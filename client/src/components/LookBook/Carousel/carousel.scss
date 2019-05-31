@@ -1,0 +1,71 @@
+.BrainhubCarousel {
+  border-radius: 8px;
+}
+
+.BrainhubCarousel__custom-arrowLeft{
+  position: absolute;
+  left: 0;
+  z-index: 99;
+  height: 60px;
+  width: 30px;
+  border-radius: 0 60px 60px 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.BrainhubCarousel__custom-arrowRight {
+  position: absolute; 
+  right: 20px;
+  z-index: 99;
+  height: 60px;
+  width: 30px;
+  border-radius: 60px 0 0 60px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.custom-arrow-left { 
+  display: flex;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+.custom-arrow-right {
+  display: flex;
+  justify-content: center;
+  margin-left: 5px;
+}
+
+.carousel__actions {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 200px auto 200px;
+  grid-template-areas: "viewMore" "currentSlide" "random";
+  
+  .current__slide {
+    display: grid;
+    grid-area: 'currentSlide';
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .view__more {
+    display: flex;
+    grid-area: "viewMore";
+    justify-content: flex-start;
+    align-items: center;
+    
+    button {
+      background-color: none;
+      color: #000;
+      border: 0;
+      border-bottom: 1px solid black;
+      font-size: 14px;
+      padding: 0;
+      height: fit-content;
+      width: fit-content;
+    }
+  }
+}

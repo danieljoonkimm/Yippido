@@ -9,13 +9,33 @@ import BestSeller from '../components/CategoryMain/BestSeller';
 import NewVendors from '../components/CategoryMain/NewVendors';
 import ItemDetails from '../components/ItemDetails';
 import Favorites from '../components/Favorites';
-import Settings from '../components/Settings';
 import CategorySub from "../components/CategorySub";
 import Sale from "../components/Sale";
+import Settings from '../components/Settings';
+import LookBook from '../components/LookBook';
+import LookbookSub from '../components/LookBook/LookbookSub';
 import NavDailyNew from "../components/Navigation/NavDailyNew";
 import CategoryMain from "../components/CategoryMain";
 
 const routes = [
+  {
+    path: '/lookbook/sub',
+    name: 'lookbooksub',
+    exact: true,
+    component: LookbookSub,
+  },
+  {
+    path: '/account',
+    name: 'account',
+    exact: true,
+    component: Settings,
+  },
+  {
+    path: '/lookbook',
+    name: 'lookbook',
+    exact: true,
+    component: LookBook,
+  },
   {
     path: '/signin',
     name: 'signin',
@@ -57,12 +77,6 @@ const routes = [
     name: 'buyerregistration',
     exact: true,
     component: BuyerRegisteration,
-  },
-  {
-    path: '/account',
-    name: 'account',
-    exact: true,
-    component: Settings,
   },
   {
     path: '/favorites',

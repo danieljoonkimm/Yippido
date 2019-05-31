@@ -1,0 +1,42 @@
+#lookbookSub {
+
+  .grow {
+    overflow: hidden;
+    -moz-transition: height .5s;
+    -ms-transition: height .5s;
+    -o-transition: height .5s;
+    -webkit-transition: height .5s;
+    transition: height .5s;
+  }
+
+  .lookbook__sub__item__detail  {
+    padding: 20px 0; 
+    
+    .lookbooksub__details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      p {
+        display: flex;
+        padding: 4px;
+        font-size: 14px;
+        justify-content: center;
+      }
+  
+      button {
+        display: flex;
+        justify-content: center;
+        width: 175px;
+        height: 20px;
+        font-size: 14px;
+        background-color: #fff;
+        color: grey;
+        border: 0;
+        margin: 6px;
+      }
+    }
+  }
+}

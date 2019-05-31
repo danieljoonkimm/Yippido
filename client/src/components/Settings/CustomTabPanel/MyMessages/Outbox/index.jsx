@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
-
-class AccountSettings extends Component {
+class Outbox extends Component {
   constructor(props) {
     super(props);
   }
@@ -9,11 +8,10 @@ class AccountSettings extends Component {
   render() {
     return (
       <div>
-        hi from accountsettingss
+        outbox
       </div>
-
     );
   }
 }
 
-export default AccountSettings;
+export default Outbox;

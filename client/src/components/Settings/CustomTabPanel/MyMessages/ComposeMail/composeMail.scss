@@ -1,0 +1,131 @@
+.composeMail {
+  display: flex;
+  justify-content: flex-end;
+  button {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    padding: 8px 10px;
+    border: 1px solid #2f3136;
+
+  }
+}
+
+.compose-mail-wrapper {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 988;
+  display: grid;
+  align-self: center;
+  justify-items: center;
+
+  .compose-mail-container {
+    background-color: #2f3136;
+    align-self: center;
+    border: 1px solid #2f3136;
+    border-radius: 5px;
+    width: 600px;
+
+    
+    position: relative;
+    color: #fff;
+    
+    .row {
+      margin: 0;
+    }
+
+    h1 {
+      padding: 20px;
+      text-transform: uppercase;
+    }
+
+    .message__reply {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      background-color: #fff;
+   
+      
+      padding: 15px 0;
+      font-size: 14px;
+      
+      .row {
+        margin: 0;
+      }
+  
+      .message__reply__content {
+        padding: 10px 30px;
+        display: flex;
+        color: #2f3136;
+        justify-content: flex-start;
+        
+        h4 {
+          padding-top: 5px;
+        }
+  
+        input {
+          color: #000;
+          height: 30px;
+          outline: 0;
+          width: 200px;
+          padding: 10px;
+        }
+    
+        textarea {
+          color: #000;
+          height: 200px;
+          width: 400px;
+          min-width: 300px;
+          max-width: 400px;
+          max-height: 300px;
+          outline: 0;
+          padding: 10px;
+          
+        }
+  
+        button {
+          color: #000;
+          outline: 0;
+          padding: 10px;
+          width: 200px;
+        }
+      }
+  
+  
+    }
+  
+    .message__reply__buttons {
+      padding: 20px 30px;
+      
+      display: flex;
+      justify-content: flex-end;
+      border-top: 1px solid #f0f0f0;
+      background-color: #f9f9f9;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+  
+      button {
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        outline: 0;
+        padding: 8px 10px;
+        margin: 0 8px;
+        width: 100px;
+        height: 35px;
+        font-size: 12px;
+        border-radius: 3px;
+        border: 1px solid #2f3136;
+        background-color: #2f3136;
+        
+      }
+    }
+  }
+
+}
+
+
