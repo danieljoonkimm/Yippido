@@ -3,12 +3,13 @@ import { render } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import App from './components/App';
 
-import {createStore} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 import allReducers from '../src/Reducers/index.jsx';
-import initialState from "./components/ShoppingCart/CartLogic/dummyCartData.jsx";
+import thunk from "redux-thunk";
+const middleware = [thunk];
 
-const store = createStore(allReducers, initialState);
+const store = createStore(allReducers, applyMiddleware(...middleware));
 
 render(<Provider store={store}><BrowserRouter>
 <App />

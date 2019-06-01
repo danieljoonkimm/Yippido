@@ -1,4 +1,6 @@
 // cart
+import cartItem from "./cartItem.js";
+
 const cart = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TO_CART':
@@ -14,3 +16,5 @@ const cart = (state = [], action) => {
       return state;
   }
 };
+
+export default cart;

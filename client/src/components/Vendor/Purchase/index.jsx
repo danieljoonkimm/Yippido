@@ -6,9 +6,8 @@ import {connect} from "react-redux";
 import addToCart from "../../../Actions/addToCart.js";
 
 const Purchase = ( {id, onSubmit} ) => {
-  console.log(onSubmit, 'this')
   return (
-    <div>
+    <div >
       <div id="purchase">
         <ul className="nav nav-pills">
           <li className="active"><a href="#1b" data-toggle="tab">Purchase</a></li>
@@ -30,8 +29,7 @@ const Purchase = ( {id, onSubmit} ) => {
         </div>
       </div>
       <div className="purchase__btn">
-        <button type="submit" className="addToBag" onClick={e => {
-        e.preventDefault();
+        <button className="addToBag" onClick={e => {
         onSubmit(e, id);
       }}>Add To Bag</button>
         <button className="favorite-btn">
@@ -54,7 +52,7 @@ const AddItemContainer = connect(
   (state, ownProps) => (
     {
       id: ownProps.id,
-      inCart: state.cart.some(item => item.id === ownProps.id),
+      // inCart: state.cart.some(item => item.id === ownProps.id),
     }
   ),
   null,

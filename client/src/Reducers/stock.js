@@ -7,3 +7,5 @@ const stock = (state = [], action) => {
       return state;
   }
 };
+
+export default stock;

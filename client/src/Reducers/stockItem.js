@@ -17,3 +17,5 @@ const stockItem = (state, action) => {
       return state;
   }
 };
+
+export default stockItem;

@@ -3,8 +3,7 @@ const cartItem = (state, action) => {
   switch (action.type) {
     case 'ADD_TO_CART':
       return {
-        id: action.id,
-        count: action.count,
+        id: action.id
       };
     case 'REMOVE_FROM_CART':
       return state.id !== action.id;
@@ -15,12 +14,11 @@ const cartItem = (state, action) => {
 
       return Object.assign(
         {},
-        state,
-        {
-          count: action.count,
-        }
+        state
       );
     default:
       return state;
   }
 };
+
+export default cartItem;
