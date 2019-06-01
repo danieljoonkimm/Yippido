@@ -78,6 +78,7 @@ const AddItemContainer = connect(
   },
   null,
   (stateProps, dispatchProps, ownProps) => {
+    const onSubmit = stateProps.inCart ? updateCartItem : addToCart;
     return {
       onSubmit: (id) => {
         dispatchProps.dispatch( addToCart(id) )
