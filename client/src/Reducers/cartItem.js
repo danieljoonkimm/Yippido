@@ -1,5 +1,5 @@
 // cartItem
-const cartItem = (state, action) => {
+const cartItem = (state = null, action) => {
   switch (action.type) {
     case 'ADD_TO_CART':
       return {

@@ -40,7 +40,7 @@ const Purchase = ( {id, onSubmit} ) => {
   );
 }
 
-Purchase.PropTypes = {
+Purchase.propTypes = {
   onClick: PropTypes.func.isRequired,
 };
 
@@ -48,22 +48,41 @@ const addItemGetSelectedValue = (e) => (
   console.log(e, 'this is addItemGetSelectedvalue')
 );
 
+// const AddItemContainer = connect(
+//   (state, ownProps) => (
+//     {
+//       id: ownProps.id,
+//       // inCart: state.cart.some(item => item.id === ownProps.id),
+//     }
+//   ),
+//   null,
+//   (stateProps, dispatchProps, ownProps) => {
+//     const onSubmit = stateProps.inCart ? updateCartItem : addToCart;
+//     console.log(onSubmit, 'wtf is this')
+
+//     return Object.assign({}, ownProps, stateProps, dispatchProps, {
+//       onSubmit: (e, id) => {
+//         dispatchProps.dispatch(onSubmit(id, addItemGetSelectedValue(e)));
+//       },
+//     });
+//   }
+// )(Purchase);
+
 const AddItemContainer = connect(
-  (state, ownProps) => (
-    {
+  (state, ownProps) => {
+    console.log(state, ownProps);
+    return {
       id: ownProps.id,
       // inCart: state.cart.some(item => item.id === ownProps.id),
     }
-  ),
+  },
   null,
   (stateProps, dispatchProps, ownProps) => {
-    const onSubmit = stateProps.inCart ? updateCartItem : addToCart;
-
-    return Object.assign({}, ownProps, stateProps, dispatchProps, {
-      onSubmit: (e, id) => {
-        dispatchProps.dispatch(onSubmit(id, addItemGetSelectedValue(e)));
-      },
-    });
+    return {
+      onSubmit: (id) => {
+        dispatchProps.dispatch( addToCart(id) )
+      }
+    }
   }
 )(Purchase);
 

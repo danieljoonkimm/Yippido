@@ -1,4 +1,6 @@
 // stock
+import stockItem from "./stockItem.js";
+
 const stock = (state = [], action) => {
   switch (action.type) {
     case 'REMOVE_STOCK_ITEM':

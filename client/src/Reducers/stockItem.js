@@ -1,5 +1,5 @@
 // stockItem
-const stockItem = (state, action) => {
+const stockItem = (state = null, action) => {
   switch (action.type) {
     case 'REMOVE_STOCK_ITEM':
       if (state.id !== action.id) {
