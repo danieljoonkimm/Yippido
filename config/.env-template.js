@@ -9,6 +9,9 @@ const envBuild = {
     'AWS_HOST=',
     'AWS_PASSWORD=',
     'AWS_PORT=',
+    "apiSecretKey=",
+    "apiURL="
+
   ],
   // 'smtp-server': [
   //   'DEBUG=TRUE',
@@ -27,7 +30,8 @@ const envBuild = {
   // ],
   'client': [
     'NODE_ENV=development',
-    'apiSecretKey= ',
+    "apiSecretKey=",
+    "apiURL="
   ]
 };
 

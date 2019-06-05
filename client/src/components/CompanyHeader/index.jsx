@@ -4,7 +4,6 @@ import Yippido from "../../../public/images/Yippido.png";
 import "./companyHeader.scss";
 import { CountryDropdown } from "react-country-region-selector";
 import ReactTooltip from "react-tooltip";
-import GetCartButton from "../ShoppingCart/CartLogic/getCartButton.jsx";
 
 const dummyData = [
   "Daniels Company",
@@ -131,7 +130,7 @@ class CompanyHeader extends Component {
 
           <div className="row" id="companyHeader_registerSignIn">
             <div className="col-xs-4 col-sm-4 col-md-4 companyHeader_signLog">
-              <button id="companyHeader_registerButton"><GetCartButton/></button>
+              <button id="companyHeader_registerButton">gg</button>
             </div>
                 
             <div className="col-xs-4 col-sm-4 col-md-4 companyHeader_signLog">

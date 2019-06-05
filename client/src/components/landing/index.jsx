@@ -11,12 +11,43 @@ import "./landing.scss";
 
 import CompanyFooter from "../CompanyFooter/index.jsx";
 
+import axios from "axios";
+const API_KEY = process.env.apiSecretKey;
+
 class Landing extends Component {
   constructor() {
     super();
 
     this.state = {};
   }
+
+  async componentDidMount() {
+    console.log(API_KEY, 'what is this')
+    try {
+      const landingData = await Promise.all([
+        axios.get("http://yippido.com/index.php?route=feed/rest_api/featured", {
+          header: {
+            'Access-Control-Allow-Origin': '*',
+          }
+        }),
+        axios.get("http://yippido.com/index.php?route=feed/rest_api/bestsellers&limit={limit}", {
+          header: {
+            'Access-Control-Allow-Origin': '*',
+          }
+        }),
+        axios.get("http://yippido.com/index.php?route=feed/rest_api/latest", {
+          header: {
+            'Access-Control-Allow-Origin': '*',
+          }
+        })
+      ])
+      console.log(landingData, "what does this data look like")
+    }
+    catch(error) {
+      console.log(error, "error")
+    }
+  }
+
   render() {
     return (
       <div>
