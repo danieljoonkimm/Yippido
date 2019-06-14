@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import "./signIn.scss";
 import topdeals from "../../../public/images/topdeals.jpeg";
+import axios from "axios";
+const apiSecretKey = process.env.apiSecretKey;
 
 class SignIn extends Component {
   constructor() {
@@ -23,8 +25,15 @@ class SignIn extends Component {
   signIn() {
     if (!!this.state.email.length > 6 && !!this.state.password.length > 4) {
       alert("Username and/or Password Invalid");
+    } else {
+      let sessionId = axios.get("http://yippido.com/api/rest/session", {
+        header: {
+          "X-Oc-Merchant-Id": apiSecretKey
+        }
+      });
+      console.log(sessionId, 'is this my sessionID')
+      this.props.history.push("/individualVendorLanding");
     }
-    this.props.history.push("/individualVendorLanding");
   }
 
   buyerRegistration() {

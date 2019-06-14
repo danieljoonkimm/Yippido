@@ -12,7 +12,10 @@ import "./landing.scss";
 import CompanyFooter from "../CompanyFooter/index.jsx";
 
 import axios from "axios";
-const API_KEY = process.env.apiSecretKey;
+
+const nodeEnv = process.env.NODE_ENV;
+const apiSecretKey = process.env.apiSecretKey;
+const apiURL = process.env.apiURL;
 
 class Landing extends Component {
   constructor() {
@@ -22,22 +25,23 @@ class Landing extends Component {
   }
 
   async componentDidMount() {
-    console.log(API_KEY, 'what is this')
+    console.log(process.env, 'what is this')
     try {
       const landingData = await Promise.all([
-        axios.get("http://yippido.com/index.php?route=feed/rest_api/featured", {
+        axios.get("http://yippido.com/api/rest/featured", {
           header: {
-            'Access-Control-Allow-Origin': '*',
+            "X-Oc-Merchant-Id": apiSecretKey,
           }
         }),
-        axios.get("http://yippido.com/index.php?route=feed/rest_api/bestsellers&limit={limit}", {
+        axios.get("http://api.yippido.com/api/bestsellers/limit/{limit}", {
           header: {
-            'Access-Control-Allow-Origin': '*',
+            "X-Oc-Merchant-Id": apiSecretKey
+
           }
         }),
-        axios.get("http://yippido.com/index.php?route=feed/rest_api/latest", {
+        axios.get("http://api.yippido.com/api/latest", {
           header: {
-            'Access-Control-Allow-Origin': '*',
+            "X-Oc-Merchant-Id": apiSecretKey
           }
         })
       ])
