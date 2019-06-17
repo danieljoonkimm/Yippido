@@ -16,14 +16,14 @@ class SignIn extends Component {
   }
 
   onTextHandler(e) {
-    console.log(this.state)
     this.setState({
       [e.target.name]: e.target.value
     });
   }
 
   signIn() {
-    if (!!this.state.email.length > 6 && !!this.state.password.length > 4) {
+    console.log(this.state.email.length, 'ewgewgweegewrtyw')
+    if (this.state.email.length < 6 || this.state.password.length < 4) {
       alert("Username and/or Password Invalid");
     } else {
       let sessionId = axios.get("http://yippido.com/api/rest/session", {
