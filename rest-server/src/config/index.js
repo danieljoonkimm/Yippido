@@ -9,7 +9,7 @@ const middleWare = [
   // compression(),
   helmet(),
   cors({
-    allowedHeaders: ['Access-Control-Allow-Origin', 'Content-type', 'Authorization', 'Access-Control-Allow-Headers'],
+    allowedHeaders: ['Content-type', 'Authorization'],
     methods: ['GET', 'POST', 'PUT','DELETE', 'OPTIONS']
   }),
   parser.json(),

@@ -16,7 +16,7 @@ class CreateAccount extends Component {
           Registration is free for buyers. Join Perfetii.com right now and your
           purchasing is just one-click away. Instead of visiting a single store
           online, you can now visit all the online stores of your favorite
-          vendors and order in the convenience of your home or office...
+          vendors and order in the convenience of your home or office..
         </div>
       </div>
     );
