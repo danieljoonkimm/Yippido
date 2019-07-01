@@ -1,5 +1,5 @@
 import SignInRegister from '../components/register';
-import SignIn from '../components/signIn';
+import SignIn from '../components/SignIn';
 import Category from './Category';
 import Vendor from '../components/Vendor';
 import Landing from '../components/landing';
