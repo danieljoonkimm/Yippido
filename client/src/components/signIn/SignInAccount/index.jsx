@@ -5,7 +5,17 @@ class SignInAccount extends Component {
   constructor() {
     super();
 
-    this.state = {};
+    this.state = {
+      email: "",
+      password: ""
+    };
+  }
+
+  loginHandler(e) {
+    console.log('this', e.target.value)
+    this.setState({
+      [e.target.name]: e.target.value
+    })
   }
 
   convertSignInAccount() {
@@ -27,6 +37,7 @@ class SignInAccount extends Component {
                 name="email"
                 id="email"
                 className="form-control"
+                onChange={this.loginHandler.bind(this)}
               />
             </div>
 
@@ -38,6 +49,7 @@ class SignInAccount extends Component {
                 name="password"
                 id="password"
                 className="form-control"
+                onChange={this.loginHandler.bind(this)}
               />
             </div>
 
@@ -54,7 +66,7 @@ class SignInAccount extends Component {
                 name="submit"
                 id="password"
                 className="btn btn-info btn-md"
-                value="submit"
+                value="Sign In"
               />
             </div>
 
