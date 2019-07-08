@@ -13,11 +13,9 @@ class SignInAccount extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      fullName: null,
       email: null,
       password: null,
       errors: {
-        fullName: '',
         email: '',
         password: '',
       }
@@ -30,12 +28,6 @@ class SignInAccount extends Component {
     let errors = this.state.errors;
 
     switch (name) {
-      case 'fullName': 
-        errors.fullName = 
-          value.length < 5
-            ? 'Full Name must be 5 characters long!'
-            : '';
-        break;
       case 'email': 
         errors.email = 
           validEmailRegex.test(value)
@@ -71,12 +63,6 @@ class SignInAccount extends Component {
         <div className='form-wrapper'>
           <h2>Create Account</h2>
           <form onSubmit={this.handleSubmit} noValidate>
-            <div className='fullName'>
-              <label htmlFor="fullName">Full Name</label>
-              <input type='text' name='fullName' onChange={this.handleChange.bind(this)} noValidate />
-              {errors.fullName.length > 0 && 
-                <span className='error'>{errors.fullName}</span>}
-            </div>
             <div className='email'>
               <label htmlFor="email">Email</label>
               <input type='email' name='email' onChange={this.handleChange.bind(this)} noValidate />
@@ -88,9 +74,6 @@ class SignInAccount extends Component {
               <input type='password' name='password' onChange={this.handleChange.bind(this)} noValidate />
               {errors.password.length > 0 && 
                 <span className='error'>{errors.password}</span>}
-            </div>
-            <div className='info'>
-              <small>Password must be eight characters in length.</small>
             </div>
             <div className='submit'>
               <button>Create</button>
