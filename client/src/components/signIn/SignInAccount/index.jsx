@@ -1,105 +1,104 @@
-import React, { Component } from "react";
-import "./signInAccount.scss";
+import React, { Component } from 'react';
+
+const validEmailRegex = RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
+const validateForm = (errors) => {
+  let valid = true;
+  Object.values(errors).forEach(
+    (val) => val.length > 0 && (valid = false)
+  );
+  return valid;
+}
 
 class SignInAccount extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
+      fullName: null,
       email: null,
       password: null,
       errors: {
+        fullName: '',
         email: '',
         password: '',
       }
     };
   }
 
-  handleEmailChange (evt) {
-    this.setState({ email: evt.target.value });
-  };
+  handleChange (event) {
+    event.preventDefault();
+    const { name, value } = event.target;
+    let errors = this.state.errors;
 
-  handlePasswordChange (evt) {
-    this.setState({ password: evt.target.value });
-  };
+    switch (name) {
+      case 'fullName': 
+        errors.fullName = 
+          value.length < 5
+            ? 'Full Name must be 5 characters long!'
+            : '';
+        break;
+      case 'email': 
+        errors.email = 
+          validEmailRegex.test(value)
+            ? ''
+            : 'Email is not valid!';
+        break;
+      case 'password': 
+        errors.password = 
+          value.length < 8
+            ? 'Password must be 8 characters long!'
+            : '';
+        break;
+      default:
+        break;
+    }
 
-validate(email, password) {
-  return {
-    email: email.length > 3,
-    password: password.length > 3
+    this.setState({errors, [name]: value});
   }
-}
 
-  convertSignInAccount() {
-    const createSignInHeader = "sign in";
-    const errors = validate(this.state.email, this.state.password);
-    const isDisabled = Object.keys(errors).some(x => errors[x]);
+  handleSubmit (event) {
+    event.preventDefault();
+    if(validateForm(this.state.errors)) {
+      console.info('Valid Form')
+    }else{
+      console.error('Invalid Form')
+    }
+  }
+
+  render() {
+    const {errors} = this.state;
     return (
-      <div className="row" id="signInAccount">
-        <h1 style={{ textTransform: "uppercase" }}>{createSignInHeader}</h1>
-        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          If you have an account with us, please log in.
-        </div>
-
-        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <form id="login-form" className="form" action="" method="post">
-            <div className="form-group">
-              <label className="text-info">Email Address:</label>
-              <br />
-              <input
-                  className={errors.email && ""}
-                  type="text"
-                  placeholder="Enter email"
-                  value={this.state.email}
-                  onChange={this.handleEmailChange}
-              />
+      <div className='wrapper'>
+        <div className='form-wrapper'>
+          <h2>Create Account</h2>
+          <form onSubmit={this.handleSubmit} noValidate>
+            <div className='fullName'>
+              <label htmlFor="fullName">Full Name</label>
+              <input type='text' name='fullName' onChange={this.handleChange.bind(this)} noValidate />
+              {errors.fullName.length > 0 && 
+                <span className='error'>{errors.fullName}</span>}
             </div>
-
-            <div className="form-group">
-              <label className="text-info">Password:</label>
-              <br />
-              <input
-               className={errors.password && ""}
-               type="password"
-               placeholder="Enter password"
-               value={this.state.password}
-               onChange={this.handlePasswordChange}
-              />
+            <div className='email'>
+              <label htmlFor="email">Email</label>
+              <input type='email' name='email' onChange={this.handleChange.bind(this)} noValidate />
+              {errors.email.length > 0 && 
+                <span className='error'>{errors.email}</span>}
             </div>
-
-            <div className="form-group col-xs-6 col-sm-6 col-md-6 col-lg-6">
-              <label className="text-info">
-                <span>Remember Me</span>.
-                <span>
-                  <input id="remember-me" name="remember-me" type="checkbox" />
-                </span>
-              </label>
-              <br />
-              <input
-                type="submit"
-                name="submit"
-                id="password"
-                className="btn btn-info btn-md"
-                value="Sign In"
-              />
+            <div className='password'>
+              <label htmlFor="password">Password</label>
+              <input type='password' name='password' onChange={this.handleChange.bind(this)} noValidate />
+              {errors.password.length > 0 && 
+                <span className='error'>{errors.password}</span>}
             </div>
-
-            <div
-              id="register-link"
-              className="text-right col-xs-6 col-sm-6 col-md-6 col-lg-6"
-            >
-              <a href="#" className="text-info">
-                Forgot Your Password?
-              </a>
+            <div className='info'>
+              <small>Password must be eight characters in length.</small>
+            </div>
+            <div className='submit'>
+              <button>Create</button>
             </div>
           </form>
         </div>
       </div>
     );
-  }
-
-  render() {
-    return <div className="container">{this.convertSignInAccount()}</div>;
   }
 }
 
