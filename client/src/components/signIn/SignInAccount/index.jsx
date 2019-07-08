@@ -2,24 +2,38 @@ import React, { Component } from "react";
 import "./signInAccount.scss";
 
 class SignInAccount extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
-      email: "",
-      password: ""
+      email: null,
+      password: null,
+      errors: {
+        email: '',
+        password: '',
+      }
     };
   }
 
-  loginHandler(e) {
-    console.log('this', e.target.value)
-    this.setState({
-      [e.target.name]: e.target.value
-    })
+  handleEmailChange (evt) {
+    this.setState({ email: evt.target.value });
+  };
+
+  handlePasswordChange (evt) {
+    this.setState({ password: evt.target.value });
+  };
+
+validate(email, password) {
+  return {
+    email: email.length > 3,
+    password: password.length > 3
   }
+}
 
   convertSignInAccount() {
     const createSignInHeader = "sign in";
+    const errors = validate(this.state.email, this.state.password);
+    const isDisabled = Object.keys(errors).some(x => errors[x]);
     return (
       <div className="row" id="signInAccount">
         <h1 style={{ textTransform: "uppercase" }}>{createSignInHeader}</h1>
@@ -33,11 +47,11 @@ class SignInAccount extends Component {
               <label className="text-info">Email Address:</label>
               <br />
               <input
-                type="text"
-                name="email"
-                id="email"
-                className="form-control"
-                onChange={this.loginHandler.bind(this)}
+                  className={errors.email && ""}
+                  type="text"
+                  placeholder="Enter email"
+                  value={this.state.email}
+                  onChange={this.handleEmailChange}
               />
             </div>
 
@@ -45,11 +59,11 @@ class SignInAccount extends Component {
               <label className="text-info">Password:</label>
               <br />
               <input
-                type="text"
-                name="password"
-                id="password"
-                className="form-control"
-                onChange={this.loginHandler.bind(this)}
+               className={errors.password && ""}
+               type="password"
+               placeholder="Enter password"
+               value={this.state.password}
+               onChange={this.handlePasswordChange}
               />
             </div>
 
@@ -70,12 +84,14 @@ class SignInAccount extends Component {
               />
             </div>
 
-            <div id="register-link" className="text-right col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div
+              id="register-link"
+              className="text-right col-xs-6 col-sm-6 col-md-6 col-lg-6"
+            >
               <a href="#" className="text-info">
                 Forgot Your Password?
               </a>
             </div>
-
           </form>
         </div>
       </div>
