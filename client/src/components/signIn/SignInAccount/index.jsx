@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./signInAccount.scss";
 
 class SignInAccount extends Component {
   constructor() {
@@ -10,21 +11,21 @@ class SignInAccount extends Component {
   convertSignInAccount() {
     const createSignInHeader = "sign in";
     return (
-      <div className="row">
+      <div className="row" id="signInAccount">
         <h1 style={{ textTransform: "uppercase" }}>{createSignInHeader}</h1>
-        <div className="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           If you have an account with us, please log in.
         </div>
 
-        <div>
+        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <form id="login-form" className="form" action="" method="post">
             <div className="form-group">
-              <label className="text-info">UserName:</label>
+              <label className="text-info">Email Address:</label>
               <br />
               <input
                 type="text"
-                name="username"
-                id="username"
+                name="email"
+                id="email"
                 className="form-control"
               />
             </div>
@@ -40,7 +41,7 @@ class SignInAccount extends Component {
               />
             </div>
 
-            <div className="form-group">
+            <div className="form-group col-xs-6 col-sm-6 col-md-6 col-lg-6">
               <label className="text-info">
                 <span>Remember Me</span>.
                 <span>
@@ -57,7 +58,7 @@ class SignInAccount extends Component {
               />
             </div>
 
-            <div id="register-link" className="text-right">
+            <div id="register-link" className="text-right col-xs-6 col-sm-6 col-md-6 col-lg-6">
               <a href="#" className="text-info">
                 Forgot Your Password?
               </a>
@@ -70,7 +71,7 @@ class SignInAccount extends Component {
   }
 
   render() {
-    return <div>{this.convertSignInAccount()}</div>;
+    return <div className="container">{this.convertSignInAccount()}</div>;
   }
 }
 

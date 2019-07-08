@@ -5,36 +5,9 @@
   padding: 0;
 }
 
-#signInBuyer_login {
-  padding: 1em;
-  background-color: white;
-  p {
-    padding-top: 1em;
-    line-height: 2em;
-  }
-  .signInBuyer_input {
-    width: 90%;
-    background-color: #efefef;
-  }
-}
-
-#signInBuyer_register {
-  display: flex;
-  flex-direction: column;
-  padding: 1em;
-  background-color: white;
-
-  p {
-    margin-bottom: auto;
-    padding-top: 1em;
-    line-height: 2em;
-    padding-bottom: 1em;
-  }
-
-}
 #signInBuyer_container {
   display: flex;
-  padding: 1em;
+  padding: 4em;
   background-color: #efefef;
   width: 100%;
   #signInBuyer_forgotPassword {
@@ -63,28 +36,10 @@
 @media only screen and (max-width: 425px) {
   #signInBuyer_container {
     flex-direction: column;
-
-    #signInBuyer_login {
-      padding-bottom: 1em;
-    }
-
-    #signInBuyer_register {
-      border-top: 1px solid #c3c3c3;
-      p {
-        padding-top: 1em;
-        line-height: 2em;
-        padding-bottom: 2em;
-      }
-    }
   }
 }
 
 @media only screen and (min-width: 426px) {
   #signInBuyer_container {
-    #signInBuyer_register {
-      border-left: 1px solid #c3c3c3;
-      padding-left: 2em;
-      
-    }
   }
 }
