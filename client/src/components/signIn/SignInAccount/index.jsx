@@ -59,9 +59,9 @@ class SignInAccount extends Component {
   render() {
     const {errors} = this.state;
     return (
-      <div className='wrapper'>
-        <div className='form-wrapper'>
-          <h2>Create Account</h2>
+      <div className='container wrapper'>
+        <div className='row form-wrapper'>
+          <h2>Sign In</h2>
           <form onSubmit={this.handleSubmit} noValidate>
             <div className='email'>
               <label htmlFor="email">Email</label>
