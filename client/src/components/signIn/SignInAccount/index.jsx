@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./signInAccount.scss";
 
 const validEmailRegex = RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
 const validateForm = (errors) => {
@@ -58,10 +59,11 @@ class SignInAccount extends Component {
 
   render() {
     const {errors} = this.state;
+    const signInHeader = "Sign In";
     return (
-      <div className='container wrapper'>
-        <div className='row form-wrapper'>
-          <h2>Sign In</h2>
+      <div className='container wrapper' id="createSignInContainer">
+        <div className='row form-wrapper' id="createSignIn">
+          <h2 style={{textTransform: "uppercase"}}>{signInHeader}</h2>
           <form onSubmit={this.handleSubmit} noValidate>
             <div className='email'>
               <label htmlFor="email">Email</label>
